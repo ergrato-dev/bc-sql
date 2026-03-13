@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+  <rect width="820" height="500" fill="#1a1a2e"/>
+  <text x="410" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">SELF JOIN — Jerarquía Organizacional</text>
+
+  <!-- ====== árbol jerárquico ====== -->
+  <!-- Nivel 0: CEO -->
+  <rect x="320" y="60" width="180" height="52" rx="8" fill="#16213e" stroke="#c678dd" stroke-width="2"/>
+  <text x="410" y="81" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#c678dd" text-anchor="middle">CEO — Diana Fox</text>
+  <text x="410" y="100" font-family="'Courier New', monospace" font-size="10" fill="#718096"
+        text-anchor="middle">id=1 | manager_id=NULL</text>
+
+  <!-- líneas nivel 0 → 1 -->
+  <line x1="410" y1="112" x2="180" y2="170" stroke="#336791" stroke-width="1.5"/>
+  <line x1="410" y1="112" x2="640" y2="170" stroke="#336791" stroke-width="1.5"/>
+
+  <!-- Nivel 1: Managers -->
+  <rect x="80" y="170" width="200" height="52" rx="8" fill="#16213e" stroke="#56b6c2" stroke-width="2"/>
+  <text x="180" y="191" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Manager — Alice Smith</text>
+  <text x="180" y="210" font-family="'Courier New', monospace" font-size="10" fill="#718096"
+        text-anchor="middle">id=2 | manager_id=1</text>
+
+  <rect x="540" y="170" width="200" height="52" rx="8" fill="#16213e" stroke="#56b6c2" stroke-width="2"/>
+  <text x="640" y="191" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Manager — Bob Jones</text>
+  <text x="640" y="210" font-family="'Courier New', monospace" font-size="10" fill="#718096"
+        text-anchor="middle">id=3 | manager_id=1</text>
+
+  <!-- líneas nivel 1 → 2 -->
+  <line x1="140" y1="222" x2="100" y2="290" stroke="#336791" stroke-width="1.5"/>
+  <line x1="220" y1="222" x2="260" y2="290" stroke="#336791" stroke-width="1.5"/>
+  <line x1="600" y1="222" x2="560" y2="290" stroke="#336791" stroke-width="1.5"/>
+  <line x1="680" y1="222" x2="720" y2="290" stroke="#336791" stroke-width="1.5"/>
+
+  <!-- Nivel 2: Employees -->
+  <rect x="30" y="290" width="160" height="52" rx="8" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="110" y="312" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#98c379" text-anchor="middle">Carol White</text>
+  <text x="110" y="330" font-family="'Courier New', monospace" font-size="10" fill="#718096"
+        text-anchor="middle">id=4 | mgr=2</text>
+
+  <rect x="200" y="290" width="160" height="52" rx="8" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="280" y="312" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#98c379" text-anchor="middle">David Brown</text>
+  <text x="280" y="330" font-family="'Courier New', monospace" font-size="10" fill="#718096"
+        text-anchor="middle">id=5 | mgr=2</text>
+
+  <rect x="460" y="290" width="160" height="52" rx="8" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="540" y="312" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#98c379" text-anchor="middle">Eve Davis</text>
+  <text x="540" y="330" font-family="'Courier New', monospace" font-size="10" fill="#718096"
+        text-anchor="middle">id=6 | mgr=3</text>
+
+  <rect x="630" y="290" width="160" height="52" rx="8" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="710" y="312" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#98c379" text-anchor="middle">Frank Wilson</text>
+  <text x="710" y="330" font-family="'Courier New', monospace" font-size="10" fill="#718096"
+        text-anchor="middle">id=7 | mgr=3</text>
+
+  <!-- Separador -->
+  <line x1="30" y1="366" x2="790" y2="366" stroke="#336791" stroke-width="1" stroke-dasharray="6,3"/>
+
+  <!-- Query SELF JOIN -->
+  <text x="410" y="388" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Query SELF JOIN correspondiente</text>
+
+  <rect x="30" y="400" width="760" height="80" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="50" y="422" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="106" y="422" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">e.first_name AS employee, COALESCE(m.first_name, 'CEO') AS manager</text>
+  <text x="50" y="440" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <text x="90" y="440" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees e</text>
+  <text x="50" y="458" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">LEFT JOIN</text>
+  <text x="116" y="458" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees m</text>
+  <text x="210" y="458" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">ON</text>
+  <text x="228" y="458" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">e.manager_id = m.id;</text>
+
+  <text x="410" y="492" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 10: CROSS JOIN y SELF JOIN</text>
+</svg>

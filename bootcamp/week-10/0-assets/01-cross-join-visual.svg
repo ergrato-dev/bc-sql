@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <rect width="820" height="480" fill="#1a1a2e"/>
+  <text x="410" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">CROSS JOIN — Visualización del Producto Cartesiano</text>
+
+  <!-- Tabla A: job_levels -->
+  <rect x="30" y="54" width="170" height="136" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="30" y="54" width="170" height="30" rx="6" fill="#336791"/>
+  <text x="115" y="73" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">job_levels (3 filas)</text>
+  <line x1="30" y1="84" x2="200" y2="84" stroke="#336791" stroke-width="1"/>
+  <text x="50" y="104" font-family="'Courier New', monospace" font-size="12" fill="#98c379">jr</text>
+  <text x="50" y="124" font-family="'Courier New', monospace" font-size="12" fill="#f6c90e">mid</text>
+  <text x="50" y="144" font-family="'Courier New', monospace" font-size="12" fill="#e06c75">sr</text>
+
+  <!-- Tabla B: departments -->
+  <rect x="240" y="54" width="200" height="164" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="240" y="54" width="200" height="30" rx="6" fill="#336791"/>
+  <text x="340" y="73" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">departments (4 filas)</text>
+  <line x1="240" y1="84" x2="440" y2="84" stroke="#336791" stroke-width="1"/>
+  <text x="260" y="104" font-family="'Courier New', monospace" font-size="12" fill="#e2e8f0">Engineering</text>
+  <text x="260" y="124" font-family="'Courier New', monospace" font-size="12" fill="#e2e8f0">Marketing</text>
+  <text x="260" y="144" font-family="'Courier New', monospace" font-size="12" fill="#e2e8f0">Sales</text>
+  <text x="260" y="164" font-family="'Courier New', monospace" font-size="12" fill="#e2e8f0">HR</text>
+
+  <!-- Fórmula -->
+  <text x="206" y="100" font-family="Inter, Roboto, sans-serif" font-size="22" fill="#56b6c2"
+        text-anchor="middle">×</text>
+  <text x="460" y="100" font-family="Inter, Roboto, sans-serif" font-size="22" fill="#56b6c2"
+        text-anchor="middle">=</text>
+
+  <!-- Resultado: 12 celdas en grilla -->
+  <text x="630" y="73" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Resultado: 3 × 4 = 12 filas</text>
+
+  <!-- Grilla resultado -->
+  <!-- Cabeceras -->
+  <rect x="500" y="84" width="300" height="24" fill="#336791"/>
+  <text x="570" y="100" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">level</text>
+  <text x="690" y="100" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">department</text>
+
+  <!-- Filas resultado -->
+  <rect x="500" y="108" width="300" height="22" fill="#1a1a2e"/>
+  <text x="570" y="123" font-family="'Courier New', monospace" font-size="10" fill="#98c379" text-anchor="middle">jr</text>
+  <text x="690" y="123" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Engineering</text>
+
+  <rect x="500" y="130" width="300" height="22" fill="#16213e"/>
+  <text x="570" y="145" font-family="'Courier New', monospace" font-size="10" fill="#98c379" text-anchor="middle">jr</text>
+  <text x="690" y="145" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Marketing</text>
+
+  <rect x="500" y="152" width="300" height="22" fill="#1a1a2e"/>
+  <text x="570" y="167" font-family="'Courier New', monospace" font-size="10" fill="#98c379" text-anchor="middle">jr</text>
+  <text x="690" y="167" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Sales</text>
+
+  <rect x="500" y="174" width="300" height="22" fill="#16213e"/>
+  <text x="570" y="189" font-family="'Courier New', monospace" font-size="10" fill="#98c379" text-anchor="middle">jr</text>
+  <text x="690" y="189" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">HR</text>
+
+  <rect x="500" y="196" width="300" height="22" fill="#1a1a2e"/>
+  <text x="570" y="211" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e" text-anchor="middle">mid</text>
+  <text x="690" y="211" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Engineering</text>
+
+  <rect x="500" y="218" width="300" height="22" fill="#16213e"/>
+  <text x="570" y="233" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e" text-anchor="middle">mid</text>
+  <text x="690" y="233" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Marketing</text>
+
+  <!-- indicador de que hay más filas -->
+  <text x="650" y="258" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#718096"
+        text-anchor="middle">… 6 filas más (mid+Sales, mid+HR, sr×4)</text>
+
+  <!-- Separador -->
+  <line x1="30" y1="278" x2="790" y2="278" stroke="#336791" stroke-width="1" stroke-dasharray="6,3"/>
+
+  <!-- SQL ejemplo -->
+  <text x="410" y="300" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Sintaxis</text>
+
+  <rect x="30" y="312" width="376" height="86" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="50" y="334" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="100" y="334" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">d.name, l.name</text>
+  <text x="50" y="352" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <text x="90" y="352" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">departments d</text>
+  <text x="50" y="370" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">CROSS JOIN</text>
+  <text x="122" y="370" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">job_levels l</text>
+  <text x="50" y="388" font-family="'Courier New', monospace" font-size="11" fill="#56b6c2">ORDER BY</text>
+  <text x="122" y="388" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">d.name, l.rank;</text>
+
+  <!-- Warning box -->
+  <rect x="414" y="312" width="376" height="86" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="1"/>
+  <text x="434" y="334" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e06c75" font-weight="700">⚠ Advertencia de rendimiento</text>
+  <text x="434" y="354" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Sin WHERE el resultado crece exponencialmente:</text>
+  <text x="434" y="372" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">1 000 × 1 000 = 1 000 000 filas</text>
+  <text x="434" y="390" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Siempre filtrar o limitar cuando sea posible.</text>
+
+  <text x="410" y="468" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 10: CROSS JOIN y SELF JOIN</text>
+</svg>
