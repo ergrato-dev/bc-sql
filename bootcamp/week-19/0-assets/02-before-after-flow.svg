@@ -1,0 +1,86 @@
+<svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, sans-serif">
+  <!-- Fondo -->
+  <rect width="760" height="460" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="380" y="36" fill="#e2e8f0" font-size="18" font-weight="700" text-anchor="middle">Flujo BEFORE vs AFTER trigger</text>
+
+  <!-- ===== Etiquetas columnas ===== -->
+  <text x="200" y="64" fill="#56b6c2" font-size="14" font-weight="700" text-anchor="middle">BEFORE</text>
+  <text x="560" y="64" fill="#c678dd" font-size="14" font-weight="700" text-anchor="middle">AFTER</text>
+
+  <!-- ===== Sentencia SQL (común) ===== -->
+  <rect x="280" y="76" width="200" height="36" rx="8" fill="#336791"/>
+  <text x="380" y="99" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">INSERT / UPDATE / DELETE</text>
+
+  <!-- Flecha hacia BEFORE -->
+  <line x1="280" y1="94" x2="168" y2="130" stroke="#56b6c2" stroke-width="1.5" marker-end="url(#ab-cyan)"/>
+  <!-- Flecha hacia AFTER -->
+  <line x1="480" y1="94" x2="592" y2="130" stroke="#c678dd" stroke-width="1.5" marker-end="url(#ab-purple)"/>
+
+  <!-- ===== BEFORE flow ===== -->
+  <rect x="60" y="132" width="216" height="36" rx="6" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="168" y="155" fill="#56b6c2" font-size="11" text-anchor="middle">① fn_before() ejecutada</text>
+
+  <line x1="168" y1="168" x2="168" y2="198" stroke="#56b6c2" stroke-width="1.5" marker-end="url(#ab-cyan)"/>
+
+  <!-- Diamante BEFORE OK -->
+  <polygon points="168,200 218,234 168,268 118,234" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="168" y="230" fill="#56b6c2" font-size="10" text-anchor="middle">RETURN</text>
+  <text x="168" y="244" fill="#56b6c2" font-size="10" text-anchor="middle">NEW?</text>
+
+  <!-- Rama RETURN NULL (cancelar) -->
+  <line x1="118" y1="234" x2="58" y2="234" stroke="#e06c75" stroke-width="1.5" marker-end="url(#ab-red)"/>
+  <text x="88" y="227" fill="#e06c75" font-size="10" text-anchor="middle">NULL</text>
+  <rect x="10" y="220" width="48" height="28" rx="5" fill="#e06c75" fill-opacity="0.2" stroke="#e06c75" stroke-width="1"/>
+  <text x="34" y="238" fill="#e06c75" font-size="9" text-anchor="middle">Cancela</text>
+
+  <!-- Rama RETURN NEW (continuar) -->
+  <line x1="168" y1="268" x2="168" y2="298" stroke="#98c379" stroke-width="1.5" marker-end="url(#ab-green)"/>
+  <text x="184" y="288" fill="#98c379" font-size="10">NEW</text>
+  <rect x="60" y="300" width="216" height="36" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="168" y="323" fill="#98c379" font-size="11" text-anchor="middle">② Datos modificados en disco</text>
+
+  <!-- ===== AFTER flow ===== -->
+  <rect x="484" y="132" width="216" height="36" rx="6" fill="#16213e" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="592" y="155" fill="#c678dd" font-size="11" text-anchor="middle">① Datos modificados en disco</text>
+
+  <line x1="592" y1="168" x2="592" y2="198" stroke="#c678dd" stroke-width="1.5" marker-end="url(#ab-purple)"/>
+
+  <rect x="484" y="200" width="216" height="36" rx="6" fill="#16213e" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="592" y="223" fill="#c678dd" font-size="11" text-anchor="middle">② fn_after() ejecutada</text>
+
+  <line x1="592" y1="236" x2="592" y2="266" stroke="#c678dd" stroke-width="1.5" marker-end="url(#ab-purple)"/>
+
+  <rect x="484" y="268" width="216" height="36" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="592" y="291" fill="#98c379" font-size="11" text-anchor="middle">③ RETURN NULL (ignorado)</text>
+
+  <!-- ===== Cajas de caso de uso ===== -->
+  <rect x="60" y="360" width="216" height="56" rx="8" fill="#16213e" stroke="#56b6c2" stroke-width="1"/>
+  <text x="168" y="383" fill="#56b6c2" font-size="11" font-weight="700" text-anchor="middle">Usa BEFORE para:</text>
+  <text x="168" y="400" fill="#718096" font-size="10" text-anchor="middle">Validar / Transformar / Normalizar</text>
+  <text x="168" y="414" fill="#718096" font-size="10" text-anchor="middle">datos antes de persistirlos</text>
+
+  <rect x="484" y="360" width="216" height="56" rx="8" fill="#16213e" stroke="#c678dd" stroke-width="1"/>
+  <text x="592" y="383" fill="#c678dd" font-size="11" font-weight="700" text-anchor="middle">Usa AFTER para:</text>
+  <text x="592" y="400" fill="#718096" font-size="10" text-anchor="middle">Auditoría / Totales derivados /</text>
+  <text x="592" y="414" fill="#718096" font-size="10" text-anchor="middle">Actualizar tablas relacionadas</text>
+
+  <!-- Nota footer -->
+  <text x="380" y="448" fill="#718096" font-size="10" text-anchor="middle">Ambos operan dentro de la misma transacción — el ROLLBACK también deshace sus efectos</text>
+
+  <defs>
+    <marker id="ab-cyan" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#56b6c2"/>
+    </marker>
+    <marker id="ab-purple" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#c678dd"/>
+    </marker>
+    <marker id="ab-green" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#98c379"/>
+    </marker>
+    <marker id="ab-red" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#e06c75"/>
+    </marker>
+  </defs>
+</svg>

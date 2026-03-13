@@ -1,0 +1,80 @@
+<svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, sans-serif">
+  <!-- Fondo -->
+  <rect width="760" height="440" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="380" y="36" fill="#e2e8f0" font-size="18" font-weight="700" text-anchor="middle">Anatomía de un Trigger en PostgreSQL</text>
+
+  <!-- ===== Objetos en BD ===== -->
+  <!-- Trigger Function box -->
+  <rect x="40" y="64" width="300" height="200" rx="10" fill="#16213e" stroke="#c678dd" stroke-width="2"/>
+  <rect x="40" y="64" width="300" height="34" rx="10" fill="#c678dd" fill-opacity="0.3"/>
+  <text x="190" y="86" fill="#c678dd" font-size="13" font-weight="700" text-anchor="middle">Trigger Function</text>
+  <text x="60" y="115" fill="#718096" font-size="11">RETURNS TRIGGER</text>
+  <rect x="60" y="124" width="260" height="120" rx="5" fill="#0d1b2a"/>
+  <text x="75" y="143" fill="#c678dd" font-size="10" font-family="monospace">CREATE OR REPLACE FUNCTION</text>
+  <text x="75" y="158" fill="#98c379" font-size="10" font-family="monospace">fn_audit() RETURNS TRIGGER</text>
+  <text x="75" y="173" fill="#56b6c2" font-size="10" font-family="monospace">LANGUAGE plpgsql AS $$</text>
+  <text x="75" y="188" fill="#56b6c2" font-size="10" font-family="monospace">BEGIN</text>
+  <text x="75" y="203" fill="#e2e8f0" font-size="10" font-family="monospace">  -- usa NEW, OLD, TG_OP</text>
+  <text x="75" y="218" fill="#e2e8f0" font-size="10" font-family="monospace">  RETURN NEW;</text>
+  <text x="75" y="233" fill="#56b6c2" font-size="10" font-family="monospace">END; $$;</text>
+
+  <!-- Flecha de asociación -->
+  <line x1="340" y1="164" x2="418" y2="164" stroke="#f6c90e" stroke-width="2" marker-end="url(#arr-yellow)" stroke-dasharray="6,3"/>
+  <text x="380" y="157" fill="#f6c90e" font-size="10" text-anchor="middle">asocia</text>
+
+  <!-- Trigger box -->
+  <rect x="420" y="64" width="300" height="200" rx="10" fill="#16213e" stroke="#f6c90e" stroke-width="2"/>
+  <rect x="420" y="64" width="300" height="34" rx="10" fill="#f6c90e" fill-opacity="0.25"/>
+  <text x="570" y="86" fill="#f6c90e" font-size="13" font-weight="700" text-anchor="middle">Trigger</text>
+  <text x="440" y="115" fill="#718096" font-size="11">Cuándo + dónde + para qué filas</text>
+  <rect x="440" y="124" width="260" height="120" rx="5" fill="#0d1b2a"/>
+  <text x="455" y="143" fill="#c678dd" font-size="10" font-family="monospace">CREATE TRIGGER trg_audit</text>
+  <text x="455" y="158" fill="#e06c75" font-size="10" font-family="monospace">AFTER INSERT OR UPDATE</text>
+  <text x="455" y="173" fill="#e06c75" font-size="10" font-family="monospace">    OR DELETE</text>
+  <text x="455" y="188" fill="#56b6c2" font-size="10" font-family="monospace">ON products</text>
+  <text x="455" y="203" fill="#56b6c2" font-size="10" font-family="monospace">FOR EACH ROW</text>
+  <text x="455" y="218" fill="#98c379" font-size="10" font-family="monospace">EXECUTE FUNCTION fn_audit();</text>
+
+  <!-- ===== Variables especiales ===== -->
+  <rect x="40" y="290" width="680" height="120" rx="10" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="380" y="314" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Variables especiales disponibles en la trigger function</text>
+
+  <!-- NEW -->
+  <rect x="60" y="326" width="130" height="66" rx="6" fill="#0d1b2a" stroke="#98c379" stroke-width="1"/>
+  <text x="125" y="344" fill="#98c379" font-size="12" font-weight="700" text-anchor="middle">NEW</text>
+  <text x="125" y="362" fill="#718096" font-size="10" text-anchor="middle">Fila nueva</text>
+  <text x="125" y="376" fill="#718096" font-size="10" text-anchor="middle">INSERT / UPDATE</text>
+  <text x="125" y="390" fill="#718096" font-size="10" text-anchor="middle">NULL en DELETE</text>
+
+  <!-- OLD -->
+  <rect x="208" y="326" width="130" height="66" rx="6" fill="#0d1b2a" stroke="#e06c75" stroke-width="1"/>
+  <text x="273" y="344" fill="#e06c75" font-size="12" font-weight="700" text-anchor="middle">OLD</text>
+  <text x="273" y="362" fill="#718096" font-size="10" text-anchor="middle">Fila anterior</text>
+  <text x="273" y="376" fill="#718096" font-size="10" text-anchor="middle">UPDATE / DELETE</text>
+  <text x="273" y="390" fill="#718096" font-size="10" text-anchor="middle">NULL en INSERT</text>
+
+  <!-- TG_OP -->
+  <rect x="356" y="326" width="130" height="66" rx="6" fill="#0d1b2a" stroke="#f6c90e" stroke-width="1"/>
+  <text x="421" y="344" fill="#f6c90e" font-size="12" font-weight="700" text-anchor="middle">TG_OP</text>
+  <text x="421" y="362" fill="#718096" font-size="10" text-anchor="middle">'INSERT' |</text>
+  <text x="421" y="376" fill="#718096" font-size="10" text-anchor="middle">'UPDATE' |</text>
+  <text x="421" y="390" fill="#718096" font-size="10" text-anchor="middle">'DELETE'</text>
+
+  <!-- TG_TABLE_NAME -->
+  <rect x="504" y="326" width="196" height="66" rx="6" fill="#0d1b2a" stroke="#56b6c2" stroke-width="1"/>
+  <text x="602" y="344" fill="#56b6c2" font-size="12" font-weight="700" text-anchor="middle">TG_TABLE_NAME</text>
+  <text x="602" y="362" fill="#718096" font-size="10" text-anchor="middle">Nombre de la tabla</text>
+  <text x="602" y="376" fill="#718096" font-size="10" text-anchor="middle">que disparó el trigger</text>
+  <text x="602" y="390" fill="#718096" font-size="10" text-anchor="middle">Reutilización en varias tablas</text>
+
+  <!-- Nota pie -->
+  <text x="380" y="428" fill="#718096" font-size="10" text-anchor="middle">BEFORE ROW: RETURN NEW continúa / RETURN NULL cancela la operación</text>
+
+  <defs>
+    <marker id="arr-yellow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#f6c90e"/>
+    </marker>
+  </defs>
+</svg>
