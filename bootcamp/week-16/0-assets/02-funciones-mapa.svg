@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" width="780" height="400">
+  <rect width="780" height="400" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="390" y="30" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Mapa de funciones integradas — PostgreSQL 16</text>
+
+  <!-- Category: STRING -->
+  <rect x="20" y="48" width="230" height="160" rx="8" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="135" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#56b6c2" font-weight="bold" text-anchor="middle">Cadenas de texto</text>
+  <text x="35" y="88"  font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">UPPER</text>
+  <text x="100" y="88" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(txt) → mayúsculas</text>
+  <text x="35" y="106" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">LOWER</text>
+  <text x="100" y="106" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(txt) → minúsculas</text>
+  <text x="35" y="124" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">TRIM</text>
+  <text x="100" y="124" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(txt) → sin espacios</text>
+  <text x="35" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">LENGTH</text>
+  <text x="100" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(txt) → longitud</text>
+  <text x="35" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">SUBSTRING</text>
+  <text x="115" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(txt,inicio,len)</text>
+  <text x="35" y="178" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">REPLACE</text>
+  <text x="100" y="178" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(txt, de, a)</text>
+  <text x="35" y="196" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">CONCAT</text>
+  <text x="100" y="196" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(a, b, …)</text>
+
+  <!-- Category: DATE -->
+  <rect x="275" y="48" width="230" height="160" rx="8" fill="#16213e" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="390" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#c678dd" font-weight="bold" text-anchor="middle">Fechas y tiempo</text>
+  <text x="290" y="88"  font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">NOW()</text>
+  <text x="350" y="88" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">timestamp actual</text>
+  <text x="290" y="106" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">CURRENT_DATE</text>
+  <text x="400" y="106" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">fecha actual</text>
+  <text x="290" y="124" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">DATE_TRUNC</text>
+  <text x="380" y="124" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">('month', ts)</text>
+  <text x="290" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">EXTRACT</text>
+  <text x="355" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(YEAR FROM ts)</text>
+  <text x="290" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">AGE</text>
+  <text x="325" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(date1, date2)</text>
+  <text x="290" y="178" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">TO_CHAR</text>
+  <text x="350" y="178" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(ts, 'YYYY-MM-DD')</text>
+  <text x="290" y="196" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">INTERVAL</text>
+  <text x="355" y="196" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">'1 year' / '30 days'</text>
+
+  <!-- Category: NUMERIC -->
+  <rect x="530" y="48" width="230" height="160" rx="8" fill="#16213e" stroke="#f6c90e" stroke-width="1.5"/>
+  <text x="645" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#f6c90e" font-weight="bold" text-anchor="middle">Numéricas y CAST</text>
+  <text x="545" y="88"  font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">ROUND</text>
+  <text x="600" y="88" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(n, decimales)</text>
+  <text x="545" y="106" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">CEIL</text>
+  <text x="590" y="106" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(n) → redondea arriba</text>
+  <text x="545" y="124" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">FLOOR</text>
+  <text x="590" y="124" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(n) → redondea abajo</text>
+  <text x="545" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">ABS</text>
+  <text x="580" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(n) → valor absoluto</text>
+  <text x="545" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">MOD</text>
+  <text x="580" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(a, b) → módulo</text>
+  <text x="545" y="178" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">NULLIF</text>
+  <text x="600" y="178" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">(a, b) → NULL si a=b</text>
+  <text x="545" y="196" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">CAST / ::</text>
+  <text x="610" y="196" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">conversión de tipos</text>
+
+  <!-- Examples section -->
+  <rect x="20" y="228" width="740" height="152" rx="8" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="40" y="250" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">-- Ejemplos combinados</text>
+  <text x="40" y="270" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">SELECT</text>
+  <text x="105" y="270" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">  UPPER</text>
+  <text x="155" y="270" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">(first_name)</text>
+  <text x="260" y="270" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">|| ' ' ||</text>
+  <text x="330" y="270" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">UPPER</text>
+  <text x="375" y="270" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">(last_name)</text>
+  <text x="475" y="270" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">AS full_name,</text>
+  <text x="40" y="290" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">       TO_CHAR</text>
+  <text x="120" y="290" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">(hire_date, </text>
+  <text x="218" y="290" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">'DD/MM/YYYY'</text>
+  <text x="320" y="290" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">)</text>
+  <text x="330" y="290" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">AS hire_fmt,</text>
+  <text x="40" y="310" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">       ROUND</text>
+  <text x="98" y="310" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">(salary / </text>
+  <text x="170" y="310" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">NULLIF</text>
+  <text x="213" y="310" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">(12, 0), 2)</text>
+  <text x="295" y="310" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">AS monthly_salary</text>
+  <text x="40" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">FROM</text>
+  <text x="80" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e06c75"> employees</text>
+  <text x="160" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">WHERE</text>
+  <text x="205" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0"> hire_date &gt;= </text>
+  <text x="305" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">CURRENT_DATE</text>
+  <text x="415" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0"> - </text>
+  <text x="432" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">INTERVAL '1 year'</text>
+  <text x="560" y="330" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">;</text>
+  <text x="40" y="368" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Patrón anti-null: NULLIF(divisor, 0) → NULL antes que error de división por cero</text>
+</svg>
