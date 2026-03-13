@@ -1,0 +1,7 @@
+# Recursos — Semana 08: Proyecto Integrador Etapa 0
+
+## Contenido
+
+- [📚 Ebooks gratuitos](ebooks-free/README.md)
+- [🎬 Videografía](videografia/README.md)
+- [🌐 Webgrafía](webgrafia/README.md)

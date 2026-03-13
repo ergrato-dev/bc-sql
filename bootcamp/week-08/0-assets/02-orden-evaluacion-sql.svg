@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440">
+  <rect width="820" height="440" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="410" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Orden de Evaluación de una Consulta SQL</text>
+
+  <!-- Paso 1: FROM -->
+  <rect x="30" y="60" width="110" height="52" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="2"/>
+  <text x="85" y="82" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#e06c75" text-anchor="middle">1. FROM</text>
+  <text x="85" y="100" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Elige la tabla</text>
+
+  <!-- Arrow -->
+  <line x1="140" y1="86" x2="168" y2="86" stroke="#56b6c2" stroke-width="2"/>
+  <polygon points="168,80 180,86 168,92" fill="#56b6c2"/>
+
+  <!-- Paso 2: WHERE -->
+  <rect x="180" y="60" width="110" height="52" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="2"/>
+  <text x="235" y="82" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#e06c75" text-anchor="middle">2. WHERE</text>
+  <text x="235" y="100" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Filtra filas</text>
+
+  <!-- Arrow -->
+  <line x1="290" y1="86" x2="318" y2="86" stroke="#56b6c2" stroke-width="2"/>
+  <polygon points="318,80 330,86 318,92" fill="#56b6c2"/>
+
+  <!-- Paso 3: GROUP BY -->
+  <rect x="330" y="60" width="120" height="52" rx="6" fill="#16213e" stroke="#f6c90e" stroke-width="2"/>
+  <text x="390" y="82" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#f6c90e" text-anchor="middle">3. GROUP BY</text>
+  <text x="390" y="100" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Agrupa filas</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="86" x2="478" y2="86" stroke="#56b6c2" stroke-width="2"/>
+  <polygon points="478,80 490,86 478,92" fill="#56b6c2"/>
+
+  <!-- Paso 4: HAVING -->
+  <rect x="490" y="60" width="110" height="52" rx="6" fill="#16213e" stroke="#f6c90e" stroke-width="2"/>
+  <text x="545" y="82" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#f6c90e" text-anchor="middle">4. HAVING</text>
+  <text x="545" y="100" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Filtra grupos</text>
+
+  <!-- Paso 5 (salto de línea) -->
+  <!-- Línea vertical -->
+  <line x1="600" y1="86" x2="640" y2="86" stroke="#56b6c2" stroke-width="2"/>
+  <line x1="640" y1="86" x2="640" y2="180" stroke="#56b6c2" stroke-width="2"/>
+  <line x1="640" y1="180" x2="612" y2="180" stroke="#56b6c2" stroke-width="2"/>
+  <polygon points="618,174 606,180 618,186" fill="#56b6c2"/>
+
+  <!-- Paso 5: SELECT -->
+  <rect x="490" y="154" width="110" height="52" rx="6" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <text x="545" y="176" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#98c379" text-anchor="middle">5. SELECT</text>
+  <text x="545" y="194" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Calcula columnas</text>
+
+  <!-- Arrow izquierda -->
+  <line x1="490" y1="180" x2="462" y2="180" stroke="#56b6c2" stroke-width="2"/>
+  <polygon points="462,174 450,180 462,186" fill="#56b6c2"/>
+
+  <!-- Paso 6: ORDER BY -->
+  <rect x="330" y="154" width="110" height="52" rx="6" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <text x="385" y="176" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#98c379" text-anchor="middle">6. ORDER BY</text>
+  <text x="385" y="194" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Ordena resultado</text>
+
+  <!-- Arrow -->
+  <line x1="330" y1="180" x2="302" y2="180" stroke="#56b6c2" stroke-width="2"/>
+  <polygon points="302,174 290,180 302,186" fill="#56b6c2"/>
+
+  <!-- Paso 7: LIMIT -->
+  <rect x="170" y="154" width="110" height="52" rx="6" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <text x="225" y="176" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#98c379" text-anchor="middle">7. LIMIT</text>
+  <text x="225" y="194" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Recorta filas</text>
+
+  <!-- Arrow final a resultado -->
+  <line x1="170" y1="180" x2="142" y2="180" stroke="#56b6c2" stroke-width="2"/>
+  <polygon points="142,174 130,180 142,186" fill="#56b6c2"/>
+
+  <!-- Resultado final -->
+  <rect x="30" y="154" width="90" height="52" rx="6" fill="#336791"/>
+  <text x="75" y="176" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">RESULTADO</text>
+  <text x="75" y="192" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#e2e8f0" text-anchor="middle">Filas finales</text>
+
+  <!-- Sección de ejemplo SQL -->
+  <rect x="30" y="240" width="760" height="174" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="410" y="262" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Ejemplo completo con las 7 cláusulas</text>
+
+  <!-- Números de evaluación y código -->
+  <text x="50" y="288" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="120" y="288" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">department_id, COUNT(*) AS total, AVG(salary) AS promedio</text>
+  <text x="66" y="288" font-family="Inter, Roboto, sans-serif" font-size="8" fill="#98c379">◀5</text>
+
+  <text x="50" y="308" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <text x="96" y="308" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees</text>
+  <text x="66" y="308" font-family="Inter, Roboto, sans-serif" font-size="8" fill="#e06c75">◀1</text>
+
+  <text x="50" y="328" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">WHERE</text>
+  <text x="104" y="328" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">is_active = 1</text>
+  <text x="66" y="328" font-family="Inter, Roboto, sans-serif" font-size="8" fill="#e06c75">◀2</text>
+
+  <text x="50" y="348" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">GROUP BY</text>
+  <text x="120" y="348" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">department_id</text>
+  <text x="70" y="348" font-family="Inter, Roboto, sans-serif" font-size="8" fill="#f6c90e">◀3</text>
+
+  <text x="50" y="368" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">HAVING</text>
+  <text x="110" y="368" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">COUNT(*) &gt;= 2</text>
+  <text x="68" y="368" font-family="Inter, Roboto, sans-serif" font-size="8" fill="#f6c90e">◀4</text>
+
+  <text x="50" y="388" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">ORDER BY</text>
+  <text x="122" y="388" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">promedio DESC</text>
+  <text x="70" y="388" font-family="Inter, Roboto, sans-serif" font-size="8" fill="#98c379">◀6</text>
+
+  <text x="50" y="407" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">LIMIT</text>
+  <text x="90" y="407" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">5;</text>
+  <text x="63" y="407" font-family="Inter, Roboto, sans-serif" font-size="8" fill="#98c379">◀7</text>
+
+  <text x="410" y="428" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 08: Orden de evaluación SQL</text>
+</svg>

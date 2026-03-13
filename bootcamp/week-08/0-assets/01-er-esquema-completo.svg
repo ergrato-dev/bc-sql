@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520">
+  <rect width="860" height="520" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="430" y="36" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Esquema ER: Etapa 0 — Ejemplo Acuario</text>
+
+  <!-- ======== Tabla species ======== -->
+  <rect x="30" y="60" width="200" height="196" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="30" y="60" width="200" height="32" rx="6" fill="#336791"/>
+  <text x="130" y="81" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">species</text>
+  <line x1="30" y1="92" x2="230" y2="92" stroke="#336791" stroke-width="1"/>
+
+  <rect x="30" y="92" width="200" height="26" fill="#1a1a2e"/>
+  <text x="50" y="109" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">id</text>
+  <text x="120" y="109" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">PK  INTEGER</text>
+
+  <rect x="30" y="118" width="200" height="26" fill="#16213e"/>
+  <text x="50" y="135" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">common_name</text>
+  <text x="148" y="135" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL</text>
+
+  <rect x="30" y="144" width="200" height="26" fill="#1a1a2e"/>
+  <text x="50" y="161" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">scientific_name</text>
+  <text x="166" y="161" font-family="'Courier New', monospace" font-size="10" fill="#98c379">UNIQUE</text>
+
+  <rect x="30" y="170" width="200" height="26" fill="#16213e"/>
+  <text x="50" y="187" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">avg_size_cm</text>
+  <text x="148" y="187" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">CHECK &gt;0</text>
+
+  <rect x="30" y="196" width="200" height="26" fill="#1a1a2e"/>
+  <text x="50" y="213" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">habitat</text>
+  <text x="148" y="213" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL</text>
+
+  <rect x="30" y="222" width="200" height="34" fill="#16213e" rx="0"/>
+  <text x="130" y="235" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#718096" text-anchor="middle">1 especie puede estar</text>
+  <text x="130" y="247" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#718096" text-anchor="middle">en muchos tanques</text>
+
+  <!-- ======== Tabla tanks ======== -->
+  <rect x="330" y="60" width="210" height="230" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="330" y="60" width="210" height="32" rx="6" fill="#336791"/>
+  <text x="435" y="81" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">tanks</text>
+  <line x1="330" y1="92" x2="540" y2="92" stroke="#336791" stroke-width="1"/>
+
+  <rect x="330" y="92" width="210" height="26" fill="#1a1a2e"/>
+  <text x="350" y="109" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">id</text>
+  <text x="420" y="109" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">PK  INTEGER</text>
+
+  <rect x="330" y="118" width="210" height="26" fill="#16213e"/>
+  <text x="350" y="135" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">tank_code</text>
+  <text x="440" y="135" font-family="'Courier New', monospace" font-size="10" fill="#98c379">NOT NULL UNIQUE</text>
+
+  <rect x="330" y="144" width="210" height="26" fill="#1a1a2e"/>
+  <text x="350" y="161" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">capacity_liters</text>
+  <text x="460" y="161" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">CHECK &gt;0</text>
+
+  <rect x="330" y="170" width="210" height="26" fill="#16213e"/>
+  <text x="350" y="187" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">water_type</text>
+  <text x="440" y="187" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">CHECK IN(salt,fresh)</text>
+
+  <rect x="330" y="196" width="210" height="26" fill="#1a1a2e"/>
+  <text x="350" y="213" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">species_id</text>
+  <text x="440" y="213" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">FK → species</text>
+
+  <rect x="330" y="222" width="210" height="26" fill="#16213e"/>
+  <text x="350" y="239" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">is_active</text>
+  <text x="440" y="239" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">DEFAULT 1</text>
+
+  <rect x="330" y="248" width="210" height="42" fill="#1a1a2e" rx="0"/>
+  <text x="435" y="261" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#718096" text-anchor="middle">Un tanque puede tener</text>
+  <text x="435" y="273" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#718096" text-anchor="middle">muchas asignaciones</text>
+
+  <!-- ======== Tabla staff_assignments ======== -->
+  <rect x="630" y="60" width="200" height="220" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="630" y="60" width="200" height="32" rx="6" fill="#336791"/>
+  <text x="730" y="81" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">staff_assignments</text>
+  <line x1="630" y1="92" x2="830" y2="92" stroke="#336791" stroke-width="1"/>
+
+  <rect x="630" y="92" width="200" height="26" fill="#1a1a2e"/>
+  <text x="650" y="109" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">id</text>
+  <text x="700" y="109" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">PK  INTEGER</text>
+
+  <rect x="630" y="118" width="200" height="26" fill="#16213e"/>
+  <text x="650" y="135" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">tank_id</text>
+  <text x="720" y="135" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">FK → tanks</text>
+
+  <rect x="630" y="144" width="200" height="26" fill="#1a1a2e"/>
+  <text x="650" y="161" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">staff_name</text>
+  <text x="740" y="161" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL</text>
+
+  <rect x="630" y="170" width="200" height="26" fill="#16213e"/>
+  <text x="650" y="187" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">assigned_date</text>
+  <text x="756" y="187" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL</text>
+
+  <rect x="630" y="196" width="200" height="26" fill="#1a1a2e"/>
+  <text x="650" y="213" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">daily_rate</text>
+  <text x="736" y="213" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">CHECK &gt;0</text>
+
+  <rect x="630" y="222" width="200" height="26" fill="#16213e"/>
+  <text x="650" y="239" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">notes</text>
+  <text x="718" y="239" font-family="'Courier New', monospace" font-size="10" fill="#718096">NULL permitido</text>
+
+  <!-- FK arrows -->
+  <!-- species → tanks -->
+  <line x1="230" y1="170" x2="330" y2="207" stroke="#c678dd" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <polygon points="326,201 338,207 330,215" fill="#c678dd"/>
+  <text x="255" y="182" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">1</text>
+  <text x="300" y="202" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">N</text>
+
+  <!-- tanks → staff_assignments -->
+  <line x1="540" y1="160" x2="630" y2="135" stroke="#c678dd" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <polygon points="626,129 638,135 626,141" fill="#c678dd"/>
+  <text x="555" y="150" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">1</text>
+  <text x="605" y="132" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">N</text>
+
+  <!-- Queries de ejemplo -->
+  <rect x="30" y="330" width="800" height="164" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="430" y="352" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Consultas de ejemplo para el capstone</text>
+
+  <rect x="46" y="362" width="368" height="118" rx="4" fill="#1a1a2e"/>
+  <text x="60" y="380" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">SELECT</text>
+  <text x="76" y="394" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e">  water_type,</text>
+  <text x="76" y="408" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">  COUNT(*)</text>
+  <text x="118" y="408" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">AS total_tanks,</text>
+  <text x="76" y="422" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">  AVG</text>
+  <text x="104" y="422" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">(capacity_liters) AS avg_cap</text>
+  <text x="60" y="436" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">FROM</text>
+  <text x="90" y="436" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">  tanks</text>
+  <text x="60" y="450" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">GROUP BY</text>
+  <text x="110" y="450" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e">water_type;</text>
+  <text x="60" y="468" font-family="'Courier New', monospace" font-size="10" fill="#718096">-- Promedio de capacidad por tipo</text>
+
+  <rect x="426" y="362" width="388" height="118" rx="4" fill="#1a1a2e"/>
+  <text x="440" y="380" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">SELECT</text>
+  <text x="458" y="394" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e">  s.common_name,</text>
+  <text x="458" y="408" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">  COALESCE</text>
+  <text x="516" y="408" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">(sa.notes, 'N/A') AS notas</text>
+  <text x="440" y="422" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">FROM</text>
+  <text x="468" y="422" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">  tanks t</text>
+  <text x="464" y="436" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">JOIN</text>
+  <text x="486" y="436" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">species s</text>
+  <text x="532" y="436" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">ON</text>
+  <text x="550" y="436" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">t.species_id = s.id</text>
+  <text x="464" y="450" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">JOIN</text>
+  <text x="486" y="450" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">staff_assignments sa</text>
+  <text x="610" y="450" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">ON</text>
+  <text x="630" y="450" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">sa.tank_id = t.id;</text>
+  <text x="440" y="468" font-family="'Courier New', monospace" font-size="10" fill="#718096">-- Especie + notas del responsable</text>
+
+  <text x="430" y="508" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 08: Proyecto Integrador Etapa 0</text>
+</svg>
