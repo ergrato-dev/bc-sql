@@ -350,6 +350,63 @@ select employeeId, firstName from Employees where hireDate > '2020-01-01';
 - **Procedimientos**: `sp_<nombre>` (ej: `sp_calculate_salary`)
 - **Funciones**: `fn_<nombre>` (ej: `fn_get_full_name`)
 
+### Tipos de Dato para PRIMARY KEY
+
+#### ✅ Patrón estándar del bootcamp
+
+| Etapa | Semanas | Motor | Tipo correcto |
+| ----- | ------- | ----- | ------------- |
+| Etapa 0 | 1–12 | SQLite | `INTEGER PRIMARY KEY` |
+| Etapa 1–2 | 13–23 | PostgreSQL | `SERIAL PRIMARY KEY` |
+| Proyecto final | 24 | PostgreSQL | `SERIAL PRIMARY KEY` (tablas normales) / `BIGSERIAL PRIMARY KEY` (tablas de auditoría/log de alto volumen) |
+
+```sql
+-- ✅ SQLite (semanas 1–12)
+-- INTEGER PRIMARY KEY es alias de rowid → autoincrement implícito
+id  INTEGER  PRIMARY KEY
+
+-- ✅ PostgreSQL (semanas 13–24)
+-- SERIAL = INTEGER + secuencia automática
+id  SERIAL   PRIMARY KEY
+
+-- ✅ PostgreSQL — solo para tablas de alto volumen (audit_log, eventos)
+id  BIGSERIAL  PRIMARY KEY
+
+-- ❌ NUNCA en SQLite — AUTOINCREMENT es redundante y más lento
+id  INTEGER PRIMARY KEY AUTOINCREMENT
+```
+
+#### UUID como PRIMARY KEY — cuándo sí, cuándo no
+
+**✅ Usar UUID cuando:**
+- Los IDs se exponen en URLs/APIs públicas (opacos, no revelan conteo)
+- Sistema distribuido o multi-tenant donde los IDs se generan sin coordinación
+- Merge de datos entre instancias independientes (sin colisión entre `id=1` de dos DBs)
+- Sincronización offline (el cliente genera el ID antes de conectarse)
+
+**❌ NO usar UUID como PK por defecto porque:**
+- UUID v4 es aleatorio → inserciones en nodos aleatorios del B-tree → índice fragmentado (+30–50% tamaño)
+- Comparar 128 bits vs 32/64 bits tiene costo en JOINs masivos
+- Sin orden natural: `ORDER BY id` no da orden de inserción
+- En SQLite no existe tipo nativo UUID (se almacena como `TEXT(36)`)
+
+**En PostgreSQL 16 (el motor del bootcamp), si fuera necesario:**
+```sql
+-- Requiere extensión pgcrypto o la función nativa gen_random_uuid()
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+CREATE TABLE api_tokens (
+    id          UUID    DEFAULT gen_random_uuid() PRIMARY KEY,
+    user_id     INTEGER NOT NULL REFERENCES users(id),
+    created_at  TIMESTAMPTZ DEFAULT NOW()
+);
+```
+
+> ⚠️ **Regla para Copilot**: NO usar UUID como PK en ningún contenido del
+> bootcamp (semanas 1–24). Mencionar UUID solo en teoría de semana 22
+> (tipos avanzados) o en contexto de APIs. Siempre usar `INTEGER PRIMARY KEY`
+> (SQLite) o `SERIAL`/`BIGSERIAL PRIMARY KEY` (PostgreSQL).
+
 ### Formato de Queries
 
 - Keywords SQL siempre en **UPPERCASE**
