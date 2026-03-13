@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="720" height="340" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="340" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">GROUP BY — Semana 06</text>
+
+  <rect x="40" y="52" width="300" height="150" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="190" y="72" text-anchor="middle" fill="#56b6c2" font-size="11" font-weight="700">Consulta agrupada</text>
+  <text x="58" y="96"  fill="#c678dd" font-size="12" font-weight="700" font-family="monospace">SELECT</text>
+  <text x="58" y="114" fill="#f6c90e" font-size="12" font-family="monospace">    department_id,</text>
+  <text x="58" y="132" fill="#f6c90e" font-size="12" font-family="monospace">    COUNT(*)</text>
+  <text x="166" y="132" fill="#718096" font-size="12" font-family="monospace">  AS total,</text>
+  <text x="58" y="150" fill="#f6c90e" font-size="12" font-family="monospace">    AVG(salary)</text>
+  <text x="178" y="150" fill="#718096" font-size="12" font-family="monospace"> AS prom</text>
+  <text x="58" y="168" fill="#c678dd" font-size="12" font-weight="700" font-family="monospace">FROM</text>
+  <text x="100" y="168" fill="#e06c75" font-size="12" font-family="monospace"> employees</text>
+  <text x="58" y="186" fill="#c678dd" font-size="12" font-weight="700" font-family="monospace">GROUP BY</text>
+  <text x="142" y="186" fill="#f6c90e" font-size="12" font-family="monospace"> department_id;</text>
+
+  <!-- Regla -->
+  <rect x="380" y="52" width="300" height="150" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="530" y="72" text-anchor="middle" fill="#56b6c2" font-size="11" font-weight="700">Regla de columnas en SELECT</text>
+  <text x="398" y="100" fill="#68d391" font-size="12">✓  En GROUP BY:</text>
+  <text x="398" y="118" fill="#a0aec0" font-size="11" font-family="monospace">  department_id</text>
+  <text x="398" y="144" fill="#68d391" font-size="12">✓  Funciones de agregación:</text>
+  <text x="398" y="162" fill="#a0aec0" font-size="11" font-family="monospace">  COUNT(*), AVG(salary)</text>
+  <text x="398" y="186" fill="#e06c75" font-size="12">✗  Columna no agrupada:</text>
+  <text x="398" y="204" fill="#718096" font-size="11" font-family="monospace">  first_name  →  ERROR</text>
+
+  <!-- Flujo lógico -->
+  <rect x="40" y="222" width="640" height="90" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="360" y="244" text-anchor="middle" fill="#a0aec0" font-size="12" font-weight="600">Orden de evaluación</text>
+  <text x="76"  y="268" fill="#e2e8f0" font-size="11" font-family="monospace">FROM</text>
+  <text x="130" y="268" fill="#718096" font-size="11"> →</text>
+  <text x="150" y="268" fill="#e2e8f0" font-size="11" font-family="monospace">WHERE</text>
+  <text x="210" y="268" fill="#718096" font-size="11"> →</text>
+  <text x="232" y="268" fill="#e2e8f0" font-size="11" font-family="monospace">GROUP BY</text>
+  <text x="312" y="268" fill="#718096" font-size="11"> →</text>
+  <text x="335" y="268" fill="#e2e8f0" font-size="11" font-family="monospace">HAVING</text>
+  <text x="398" y="268" fill="#718096" font-size="11"> →</text>
+  <text x="420" y="268" fill="#e2e8f0" font-size="11" font-family="monospace">SELECT</text>
+  <text x="480" y="268" fill="#718096" font-size="11"> →</text>
+  <text x="502" y="268" fill="#e2e8f0" font-size="11" font-family="monospace">ORDER BY</text>
+  <text x="576" y="268" fill="#718096" font-size="11"> →</text>
+  <text x="598" y="268" fill="#e2e8f0" font-size="11" font-family="monospace">LIMIT</text>
+  <text x="360" y="296" text-anchor="middle" fill="#718096" font-size="11">El motor SQL evalúa las cláusulas en este orden lógico</text>
+</svg>
