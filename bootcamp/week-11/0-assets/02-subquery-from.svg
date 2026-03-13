@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <rect width="820" height="480" fill="#1a1a2e"/>
+  <text x="410" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Subquery en FROM — Tabla Derivada</text>
+
+  <!-- ===== Lado izquierdo: Subquery en FROM ===== -->
+  <text x="200" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Subquery en FROM</text>
+
+  <rect x="30" y="78" width="365" height="190" rx="8" fill="#0d1117" stroke="#56b6c2" stroke-width="2"/>
+  <!-- consulta exterior -->
+  <text x="50" y="102" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="100" y="102" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">dept, avg_sal</text>
+  <text x="50" y="120" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <!-- subquery anidada -->
+  <rect x="68" y="128" width="310" height="80" rx="4" fill="#16213e" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="88" y="148" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">(SELECT</text>
+  <text x="136" y="148" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e">d.name AS dept,</text>
+  <text x="136" y="164" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">AVG</text>
+  <text x="160" y="164" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">(e.salary) AS avg_sal</text>
+  <text x="88" y="180" font-family="'Courier New', monospace" font-size="10" fill="#c678dd"> FROM</text>
+  <text x="128" y="180" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">employees e</text>
+  <text x="88" y="196" font-family="'Courier New', monospace" font-size="10" fill="#c678dd"> JOIN</text>
+  <text x="118" y="196" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">departments d</text>
+  <text x="208" y="196" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">ON</text>
+  <text x="226" y="196" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">e.dept_id=d.id</text>
+  <text x="88" y="212" font-family="'Courier New', monospace" font-size="10" fill="#c678dd"> GROUP BY</text>
+  <text x="152" y="212" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e">d.name) AS stats</text>
+
+  <text x="50" y="242" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">WHERE</text>
+  <text x="100" y="242" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">avg_sal &gt; 60000;</text>
+
+  <!-- Badge alias -->
+  <rect x="260" y="206" width="108" height="20" rx="4" fill="#c678dd" opacity="0.9"/>
+  <text x="314" y="219" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#1a1a2e"
+        font-weight="700" text-anchor="middle">alias OBLIGATORIO</text>
+
+  <!-- ===== Lado derecho: Equivalente con JOIN ===== -->
+  <text x="618" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#98c379" text-anchor="middle">Equivalente con JOIN + HAVING</text>
+
+  <rect x="430" y="78" width="360" height="190" rx="8" fill="#0d1117" stroke="#98c379" stroke-width="2"/>
+  <text x="450" y="102" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="500" y="102" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">d.name AS dept,</text>
+  <text x="500" y="120" font-family="'Courier New', monospace" font-size="11" fill="#56b6c2">AVG</text>
+  <text x="524" y="120" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">(e.salary) AS avg_sal</text>
+  <text x="450" y="138" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <text x="490" y="138" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees e</text>
+  <text x="450" y="156" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">INNER JOIN</text>
+  <text x="524" y="156" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">departments d</text>
+  <text x="524" y="174" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">ON</text>
+  <text x="546" y="174" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">e.department_id = d.id</text>
+  <text x="450" y="192" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">GROUP BY</text>
+  <text x="518" y="192" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">d.name</text>
+  <text x="450" y="210" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">HAVING</text>
+  <text x="500" y="210" font-family="'Courier New', monospace" font-size="11" fill="#56b6c2">AVG</text>
+  <text x="524" y="210" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">(e.salary) &gt; 60000;</text>
+  <text x="450" y="252" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Más concisa para un solo nivel de agrupación</text>
+
+  <!-- VS separador -->
+  <text x="410" y="175" font-family="Inter, Roboto, sans-serif" font-size="20" font-weight="700"
+        fill="#718096" text-anchor="middle">VS</text>
+
+  <!-- Separador -->
+  <line x1="30" y1="286" x2="790" y2="286" stroke="#336791" stroke-width="1" stroke-dasharray="6,3"/>
+
+  <!-- Cuándo usar cuál -->
+  <text x="410" y="310" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">¿Cuándo usar cada opción?</text>
+
+  <rect x="30" y="322" width="367" height="90" rx="6" fill="#16213e" stroke="#56b6c2" stroke-width="1"/>
+  <text x="50" y="342" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2" font-weight="700">Usar Subquery en FROM cuando:</text>
+  <text x="50" y="362" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0">• Necesitas filtrar sobre un resultado agrupado</text>
+  <text x="50" y="382" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0">• Quieres reutilizar el resultado en múltiples columnas</text>
+  <text x="50" y="400" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0">  del SELECT exterior</text>
+
+  <rect x="413" y="322" width="377" height="90" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1"/>
+  <text x="433" y="342" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379" font-weight="700">Usar JOIN + HAVING cuando:</text>
+  <text x="433" y="362" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0">• La lógica de agrupación no se reutiliza</text>
+  <text x="433" y="382" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0">• La consulta es de un solo nivel de agrupación</text>
+  <text x="433" y="400" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0">• Prefieres código más conciso</text>
+
+  <!-- Nota CTE -->
+  <rect x="30" y="428" width="760" height="34" rx="6" fill="#16213e" stroke="#f6c90e" stroke-width="1"/>
+  <text x="50" y="446" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e" font-weight="700">Semana 12:</text>
+  <text x="140" y="446" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Las CTEs (WITH) permiten escribir subqueries de FROM con mejor legibilidad</text>
+
+  <text x="410" y="472" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 11: Subqueries</text>
+</svg>

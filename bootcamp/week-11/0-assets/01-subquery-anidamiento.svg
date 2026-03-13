@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+  <rect width="820" height="500" fill="#1a1a2e"/>
+  <text x="410" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Anatomía de una Subquery</text>
+
+  <!-- ===== Caja consulta exterior ===== -->
+  <rect x="30" y="54" width="760" height="280" rx="8" fill="#0d1117" stroke="#56b6c2" stroke-width="2"/>
+  <text x="50" y="76" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2" font-weight="700">Consulta exterior</text>
+
+  <text x="50" y="102" font-family="'Courier New', monospace" font-size="12" fill="#c678dd">SELECT</text>
+  <text x="106" y="102" font-family="'Courier New', monospace" font-size="12" fill="#f6c90e">first_name, salary</text>
+  <text x="50" y="122" font-family="'Courier New', monospace" font-size="12" fill="#c678dd">FROM</text>
+  <text x="90" y="122" font-family="'Courier New', monospace" font-size="12" fill="#e06c75">employees</text>
+  <text x="50" y="142" font-family="'Courier New', monospace" font-size="12" fill="#c678dd">WHERE</text>
+  <text x="100" y="142" font-family="'Courier New', monospace" font-size="12" fill="#f6c90e">salary</text>
+  <text x="146" y="142" font-family="'Courier New', monospace" font-size="12" fill="#56b6c2">&gt;</text>
+
+  <!-- ===== Caja subquery ===== -->
+  <rect x="168" y="152" width="340" height="80" rx="6" fill="#16213e" stroke="#c678dd" stroke-width="2"/>
+  <text x="188" y="170" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd" font-weight="700">Subquery escalar — retorna 1 valor</text>
+  <text x="188" y="192" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">(SELECT</text>
+  <text x="246" y="192" font-family="'Courier New', monospace" font-size="11" fill="#56b6c2">AVG</text>
+  <text x="274" y="192" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">(salary)</text>
+  <text x="188" y="212" font-family="'Courier New', monospace" font-size="11" fill="#c678dd"> FROM</text>
+  <text x="228" y="212" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees</text>
+  <text x="306" y="212" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">)</text>
+
+  <!-- Flecha resultado subquery -->
+  <line x1="510" y1="193" x2="600" y2="193" stroke="#98c379" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="596,188 608,193 596,198" fill="#98c379"/>
+  <rect x="610" y="178" width="120" height="32" rx="4" fill="#16213e" stroke="#98c379" stroke-width="1"/>
+  <text x="670" y="199" font-family="'Courier New', monospace" font-size="11" fill="#98c379" text-anchor="middle">62 400.00</text>
+
+  <text x="50" y="260" font-family="'Courier New', monospace" font-size="12" fill="#c678dd">ORDER BY</text>
+  <text x="122" y="260" font-family="'Courier New', monospace" font-size="12" fill="#f6c90e">salary</text>
+  <text x="166" y="260" font-family="'Courier New', monospace" font-size="12" fill="#56b6c2">DESC;</text>
+
+  <!-- Leyenda orden de ejecución -->
+  <text x="50" y="300" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">① Motor ejecuta la subquery primero → obtiene 62 400.00</text>
+  <text x="50" y="320" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">② Sustituye en la exterior: WHERE salary &gt; 62 400.00</text>
+
+  <!-- Separador -->
+  <line x1="30" y1="352" x2="790" y2="352" stroke="#336791" stroke-width="1" stroke-dasharray="6,3"/>
+
+  <!-- Tipos de subquery -->
+  <text x="410" y="376" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Tipos según dónde aparece la subquery</text>
+
+  <rect x="30" y="390" width="230" height="86" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="145" y="410" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd"
+        font-weight="700" text-anchor="middle">En WHERE</text>
+  <text x="50" y="430" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Escalar: compara con un valor</text>
+  <text x="50" y="448" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">IN: filtra con una lista de IDs</text>
+  <text x="50" y="466" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">EXISTS: detecta existencia</text>
+
+  <rect x="275" y="390" width="270" height="86" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="410" y="410" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2"
+        font-weight="700" text-anchor="middle">En FROM (tabla derivada)</text>
+  <text x="295" y="430" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Se trata como tabla temporal</text>
+  <text x="295" y="448" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Requiere alias obligatorio</text>
+  <text x="295" y="466" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Permite agrupar antes de filtrar</text>
+
+  <rect x="560" y="390" width="230" height="86" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="675" y="410" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e"
+        font-weight="700" text-anchor="middle">En SELECT</text>
+  <text x="580" y="430" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Agrega columna calculada</text>
+  <text x="580" y="448" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Se ejecuta por cada fila</text>
+  <text x="580" y="466" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Debe retornar 1 valor</text>
+
+  <text x="410" y="492" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 11: Subqueries</text>
+</svg>
