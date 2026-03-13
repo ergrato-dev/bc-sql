@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <rect width="760" height="400" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="380" y="36" font-family="Inter, Roboto, sans-serif" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">CASE WHEN — Flujo de evaluación</text>
+
+  <!-- Input row -->
+  <rect x="290" y="54" width="180" height="40" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="380" y="80" font-family="monospace" font-size="13" fill="#e2e8f0" text-anchor="middle">valor a evaluar</text>
+
+  <!-- Arrow down -->
+  <line x1="380" y1="96" x2="380" y2="120" stroke="#718096" stroke-width="2"/>
+  <polygon points="380,128 374,116 386,116" fill="#718096"/>
+
+  <!-- WHEN 1 box -->
+  <rect x="200" y="130" width="360" height="40" rx="6" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="380" y="156" font-family="monospace" font-size="12" fill="#56b6c2" text-anchor="middle">WHEN salary &gt;= 80000  →  TRUE?</text>
+
+  <!-- Yes branch -->
+  <line x1="560" y1="150" x2="640" y2="150" stroke="#98c379" stroke-width="2"/>
+  <polygon points="648,150 636,144 636,156" fill="#98c379"/>
+  <rect x="650" y="130" width="90" height="40" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="695" y="156" font-family="monospace" font-size="12" fill="#98c379" text-anchor="middle">'Senior'</text>
+
+  <!-- No arrow down -->
+  <line x1="380" y1="172" x2="380" y2="196" stroke="#718096" stroke-width="2"/>
+  <polygon points="380,204 374,192 386,192" fill="#718096"/>
+
+  <!-- WHEN 2 box -->
+  <rect x="200" y="206" width="360" height="40" rx="6" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="380" y="232" font-family="monospace" font-size="12" fill="#56b6c2" text-anchor="middle">WHEN salary &gt;= 50000  →  TRUE?</text>
+
+  <!-- Yes branch -->
+  <line x1="560" y1="226" x2="640" y2="226" stroke="#98c379" stroke-width="2"/>
+  <polygon points="648,226 636,220 636,232" fill="#98c379"/>
+  <rect x="650" y="206" width="90" height="40" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="695" y="232" font-family="monospace" font-size="12" fill="#98c379" text-anchor="middle">'Mid'</text>
+
+  <!-- No arrow down -->
+  <line x1="380" y1="248" x2="380" y2="272" stroke="#718096" stroke-width="2"/>
+  <polygon points="380,280 374,268 386,268" fill="#718096"/>
+
+  <!-- ELSE box -->
+  <rect x="200" y="282" width="360" height="40" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="1.5"/>
+  <text x="380" y="308" font-family="monospace" font-size="12" fill="#e06c75" text-anchor="middle">ELSE (ninguna condición se cumplió)</text>
+
+  <!-- ELSE result -->
+  <line x1="560" y1="302" x2="640" y2="302" stroke="#98c379" stroke-width="2"/>
+  <polygon points="648,302 636,296 636,308" fill="#98c379"/>
+  <rect x="650" y="282" width="90" height="40" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="695" y="308" font-family="monospace" font-size="12" fill="#98c379" text-anchor="middle">'Junior'</text>
+
+  <!-- END label -->
+  <line x1="380" y1="324" x2="380" y2="350" stroke="#718096" stroke-width="2"/>
+  <rect x="310" y="352" width="140" height="32" rx="6" fill="#16213e" stroke="#c678dd" stroke-width="2"/>
+  <text x="380" y="374" font-family="monospace" font-size="13" fill="#c678dd" text-anchor="middle">END AS salary_band</text>
+
+  <!-- Yes/No labels -->
+  <text x="574" y="145" font-family="Inter, sans-serif" font-size="10" fill="#98c379">SÍ</text>
+  <text x="390" y="190" font-family="Inter, sans-serif" font-size="10" fill="#718096">NO</text>
+  <text x="574" y="221" font-family="Inter, sans-serif" font-size="10" fill="#98c379">SÍ</text>
+  <text x="390" y="266" font-family="Inter, sans-serif" font-size="10" fill="#718096">NO</text>
+</svg>
