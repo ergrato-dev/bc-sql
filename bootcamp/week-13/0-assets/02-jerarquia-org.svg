@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+  <rect width="700" height="420" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="350" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Jerarquía Org Chart — WITH RECURSIVE</text>
+
+  <!-- Level 0: CEO -->
+  <rect x="270" y="56" width="160" height="44" rx="8" fill="#336791" stroke="#56b6c2" stroke-width="2"/>
+  <text x="350" y="74" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">CEO — Laura</text>
+  <text x="350" y="90" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">depth = 1 | manager_id = NULL</text>
+
+  <!-- Level 1 connectors -->
+  <line x1="350" y1="100" x2="350" y2="118" stroke="#718096" stroke-width="1.5"/>
+  <line x1="350" y1="118" x2="174" y2="118" stroke="#718096" stroke-width="1.5"/>
+  <line x1="350" y1="118" x2="526" y2="118" stroke="#718096" stroke-width="1.5"/>
+  <line x1="174" y1="118" x2="174" y2="136" stroke="#718096" stroke-width="1.5"/>
+  <line x1="526" y1="118" x2="526" y2="136" stroke="#718096" stroke-width="1.5"/>
+
+  <!-- Level 1: Engineering -->
+  <rect x="90" y="137" width="168" height="44" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="174" y="155" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Engineering — Ana</text>
+  <text x="174" y="171" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">depth = 2</text>
+
+  <!-- Level 1: Finance -->
+  <rect x="442" y="137" width="168" height="44" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="526" y="155" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Finance — Carlos</text>
+  <text x="526" y="171" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">depth = 2</text>
+
+  <!-- Level 2 under Engineering -->
+  <line x1="174" y1="181" x2="174" y2="200" stroke="#718096" stroke-width="1.5"/>
+  <line x1="174" y1="200" x2="110" y2="200" stroke="#718096" stroke-width="1.5"/>
+  <line x1="174" y1="200" x2="238" y2="200" stroke="#718096" stroke-width="1.5"/>
+  <line x1="110" y1="200" x2="110" y2="218" stroke="#718096" stroke-width="1.5"/>
+  <line x1="238" y1="200" x2="238" y2="218" stroke="#718096" stroke-width="1.5"/>
+
+  <rect x="52" y="218" width="116" height="44" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="110" y="236" font-family="Inter, sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Dev — Miguel</text>
+  <text x="110" y="252" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">depth = 3</text>
+
+  <rect x="180" y="218" width="116" height="44" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="238" y="236" font-family="Inter, sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">QA — Sofia</text>
+  <text x="238" y="252" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">depth = 3</text>
+
+  <!-- Depth 3 under Finance -->
+  <line x1="526" y1="181" x2="526" y2="218" stroke="#718096" stroke-width="1.5"/>
+  <rect x="462" y="218" width="128" height="44" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="526" y="236" font-family="Inter, sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Analyst — Lucía</text>
+  <text x="526" y="252" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">depth = 3</text>
+
+  <!-- Path column -->
+  <rect x="52" y="300" width="596" height="92" rx="8" fill="#0d1117" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="80" y="320" font-family="monospace" font-size="12" fill="#f6c90e">path (columna calculada)</text>
+  <text x="80" y="342" font-family="monospace" font-size="11" fill="#e2e8f0">Laura</text>
+  <text x="80" y="360" font-family="monospace" font-size="11" fill="#e2e8f0">Laura &gt; Ana    |    Laura &gt; Carlos</text>
+  <text x="80" y="378" font-family="monospace" font-size="11" fill="#e2e8f0">Laura &gt; Ana &gt; Miguel    |    Laura &gt; Ana &gt; Sofia    |    Laura &gt; Carlos &gt; Lucía</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="380" y="34" font-family="Inter, Roboto, sans-serif" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">CTE Recursiva — Estructura y Ejecución</text>
+
+  <!-- WITH RECURSIVE label -->
+  <text x="60" y="66" font-family="monospace" font-size="14" fill="#c678dd">WITH RECURSIVE</text>
+  <text x="210" y="66" font-family="monospace" font-size="14" fill="#f6c90e">nombre_cte</text>
+  <text x="308" y="66" font-family="monospace" font-size="14" fill="#e2e8f0">AS (</text>
+
+  <!-- Caso base box -->
+  <rect x="60" y="80" width="640" height="90" rx="8" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <text x="84" y="102" font-family="Inter, sans-serif" font-size="11" fill="#98c379" font-weight="bold">CASO BASE (semilla inicial)</text>
+  <text x="84" y="122" font-family="monospace" font-size="12" fill="#c678dd">SELECT</text>
+  <text x="136" y="122" font-family="monospace" font-size="12" fill="#98c379">1</text>
+  <text x="148" y="122" font-family="monospace" font-size="12" fill="#c678dd">AS</text>
+  <text x="172" y="122" font-family="monospace" font-size="12" fill="#e2e8f0">n</text>
+  <text x="84" y="156" font-family="monospace" font-size="12" fill="#718096">-- No referencia al CTE. Se ejecuta solo una vez.</text>
+
+  <!-- UNION ALL -->
+  <rect x="280" y="178" width="200" height="30" rx="4" fill="#0d1117" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="380" y="199" font-family="monospace" font-size="13" fill="#56b6c2" text-anchor="middle">UNION ALL</text>
+
+  <!-- Caso recursivo box -->
+  <rect x="60" y="216" width="640" height="110" rx="8" fill="#16213e" stroke="#e06c75" stroke-width="2"/>
+  <text x="84" y="238" font-family="Inter, sans-serif" font-size="11" fill="#e06c75" font-weight="bold">CASO RECURSIVO (se repite)</text>
+  <text x="84" y="260" font-family="monospace" font-size="12" fill="#c678dd">SELECT</text>
+  <text x="136" y="260" font-family="monospace" font-size="12" fill="#e2e8f0">n + 1</text>
+  <text x="84" y="282" font-family="monospace" font-size="12" fill="#c678dd">FROM</text>
+  <text x="126" y="282" font-family="monospace" font-size="12" fill="#f6c90e">nombre_cte</text>
+  <text x="84" y="304" font-family="monospace" font-size="12" fill="#c678dd">WHERE</text>
+  <text x="130" y="304" font-family="monospace" font-size="12" fill="#e2e8f0">n &lt;</text>
+  <text x="154" y="304" font-family="monospace" font-size="12" fill="#98c379">5</text>
+  <text x="280" y="304" font-family="monospace" font-size="12" fill="#718096">-- condición de parada</text>
+
+  <!-- Close paren -->
+  <text x="60" y="348" font-family="monospace" font-size="14" fill="#e2e8f0">)</text>
+
+  <!-- Main select -->
+  <rect x="60" y="358" width="640" height="40" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="84" y="383" font-family="monospace" font-size="13" fill="#c678dd">SELECT</text>
+  <text x="140" y="383" font-family="monospace" font-size="13" fill="#e2e8f0">n</text>
+  <text x="160" y="383" font-family="monospace" font-size="13" fill="#c678dd">FROM</text>
+  <text x="204" y="383" font-family="monospace" font-size="13" fill="#f6c90e">nombre_cte</text>
+  <text x="300" y="383" font-family="monospace" font-size="13" fill="#718096">-- Resultado: 1, 2, 3, 4, 5</text>
+
+  <!-- Iteration diagram on right -->
+  <text x="400" y="430" font-family="Inter, sans-serif" font-size="11" fill="#718096" text-anchor="middle">Iteración 1: n=1 → Iteración 2: n=2 → ... → n=5 → STOP</text>
+
+  <!-- Self-reference arrow -->
+  <path d="M 700 262 Q 730 262 730 304 Q 730 346 700 346" stroke="#e06c75" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="700,346 706,339 712,346" fill="#e06c75"/>
+  <text x="735" y="308" font-family="Inter, sans-serif" font-size="10" fill="#e06c75" writing-mode="vertical-lr">auto-ref</text>
+</svg>
