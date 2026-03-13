@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Inter, Roboto, sans-serif">
+  <!-- Fondo -->
+  <rect width="760" height="420" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#e2e8f0">Anatomía del plan de ejecución — EXPLAIN ANALYZE</text>
+
+  <!-- Caja principal del plan -->
+  <rect x="30" y="52" width="700" height="230" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+
+  <!-- Línea 1: nodo raíz -->
+  <text x="46" y="78" font-size="12" fill="#e2e8f0" font-family="monospace">Hash Join</text>
+  <text x="200" y="78" font-size="11" fill="#718096" font-family="monospace">(cost=18.25..52.10 rows=250 width=96)</text>
+  <text x="46" y="96" font-size="11" fill="#718096" font-family="monospace">  Hash Cond: (o.customer_id = c.id)</text>
+  <text x="46" y="114" font-size="11" fill="#56b6c2" font-family="monospace">  Actual time=0.45..1.82  rows=47  loops=1</text>
+
+  <!-- separador -->
+  <line x1="46" y1="122" x2="720" y2="122" stroke="#336791" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  <!-- Línea 2: nodo hijo 1 -->
+  <text x="46" y="142" font-size="12" fill="#c678dd" font-family="monospace">  Seq Scan on orders o</text>
+  <text x="300" y="142" font-size="11" fill="#718096" font-family="monospace">(cost=0.00..25.00 rows=1000 width=64)</text>
+  <text x="46" y="160" font-size="11" fill="#718096" font-family="monospace">    Filter: (status = 'pending')</text>
+  <text x="46" y="178" font-size="11" fill="#e06c75" font-family="monospace">    Rows Removed by Filter: 953</text>
+  <text x="46" y="196" font-size="11" fill="#56b6c2" font-family="monospace">    Actual time=0.01..0.89  rows=47  loops=1</text>
+
+  <!-- separador -->
+  <line x1="46" y1="204" x2="720" y2="204" stroke="#336791" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  <!-- Línea 3: nodo hijo 2 -->
+  <text x="46" y="224" font-size="12" fill="#98c379" font-family="monospace">  Index Scan on customers c</text>
+  <text x="330" y="224" font-size="11" fill="#718096" font-family="monospace">(cost=0.28..12.50 rows=200 width=32)</text>
+  <text x="46" y="242" font-size="11" fill="#718096" font-family="monospace">    Index Cond: (id = o.customer_id)</text>
+  <text x="46" y="260" font-size="11" fill="#56b6c2" font-family="monospace">    Actual time=0.003..0.41  rows=47  loops=47</text>
+
+  <!-- Leyenda de campos -->
+  <rect x="30" y="295" width="700" height="114" rx="6" fill="#0d1b2a" stroke="#336791" stroke-width="1"/>
+  <text x="380" y="317" text-anchor="middle" font-size="12" font-weight="bold" fill="#e2e8f0">Campos del plan</text>
+
+  <!-- col 1 -->
+  <rect x="50" y="328" width="14" height="14" fill="#c678dd" rx="2"/>
+  <text x="70" y="340" font-size="11" fill="#e2e8f0">Seq Scan</text>
+  <text x="70" y="355" font-size="10" fill="#718096">lee toda la tabla</text>
+
+  <rect x="185" y="328" width="14" height="14" fill="#98c379" rx="2"/>
+  <text x="205" y="340" font-size="11" fill="#e2e8f0">Index Scan</text>
+  <text x="205" y="355" font-size="10" fill="#718096">usa índice + tabla</text>
+
+  <rect x="340" y="328" width="14" height="14" fill="#f6c90e" rx="2"/>
+  <text x="360" y="340" font-size="11" fill="#e2e8f0">cost=X..Y</text>
+  <text x="360" y="355" font-size="10" fill="#718096">inicio..total estimado</text>
+
+  <rect x="510" y="328" width="14" height="14" fill="#56b6c2" rx="2"/>
+  <text x="530" y="340" font-size="11" fill="#e2e8f0">Actual time</text>
+  <text x="530" y="355" font-size="10" fill="#718096">tiempo real en ms</text>
+
+  <rect x="185" y="368" width="14" height="14" fill="#e06c75" rx="2"/>
+  <text x="205" y="380" font-size="11" fill="#e2e8f0">Rows Removed</text>
+  <text x="205" y="395" font-size="10" fill="#718096">filas descartadas por filtro</text>
+
+  <text x="50" y="380" font-size="10" fill="#718096">rows= estimado</text>
+  <text x="50" y="395" font-size="10" fill="#718096">vs rows= real</text>
+</svg>

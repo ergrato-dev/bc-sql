@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Inter, Roboto, sans-serif">
+  <!-- Fondo -->
+  <rect width="760" height="420" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#e2e8f0">Tipos de scan en PostgreSQL</text>
+
+  <!-- ---- SEQ SCAN ---- -->
+  <rect x="30" y="55" width="210" height="165" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="1.5"/>
+  <text x="135" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="#e06c75">Seq Scan</text>
+
+  <!-- tabla con todas las filas leídas -->
+  <rect x="50" y="88" width="170" height="100" rx="4" fill="#0d1b2a"/>
+  <text x="135" y="105" text-anchor="middle" font-size="10" fill="#718096">orders (1 000 filas)</text>
+  <!-- filas leídas -->
+  <rect x="58" y="110" width="154" height="12" rx="2" fill="#e06c75" opacity="0.6"/>
+  <rect x="58" y="126" width="154" height="12" rx="2" fill="#e06c75" opacity="0.6"/>
+  <rect x="58" y="142" width="154" height="12" rx="2" fill="#e06c75" opacity="0.6"/>
+  <rect x="58" y="158" width="154" height="12" rx="2" fill="#e06c75" opacity="0.6"/>
+  <text x="135" y="185" text-anchor="middle" font-size="9" fill="#718096">⋮ 1 000 filas leídas</text>
+
+  <text x="135" y="210" text-anchor="middle" font-size="10" fill="#e06c75">Sin índice necesario</text>
+  <text x="135" y="225" text-anchor="middle" font-size="9" fill="#718096">Útil si retorna &gt;15% filas</text>
+
+  <!-- ---- INDEX SCAN ---- -->
+  <rect x="275" y="55" width="210" height="165" rx="6" fill="#16213e" stroke="#f6c90e" stroke-width="1.5"/>
+  <text x="380" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="#f6c90e">Index Scan</text>
+
+  <!-- índice B-tree -->
+  <rect x="295" y="88" width="80" height="60" rx="4" fill="#0d1b2a" stroke="#336791" stroke-width="1"/>
+  <text x="335" y="108" text-anchor="middle" font-size="9" fill="#336791">B-tree</text>
+  <text x="335" y="124" text-anchor="middle" font-size="9" fill="#f6c90e">status</text>
+  <text x="335" y="140" text-anchor="middle" font-size="8" fill="#718096">→ {id, ptr}</text>
+
+  <!-- flecha índice → tabla -->
+  <line x1="375" y1="118" x2="425" y2="118" stroke="#f6c90e" stroke-width="1.5" marker-end="url(#b1)"/>
+
+  <!-- tabla parcial -->
+  <rect x="426" y="88" width="50" height="60" rx="4" fill="#0d1b2a"/>
+  <rect x="432" y="95" width="37" height="10" rx="2" fill="#f6c90e" opacity="0.7"/>
+  <rect x="432" y="110" width="37" height="10" rx="2" fill="#f6c90e" opacity="0.7"/>
+  <text x="450" y="138" text-anchor="middle" font-size="8" fill="#718096">47 filas</text>
+
+  <text x="380" y="170" text-anchor="middle" font-size="10" fill="#f6c90e">Índice + tabla</text>
+  <text x="380" y="185" text-anchor="middle" font-size="9" fill="#718096">Lee solo filas coincidentes</text>
+  <text x="380" y="200" text-anchor="middle" font-size="9" fill="#718096">Ideal &lt;15% de la tabla</text>
+  <text x="380" y="215" text-anchor="middle" font-size="9" fill="#718096">Requiere heap fetch</text>
+
+  <!-- ---- INDEX ONLY SCAN ---- -->
+  <rect x="520" y="55" width="210" height="165" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="625" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="#98c379">Index Only Scan</text>
+
+  <!-- índice covering -->
+  <rect x="540" y="88" width="170" height="60" rx="4" fill="#0d1b2a" stroke="#98c379" stroke-width="1"/>
+  <text x="625" y="108" text-anchor="middle" font-size="9" fill="#98c379">Índice cubriente</text>
+  <text x="625" y="124" text-anchor="middle" font-size="9" fill="#f6c90e">(status, created_at, amount)</text>
+  <text x="625" y="140" text-anchor="middle" font-size="8" fill="#718096">todas las columnas del SELECT</text>
+
+  <text x="625" y="170" text-anchor="middle" font-size="10" fill="#98c379">Solo índice</text>
+  <text x="625" y="185" text-anchor="middle" font-size="9" fill="#718096">No accede a la tabla</text>
+  <text x="625" y="200" text-anchor="middle" font-size="9" fill="#718096">El más rápido</text>
+  <text x="625" y="215" text-anchor="middle" font-size="9" fill="#718096">Requiere VACUUM reciente</text>
+
+  <!-- Decisión -->
+  <rect x="30" y="238" width="700" height="80" rx="6" fill="#0d1b2a" stroke="#336791" stroke-width="1"/>
+  <text x="380" y="260" text-anchor="middle" font-size="12" font-weight="bold" fill="#e2e8f0">¿Cuándo PostgreSQL elige cada scan?</text>
+  <text x="380" y="282" text-anchor="middle" font-size="11" fill="#718096">
+    Sin índice  →  <tspan fill="#e06c75">Seq Scan</tspan>  |  Índice + todas las columnas  →  <tspan fill="#98c379">Index Only Scan</tspan>  |  Índice + columnas extras  →  <tspan fill="#f6c90e">Index Scan</tspan>
+  </text>
+  <text x="380" y="304" text-anchor="middle" font-size="10" fill="#718096">Si la query retorna muchas filas, PostgreSQL puede preferir Seq Scan aunque exista un índice</text>
+
+  <!-- Tip índice parcial -->
+  <rect x="30" y="332" width="700" height="72" rx="6" fill="#16213e" stroke="#56b6c2" stroke-width="1"/>
+  <text x="380" y="353" text-anchor="middle" font-size="12" font-weight="bold" fill="#56b6c2">Índice parcial — máxima eficiencia</text>
+  <text x="50" y="374" font-size="11" fill="#718096" font-family="monospace">CREATE INDEX idx_orders_pending ON orders (created_at) WHERE status = 'pending';</text>
+  <text x="380" y="394" text-anchor="middle" font-size="10" fill="#718096">Solo indexa las filas que importan — más pequeño y más rápido de mantener</text>
+
+  <defs>
+    <marker id="b1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f6c90e"/>
+    </marker>
+  </defs>
+</svg>
