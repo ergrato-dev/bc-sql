@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <rect width="760" height="440" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="380" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="bold" fill="#e2e8f0" text-anchor="middle">OVER() y PARTITION BY — Ventanas independientes</text>
+
+  <!-- Table header -->
+  <rect x="40" y="52" width="680" height="32" rx="4" fill="#336791"/>
+  <text x="120" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">first_name</text>
+  <text x="280" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">department_id</text>
+  <text x="440" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">salary</text>
+  <text x="620" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">ROW_NUMBER()</text>
+
+  <!-- Partition 1: dept 1 (Engineering) -->
+  <rect x="40" y="84" width="680" height="104" rx="0" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <text x="720" y="96" font-family="Inter, sans-serif" font-size="10" fill="#98c379" text-anchor="end">PARTITION dept=1</text>
+
+  <!-- Rows dept 1 -->
+  <line x1="40" y1="116" x2="720" y2="116" stroke="#2d3748" stroke-width="1"/>
+  <text x="120" y="106" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">Ana</text>
+  <text x="280" y="106" font-family="monospace" font-size="12" fill="#98c379" text-anchor="middle">1</text>
+  <text x="440" y="106" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">82 000</text>
+  <text x="620" y="106" font-family="monospace" font-size="12" fill="#f6c90e" text-anchor="middle">1</text>
+
+  <line x1="40" y1="130" x2="720" y2="130" stroke="#2d3748" stroke-width="1"/>
+  <text x="120" y="145" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">Carlos</text>
+  <text x="280" y="145" font-family="monospace" font-size="12" fill="#98c379" text-anchor="middle">1</text>
+  <text x="440" y="145" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">76 000</text>
+  <text x="620" y="145" font-family="monospace" font-size="12" fill="#f6c90e" text-anchor="middle">2</text>
+
+  <line x1="40" y1="158" x2="720" y2="158" stroke="#2d3748" stroke-width="1"/>
+  <text x="120" y="174" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">Omar</text>
+  <text x="280" y="174" font-family="monospace" font-size="12" fill="#98c379" text-anchor="middle">1</text>
+  <text x="440" y="174" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">48 000</text>
+  <text x="620" y="174" font-family="monospace" font-size="12" fill="#f6c90e" text-anchor="middle">3</text>
+
+  <!-- Partition 2: dept 2 (Marketing) -->
+  <rect x="40" y="188" width="680" height="90" rx="0" fill="#16213e" stroke="#56b6c2" stroke-width="2"/>
+  <text x="720" y="200" font-family="Inter, sans-serif" font-size="10" fill="#56b6c2" text-anchor="end">PARTITION dept=2</text>
+
+  <line x1="40" y1="216" x2="720" y2="216" stroke="#2d3748" stroke-width="1"/>
+  <text x="120" y="210" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">Lucía</text>
+  <text x="280" y="210" font-family="monospace" font-size="12" fill="#56b6c2" text-anchor="middle">2</text>
+  <text x="440" y="210" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">55 000</text>
+  <text x="620" y="210" font-family="monospace" font-size="12" fill="#f6c90e" text-anchor="middle">1</text>
+
+  <line x1="40" y1="244" x2="720" y2="244" stroke="#2d3748" stroke-width="1"/>
+  <text x="120" y="256" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">Miguel</text>
+  <text x="280" y="256" font-family="monospace" font-size="12" fill="#56b6c2" text-anchor="middle">2</text>
+  <text x="440" y="256" font-family="monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">48 000</text>
+  <text x="620" y="256" font-family="monospace" font-size="12" fill="#f6c90e" text-anchor="middle">2</text>
+
+  <!-- Reinicia caption -->
+  <text x="620" y="296" font-family="Inter, sans-serif" font-size="10" fill="#f6c90e" text-anchor="middle">↑ reinicia en 1</text>
+
+  <!-- SQL code box -->
+  <rect x="40" y="310" width="680" height="104" rx="8" fill="#0d1117" stroke="#336791" stroke-width="1.5"/>
+  <text x="60" y="332" font-family="monospace" font-size="12" fill="#c678dd">ROW_NUMBER()</text>
+  <text x="190" y="332" font-family="monospace" font-size="12" fill="#c678dd">OVER</text>
+  <text x="222" y="332" font-family="monospace" font-size="12" fill="#e2e8f0">(</text>
+  <text x="60" y="352" font-family="monospace" font-size="12" fill="#c678dd">    PARTITION BY</text>
+  <text x="178" y="352" font-family="monospace" font-size="12" fill="#e2e8f0">department_id</text>
+  <text x="60" y="372" font-family="monospace" font-size="12" fill="#c678dd">    ORDER BY</text>
+  <text x="166" y="372" font-family="monospace" font-size="12" fill="#e2e8f0">salary</text>
+  <text x="213" y="372" font-family="monospace" font-size="12" fill="#c678dd">DESC</text>
+  <text x="60" y="392" font-family="monospace" font-size="12" fill="#e2e8f0">) AS row_num</text>
+  <text x="250" y="420" font-family="Inter, sans-serif" font-size="11" fill="#718096" text-anchor="middle">Cada partición tiene su propio conteo independiente</text>
+</svg>

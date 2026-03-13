@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <rect width="760" height="380" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="380" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="bold" fill="#e2e8f0" text-anchor="middle">ROW_NUMBER vs RANK vs DENSE_RANK — Empates</text>
+
+  <!-- Column headers -->
+  <rect x="30" y="52" width="700" height="32" rx="4" fill="#336791"/>
+  <text x="120" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">first_name</text>
+  <text x="240" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">salary</text>
+  <text x="380" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#98c379" text-anchor="middle">ROW_NUMBER()</text>
+  <text x="520" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e06c75" text-anchor="middle">RANK()</text>
+  <text x="660" y="73" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#56b6c2" text-anchor="middle">DENSE_RANK()</text>
+
+  <!-- Row 1 -->
+  <rect x="30" y="84" width="700" height="38" fill="#16213e"/>
+  <text x="120" y="108" font-family="monospace" font-size="13" fill="#e2e8f0" text-anchor="middle">Valeria</text>
+  <text x="240" y="108" font-family="monospace" font-size="13" fill="#e2e8f0" text-anchor="middle">90 000</text>
+  <text x="380" y="108" font-family="monospace" font-size="13" fill="#98c379" text-anchor="middle">1</text>
+  <text x="520" y="108" font-family="monospace" font-size="13" fill="#e06c75" text-anchor="middle">1</text>
+  <text x="660" y="108" font-family="monospace" font-size="13" fill="#56b6c2" text-anchor="middle">1</text>
+
+  <!-- Row 2 (empate) -->
+  <rect x="30" y="122" width="700" height="38" fill="#0d1117"/>
+  <rect x="30" y="122" width="700" height="38" fill="#1e3a5f" opacity="0.5"/>
+  <text x="120" y="146" font-family="monospace" font-size="13" fill="#e2e8f0" text-anchor="middle">Ana</text>
+  <text x="240" y="146" font-family="monospace" font-size="13" fill="#f6c90e" text-anchor="middle">76 000 ←</text>
+  <text x="380" y="146" font-family="monospace" font-size="13" fill="#98c379" text-anchor="middle">2</text>
+  <text x="520" y="146" font-family="monospace" font-size="13" fill="#e06c75" text-anchor="middle">2</text>
+  <text x="660" y="146" font-family="monospace" font-size="13" fill="#56b6c2" text-anchor="middle">2</text>
+
+  <!-- Row 3 (empate) -->
+  <rect x="30" y="160" width="700" height="38" fill="#1e3a5f" opacity="0.5"/>
+  <text x="120" y="184" font-family="monospace" font-size="13" fill="#e2e8f0" text-anchor="middle">Carlos</text>
+  <text x="240" y="184" font-family="monospace" font-size="13" fill="#f6c90e" text-anchor="middle">76 000 ←</text>
+  <text x="380" y="184" font-family="monospace" font-size="13" fill="#98c379" text-anchor="middle">3</text>
+  <text x="520" y="184" font-family="monospace" font-size="13" fill="#e06c75" text-anchor="middle">2</text>
+  <text x="660" y="184" font-family="monospace" font-size="13" fill="#56b6c2" text-anchor="middle">2</text>
+
+  <!-- Empate label -->
+  <text x="310" y="200" font-family="Inter, sans-serif" font-size="10" fill="#f6c90e" text-anchor="middle">↑ EMPATE</text>
+
+  <!-- Row 4 -->
+  <rect x="30" y="198" width="700" height="38" fill="#16213e"/>
+  <text x="120" y="222" font-family="monospace" font-size="13" fill="#e2e8f0" text-anchor="middle">Andrés</text>
+  <text x="240" y="222" font-family="monospace" font-size="13" fill="#e2e8f0" text-anchor="middle">65 000</text>
+  <text x="380" y="222" font-family="monospace" font-size="13" fill="#98c379" text-anchor="middle">4</text>
+  <text x="520" y="222" font-family="monospace" font-size="13" fill="#e06c75" text-anchor="middle">4</text>
+  <text x="660" y="222" font-family="monospace" font-size="13" fill="#56b6c2" text-anchor="middle">3</text>
+
+  <!-- Annotations -->
+  <rect x="30" y="256" width="214" height="90" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="137" y="276" font-family="Inter, sans-serif" font-size="11" fill="#98c379" font-weight="bold" text-anchor="middle">ROW_NUMBER()</text>
+  <text x="137" y="294" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Siempre único.</text>
+  <text x="137" y="312" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Sin empates reales.</text>
+  <text x="137" y="330" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Usa ORDER BY para el orden.</text>
+
+  <rect x="272" y="256" width="214" height="90" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="1.5"/>
+  <text x="379" y="276" font-family="Inter, sans-serif" font-size="11" fill="#e06c75" font-weight="bold" text-anchor="middle">RANK()</text>
+  <text x="379" y="294" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Empates comparten rango.</text>
+  <text x="379" y="312" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Salta posiciones: 2, 2, 4.</text>
+  <text x="379" y="330" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Olimpiadas (1°, 2°, 2°, 4°).</text>
+
+  <rect x="514" y="256" width="216" height="90" rx="6" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="622" y="276" font-family="Inter, sans-serif" font-size="11" fill="#56b6c2" font-weight="bold" text-anchor="middle">DENSE_RANK()</text>
+  <text x="622" y="294" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Empates comparten rango.</text>
+  <text x="622" y="312" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Sin saltos: 2, 2, 3.</text>
+  <text x="622" y="330" font-family="Inter, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Percentiles, cuartiles.</text>
+</svg>
