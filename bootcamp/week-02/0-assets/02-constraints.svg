@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="440" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">Constraints de Columna — Semana 02</text>
+
+  <!-- Encabezado tabla -->
+  <rect x="60" y="52" width="600" height="34" rx="4" fill="#336791"/>
+  <text x="360" y="74" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">users</text>
+
+  <!-- Fila NOT NULL -->
+  <rect x="60" y="86" width="600" height="52" fill="#1e2a45" stroke="#2d3748" stroke-width="1"/>
+  <rect x="60" y="86" width="8" height="52" fill="#e06c75"/>
+  <text x="84" y="108" fill="#f6c90e" font-size="12" font-family="monospace">id</text>
+  <text x="160" y="108" fill="#56b6c2" font-size="12" font-family="monospace">INTEGER</text>
+  <text x="280" y="108" fill="#98c379" font-size="12" font-family="monospace">PRIMARY KEY</text>
+  <text x="84" y="128" fill="#718096" font-size="11">→ Identifica de forma única cada fila. No permite NULL ni duplicados.</text>
+
+  <!-- Fila NOT NULL -->
+  <rect x="60" y="138" width="600" height="52" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <rect x="60" y="138" width="8" height="52" fill="#e06c75"/>
+  <text x="84" y="160" fill="#f6c90e" font-size="12" font-family="monospace">email</text>
+  <text x="160" y="160" fill="#56b6c2" font-size="12" font-family="monospace">TEXT</text>
+  <text x="230" y="160" fill="#e06c75" font-size="12" font-family="monospace">NOT NULL</text>
+  <text x="320" y="160" fill="#98c379" font-size="12" font-family="monospace">UNIQUE</text>
+  <text x="84" y="180" fill="#718096" font-size="11">→ Obligatorio (NOT NULL) + sin duplicados (UNIQUE)</text>
+
+  <!-- Fila DEFAULT -->
+  <rect x="60" y="190" width="600" height="52" fill="#1e2a45" stroke="#2d3748" stroke-width="1"/>
+  <rect x="60" y="190" width="8" height="52" fill="#f6c90e"/>
+  <text x="84" y="212" fill="#f6c90e" font-size="12" font-family="monospace">is_active</text>
+  <text x="190" y="212" fill="#56b6c2" font-size="12" font-family="monospace">INTEGER</text>
+  <text x="280" y="212" fill="#e06c75" font-size="12" font-family="monospace">NOT NULL</text>
+  <text x="370" y="212" fill="#f6c90e" font-size="12" font-family="monospace">DEFAULT 1</text>
+  <text x="84" y="232" fill="#718096" font-size="11">→ Si no se inserta valor, SQLite asigna 1 automáticamente</text>
+
+  <!-- Fila CHECK -->
+  <rect x="60" y="242" width="600" height="52" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <rect x="60" y="242" width="8" height="52" fill="#56b6c2"/>
+  <text x="84" y="264" fill="#f6c90e" font-size="12" font-family="monospace">age</text>
+  <text x="160" y="264" fill="#56b6c2" font-size="12" font-family="monospace">INTEGER</text>
+  <text x="240" y="264" fill="#56b6c2" font-size="12" font-family="monospace">CHECK (age &gt;= 18)</text>
+  <text x="84" y="284" fill="#718096" font-size="11">→ Rechaza la fila si age &lt; 18. Se valida en INSERT y UPDATE.</text>
+
+  <!-- Leyenda -->
+  <rect x="60" y="316" width="600" height="100" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="360" y="338" text-anchor="middle" fill="#a0aec0" font-size="12" font-weight="600">Resumen de Constraints</text>
+
+  <rect x="80" y="352" width="10" height="10" fill="#e06c75"/>
+  <text x="98" y="362" fill="#a0aec0" font-size="11">NOT NULL — dato obligatorio</text>
+
+  <rect x="80" y="372" width="10" height="10" fill="#f6c90e"/>
+  <text x="98" y="382" fill="#a0aec0" font-size="11">DEFAULT — valor automático cuando no se especifica</text>
+
+  <rect x="340" y="352" width="10" height="10" fill="#98c379"/>
+  <text x="358" y="362" fill="#a0aec0" font-size="11">UNIQUE — sin valores repetidos</text>
+
+  <rect x="340" y="372" width="10" height="10" fill="#56b6c2"/>
+  <text x="358" y="382" fill="#a0aec0" font-size="11">CHECK — condición lógica personalizada</text>
+</svg>

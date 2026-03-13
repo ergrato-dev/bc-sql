@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="380" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">ALTER TABLE y DROP TABLE — Semana 02</text>
+
+  <!-- ALTER TABLE ADD COLUMN -->
+  <rect x="40" y="55" width="300" height="105" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="190" y="76" text-anchor="middle" fill="#68d391" font-size="11" font-weight="700">ADD COLUMN</text>
+  <text x="60" y="98"  fill="#c678dd" font-size="12" font-family="monospace">ALTER TABLE</text>
+  <text x="175" y="98" fill="#e06c75" font-size="12" font-family="monospace"> employees</text>
+  <text x="60" y="118" fill="#c678dd" font-size="12" font-family="monospace">ADD COLUMN</text>
+  <text x="175" y="118" fill="#f6c90e" font-size="12" font-family="monospace"> phone</text>
+  <text x="220" y="118" fill="#56b6c2" font-size="12" font-family="monospace"> TEXT</text>
+  <text x="60" y="142" fill="#718096" font-size="11">Se agrega al final de la tabla.</text>
+  <text x="60" y="156" fill="#718096" font-size="11">Con NOT NULL debe incluir DEFAULT.</text>
+
+  <!-- ALTER TABLE RENAME -->
+  <rect x="380" y="55" width="300" height="105" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="530" y="76" text-anchor="middle" fill="#68d391" font-size="11" font-weight="700">RENAME COLUMN / TABLE</text>
+  <text x="400" y="98"  fill="#c678dd" font-size="12" font-family="monospace">ALTER TABLE</text>
+  <text x="512" y="98" fill="#e06c75" font-size="12" font-family="monospace"> employees</text>
+  <text x="400" y="118" fill="#c678dd" font-size="12" font-family="monospace">RENAME COLUMN</text>
+  <text x="530" y="118" fill="#f6c90e" font-size="12" font-family="monospace"> phone</text>
+  <text x="400" y="138" fill="#c678dd" font-size="12" font-family="monospace">TO</text>
+  <text x="430" y="138" fill="#f6c90e" font-size="12" font-family="monospace"> phone_number</text>
+  <text x="400" y="158" fill="#718096" font-size="11">Requiere SQLite 3.25+</text>
+
+  <!-- Flecha entre los dos -->
+  <text x="360" y="115" text-anchor="middle" fill="#4a5568" font-size="18">↔</text>
+
+  <!-- DROP TABLE -->
+  <rect x="160" y="192" width="400" height="90" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="1.5"/>
+  <text x="360" y="212" text-anchor="middle" fill="#e06c75" font-size="11" font-weight="700">DROP TABLE — elimina tabla y datos permanentemente</text>
+  <text x="180" y="236" fill="#c678dd" font-size="13" font-family="monospace">DROP TABLE IF EXISTS</text>
+  <text x="402" y="236" fill="#e06c75" font-size="13" font-family="monospace"> temp_data</text>
+  <text x="484" y="236" fill="#e2e8f0" font-size="13" font-family="monospace">;</text>
+  <text x="360" y="270" text-anchor="middle" fill="#718096" font-size="11">⚠️ Irreversible — no existe ROLLBACK automático en SQLite</text>
+
+  <!-- vs DELETE -->
+  <rect x="60" y="310" width="600" height="44" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="360" y="328" text-anchor="middle" fill="#a0aec0" font-size="12" font-weight="600">DROP TABLE vs DELETE FROM</text>
+  <text x="360" y="346" text-anchor="middle" fill="#718096" font-size="11">DROP TABLE elimina la estructura + datos  ·  DELETE FROM vacía datos, la tabla permanece</text>
+</svg>
