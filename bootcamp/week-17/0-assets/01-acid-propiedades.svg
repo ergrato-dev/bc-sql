@@ -1,0 +1,89 @@
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, sans-serif">
+  <!-- Fondo -->
+  <rect width="760" height="420" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="380" y="38" fill="#e2e8f0" font-size="18" font-weight="700" text-anchor="middle">Propiedades ACID</text>
+
+  <!-- ===== A — Atomicidad ===== -->
+  <rect x="30" y="60" width="160" height="320" rx="10" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="110" y="88" fill="#56b6c2" font-size="14" font-weight="700" text-anchor="middle">A — Atomicidad</text>
+  <text x="110" y="110" fill="#718096" font-size="11" text-anchor="middle">Todo o nada</text>
+  <!-- ops con check y x -->
+  <rect x="50" y="125" width="120" height="26" rx="5" fill="#1a1a2e"/>
+  <text x="66" y="143" fill="#98c379" font-size="13">✓</text>
+  <text x="82" y="143" fill="#e2e8f0" font-size="11">UPDATE cuenta A</text>
+  <rect x="50" y="157" width="120" height="26" rx="5" fill="#1a1a2e"/>
+  <text x="66" y="175" fill="#e06c75" font-size="13">✗</text>
+  <text x="82" y="175" fill="#e2e8f0" font-size="11">UPDATE cuenta B</text>
+  <!-- flecha hacia rollback -->
+  <line x1="110" y1="185" x2="110" y2="215" stroke="#e06c75" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="55" y="217" width="110" height="26" rx="5" fill="#e06c75" fill-opacity="0.15" stroke="#e06c75" stroke-width="1"/>
+  <text x="110" y="235" fill="#e06c75" font-size="11" font-weight="700" text-anchor="middle">ROLLBACK total</text>
+  <text x="110" y="270" fill="#718096" font-size="10" text-anchor="middle">Ningún cambio</text>
+  <text x="110" y="284" fill="#718096" font-size="10" text-anchor="middle">queda en disco</text>
+
+  <!-- ===== C — Consistencia ===== -->
+  <rect x="210" y="60" width="160" height="320" rx="10" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="290" y="88" fill="#c678dd" font-size="14" font-weight="700" text-anchor="middle">C — Consistencia</text>
+  <text x="290" y="110" fill="#718096" font-size="11" text-anchor="middle">Restricciones válidas</text>
+  <rect x="230" y="125" width="120" height="40" rx="5" fill="#1a1a2e"/>
+  <text x="290" y="143" fill="#f6c90e" font-size="10" text-anchor="middle" font-family="monospace">CHECK (balance &gt;= 0)</text>
+  <text x="290" y="157" fill="#718096" font-size="10" text-anchor="middle">constraint activa</text>
+  <line x1="290" y1="167" x2="290" y2="197" stroke="#c678dd" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+  <rect x="235" y="199" width="110" height="26" rx="5" fill="#e06c75" fill-opacity="0.15" stroke="#e06c75" stroke-width="1"/>
+  <text x="290" y="217" fill="#e06c75" font-size="11" font-weight="700" text-anchor="middle">Error + ROLLBACK</text>
+  <text x="290" y="260" fill="#e2e8f0" font-size="10" text-anchor="middle">La BD pasa de un</text>
+  <text x="290" y="274" fill="#e2e8f0" font-size="10" text-anchor="middle">estado válido a otro</text>
+  <text x="290" y="288" fill="#e2e8f0" font-size="10" text-anchor="middle">estado válido</text>
+
+  <!-- ===== I — Aislamiento ===== -->
+  <rect x="390" y="60" width="160" height="320" rx="10" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="470" y="88" fill="#f6c90e" font-size="14" font-weight="700" text-anchor="middle">I — Aislamiento</text>
+  <text x="470" y="110" fill="#718096" font-size="11" text-anchor="middle">No interferencia</text>
+  <!-- sesión A -->
+  <rect x="408" y="125" width="68" height="60" rx="4" fill="#1a1a2e" stroke="#336791" stroke-width="1"/>
+  <text x="442" y="143" fill="#56b6c2" font-size="10" text-anchor="middle">Sesión A</text>
+  <text x="442" y="158" fill="#e2e8f0" font-size="9" text-anchor="middle">BEGIN</text>
+  <text x="442" y="171" fill="#e2e8f0" font-size="9" text-anchor="middle">UPDATE...</text>
+  <!-- sesión B -->
+  <rect x="486" y="125" width="68" height="60" rx="4" fill="#1a1a2e" stroke="#c678dd" stroke-width="1"/>
+  <text x="520" y="143" fill="#c678dd" font-size="10" text-anchor="middle">Sesión B</text>
+  <text x="520" y="158" fill="#718096" font-size="9" text-anchor="middle">SELECT...</text>
+  <text x="520" y="171" fill="#98c379" font-size="9" text-anchor="middle">ve estado viejo</text>
+  <!-- mvcc label -->
+  <text x="470" y="210" fill="#f6c90e" font-size="10" text-anchor="middle" font-weight="700">MVCC</text>
+  <text x="470" y="225" fill="#718096" font-size="9" text-anchor="middle">cada sesión ve</text>
+  <text x="470" y="238" fill="#718096" font-size="9" text-anchor="middle">su snapshot</text>
+
+  <!-- ===== D — Durabilidad ===== -->
+  <rect x="570" y="60" width="160" height="320" rx="10" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="650" y="88" fill="#98c379" font-size="14" font-weight="700" text-anchor="middle">D — Durabilidad</text>
+  <text x="650" y="110" fill="#718096" font-size="11" text-anchor="middle">Commit = persistido</text>
+  <rect x="590" y="125" width="120" height="26" rx="5" fill="#98c379" fill-opacity="0.15" stroke="#98c379" stroke-width="1"/>
+  <text x="650" y="143" fill="#98c379" font-size="11" font-weight="700" text-anchor="middle">COMMIT;</text>
+  <line x1="650" y1="153" x2="650" y2="183" stroke="#98c379" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <!-- wal log icon -->
+  <rect x="610" y="185" width="80" height="36" rx="4" fill="#1a1a2e" stroke="#336791" stroke-width="1"/>
+  <text x="650" y="200" fill="#f6c90e" font-size="9" text-anchor="middle">WAL Log</text>
+  <text x="650" y="213" fill="#718096" font-size="8" text-anchor="middle">Write-Ahead Log</text>
+  <text x="650" y="260" fill="#e2e8f0" font-size="10" text-anchor="middle">Un apagón tras</text>
+  <text x="650" y="274" fill="#e2e8f0" font-size="10" text-anchor="middle">el COMMIT no</text>
+  <text x="650" y="288" fill="#e2e8f0" font-size="10" text-anchor="middle">pierde los datos</text>
+
+  <!-- Nota inferior -->
+  <text x="380" y="398" fill="#718096" font-size="10" text-anchor="middle">PostgreSQL 16 garantiza ACID en todas las transacciones explícitas e implícitas</text>
+
+  <!-- Marcadores de flecha -->
+  <defs>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#e06c75"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#c678dd"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#98c379"/>
+    </marker>
+  </defs>
+</svg>
