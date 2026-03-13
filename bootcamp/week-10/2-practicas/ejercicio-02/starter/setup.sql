@@ -7,7 +7,7 @@ PRAGMA foreign_keys = ON;
 DROP TABLE IF EXISTS employees;
 
 CREATE TABLE employees (
-    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    id         INTEGER PRIMARY KEY,
     first_name TEXT    NOT NULL,
     last_name  TEXT    NOT NULL,
     salary     REAL    NOT NULL CHECK (salary > 0),

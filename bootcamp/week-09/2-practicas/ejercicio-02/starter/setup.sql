@@ -8,14 +8,14 @@ DROP TABLE IF EXISTS departments;
 DROP TABLE IF EXISTS locations;
 
 CREATE TABLE locations (
-    id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    id      INTEGER PRIMARY KEY,
     name    TEXT    NOT NULL UNIQUE,
     country TEXT    NOT NULL,
     region  TEXT
 );
 
 CREATE TABLE departments (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    id          INTEGER PRIMARY KEY,
     name        TEXT    NOT NULL UNIQUE,
     budget      REAL    NOT NULL CHECK (budget > 0),
     location_id INTEGER REFERENCES locations (id),
@@ -23,7 +23,7 @@ CREATE TABLE departments (
 );
 
 CREATE TABLE employees (
-    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    id            INTEGER PRIMARY KEY,
     first_name    TEXT    NOT NULL,
     last_name     TEXT    NOT NULL,
     email         TEXT    UNIQUE,

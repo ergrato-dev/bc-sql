@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS departments;
 -- TABLA: departments (4 registros)
 -- ============================================
 CREATE TABLE departments (
-    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    id   INTEGER PRIMARY KEY,
     name TEXT    NOT NULL UNIQUE
 );
 
@@ -18,7 +18,7 @@ CREATE TABLE departments (
 -- TABLA: job_levels (3 registros)
 -- ============================================
 CREATE TABLE job_levels (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    id          INTEGER PRIMARY KEY,
     name        TEXT  NOT NULL UNIQUE,
     rank        INTEGER NOT NULL,  -- 1=jr, 2=mid, 3=sr
     base_salary REAL  NOT NULL

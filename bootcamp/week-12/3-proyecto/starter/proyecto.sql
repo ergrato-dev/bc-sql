@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS items;
 
 CREATE TABLE items (
-    id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    id       INTEGER PRIMARY KEY,
     name     TEXT    NOT NULL,
     price    REAL    NOT NULL CHECK (price > 0),
     category TEXT    NOT NULL
@@ -25,7 +25,7 @@ CREATE TABLE items (
 );
 
 CREATE TABLE transactions (
-    id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    id       INTEGER PRIMARY KEY,
     item_id  INTEGER NOT NULL REFERENCES items (id),
     quantity INTEGER NOT NULL DEFAULT 1,
     tx_date  TEXT    NOT NULL  -- formato YYYY-MM-DD

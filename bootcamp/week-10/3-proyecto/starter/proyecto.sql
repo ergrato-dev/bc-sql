@@ -21,7 +21,7 @@ PRAGMA foreign_keys = ON;
 DROP TABLE IF EXISTS items;
 
 CREATE TABLE items (
-    id        INTEGER PRIMARY KEY AUTOINCREMENT,
+    id        INTEGER PRIMARY KEY,
     name      TEXT    NOT NULL UNIQUE,
     -- TODO: Agregar columnas específicas de tu dominio
     parent_id INTEGER REFERENCES items (id)  -- auto-referencial

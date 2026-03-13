@@ -24,14 +24,14 @@ DROP TABLE IF EXISTS reference_table;
 
 -- Tabla de referencia (categorías, ubicaciones, tipos, etc.)
 CREATE TABLE reference_table (
-    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    id   INTEGER PRIMARY KEY,
     name TEXT    NOT NULL UNIQUE
     -- TODO: Agregar columnas específicas de tu dominio
 );
 
 -- Tabla principal de tu dominio
 CREATE TABLE main_items (
-    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    id           INTEGER PRIMARY KEY,
     name         TEXT    NOT NULL,
     -- TODO: Agregar columnas específicas
     reference_id INTEGER REFERENCES reference_table (id)
@@ -39,7 +39,7 @@ CREATE TABLE main_items (
 
 -- Tabla hija (transacciones, préstamos, ventas, etc.)
 CREATE TABLE child_records (
-    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    id           INTEGER PRIMARY KEY,
     recorded_at  TEXT    NOT NULL DEFAULT (DATE('now')),
     -- TODO: Agregar columnas específicas
     item_id      INTEGER REFERENCES main_items (id)

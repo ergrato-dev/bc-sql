@@ -9,19 +9,19 @@ DROP TABLE IF EXISTS departments;
 DROP TABLE IF EXISTS locations;
 
 CREATE TABLE locations (
-    id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    id      INTEGER PRIMARY KEY,
     city    TEXT    NOT NULL,
     country TEXT    NOT NULL DEFAULT 'México'
 );
 
 CREATE TABLE departments (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    id          INTEGER PRIMARY KEY,
     name        TEXT    NOT NULL,
     location_id INTEGER REFERENCES locations (id)
 );
 
 CREATE TABLE employees (
-    employee_id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    employee_id   INTEGER PRIMARY KEY,
     first_name    TEXT    NOT NULL,
     last_name     TEXT    NOT NULL,
     salary        REAL    NOT NULL,

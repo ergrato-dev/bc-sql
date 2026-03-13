@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS child_records;
 DROP TABLE IF EXISTS main_items;
 
 CREATE TABLE main_items (
-    id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    id       INTEGER PRIMARY KEY,
     name     TEXT    NOT NULL,
     value    REAL    NOT NULL CHECK (value > 0),
     category TEXT    NOT NULL
@@ -25,7 +25,7 @@ CREATE TABLE main_items (
 );
 
 CREATE TABLE child_records (
-    id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    id       INTEGER PRIMARY KEY,
     item_id  INTEGER NOT NULL REFERENCES main_items (id),
     quantity INTEGER NOT NULL DEFAULT 1
     -- TODO: Agregar columnas específicas
