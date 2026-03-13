@@ -22,6 +22,98 @@ clientes y ventas.
 
 ## C
 
+### **Celda**
+
+Unidad mínima de datos en una tabla: intersección entre una fila y una
+columna. Contiene un único valor.
+
+### **Clave foránea (FK — Foreign Key)**
+
+Columna que referencia la clave primaria de otra tabla, estableciendo
+una relación entre ambas.
+
+```sql
+-- customer_id es FK que apunta a customers(id)
+FOREIGN KEY (customer_id) REFERENCES customers(id)
+```
+
+### **Clave primaria (PK — Primary Key)**
+
+Columna (o conjunto de columnas) que identifica de forma única cada fila
+en una tabla. No permite valores nulos ni duplicados.
+
+```sql
+id INTEGER PRIMARY KEY
+```
+
+### **Columna**
+
+Atributo de una tabla. Define el nombre, tipo de dato y restricciones de
+un campo en cada fila.
+
+---
+
+## F
+
+### **Fila**
+
+Registro individual en una tabla. Representa una instancia concreta de
+la entidad modelada.
+
+---
+
+## M
+
+### **Modelo relacional**
+
+Modelo de organización de datos propuesto por Edgar Codd en 1970. Los
+datos se estructuran en tablas relacionadas entre sí mediante claves.
+
+---
+
+## S
+
+### **SELECT**
+
+Instrucción SQL para consultar datos. Especifica qué columnas mostrar
+(`SELECT`), de qué tabla (`FROM`), con qué filtros (`WHERE`) y en qué
+orden (`ORDER BY`).
+
+```sql
+SELECT name, price
+FROM   products
+WHERE  price > 10
+ORDER BY price DESC;
+```
+
+### **SGBD (Sistema Gestor de Bases de Datos)**
+
+Software que gestiona el almacenamiento, consulta y administración de
+una base de datos. Ejemplos: SQLite, PostgreSQL, MySQL.
+
+### **SQLite**
+
+SGBD relacional embebido, sin servidor, ideal para desarrollo local y
+aprendizaje. Motor principal de las semanas 1–12 del bootcamp.
+
+---
+
+## T
+
+### **Tabla**
+
+Estructura que organiza datos en filas y columnas. Cada tabla modela
+una entidad del dominio (productos, clientes, pedidos).
+
+### **Tipo de dato**
+
+Define qué clase de valor puede almacenar una columna. En SQLite los
+principales son `INTEGER`, `REAL`, `TEXT`, `BLOB` y `NULL`.
+
+---
+
+## C
+
 ### **Clave foránea** (_Foreign Key_)
 
 Columna (o conjunto de columnas) en una tabla que hace referencia a la
