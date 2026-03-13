@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220">
+  <!-- Fondo principal -->
+  <rect width="900" height="220" fill="#1a1a2e"/>
+
+  <!-- Borde acento izquierdo -->
+  <rect x="0" y="0" width="6" height="220" fill="#336791"/>
+
+  <!-- Panel de nombre del bootcamp -->
+  <rect x="36" y="30" width="540" height="70" rx="8" fill="#16213e"/>
+  <rect x="36" y="30" width="6" height="70" rx="3" fill="#336791"/>
+
+  <!-- Título principal -->
+  <text x="58" y="63" font-family="Inter, Roboto, sans-serif" font-size="28" font-weight="800" fill="#e2e8f0" letter-spacing="-0.5">Bootcamp SQL</text>
+  <text x="58" y="87" font-family="Inter, Roboto, sans-serif" font-size="14" font-weight="400" fill="#718096" letter-spacing="1">DE CERO A HÉROE · POSTGRESQL 16</text>
+
+  <!-- Stats cards -->
+  <!-- Card 1: Semanas -->
+  <rect x="36" y="118" width="102" height="60" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="87" y="144" font-family="Inter, Roboto, sans-serif" font-size="22" font-weight="800" fill="#336791" text-anchor="middle">24</text>
+  <text x="87" y="164" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">SEMANAS</text>
+
+  <!-- Card 2: Horas -->
+  <rect x="152" y="118" width="102" height="60" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="203" y="144" font-family="Inter, Roboto, sans-serif" font-size="22" font-weight="800" fill="#336791" text-anchor="middle">192</text>
+  <text x="203" y="164" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">HORAS</text>
+
+  <!-- Card 3: Nivel -->
+  <rect x="268" y="118" width="162" height="60" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="349" y="144" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" text-anchor="middle">SQL Developer</text>
+  <text x="349" y="164" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">NIVEL DE SALIDA</text>
+
+  <!-- Card 4: Motor -->
+  <rect x="444" y="118" width="132" height="60" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="510" y="144" font-family="Inter, Roboto, sans-serif" font-size="14" font-weight="700" fill="#336791" text-anchor="middle">PostgreSQL 16</text>
+  <text x="510" y="164" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">+ SQLite</text>
+
+  <!-- Separador vertical decorativo -->
+  <line x1="618" y1="30" x2="618" y2="190" stroke="#16213e" stroke-width="1.5"/>
+
+  <!-- Panel derecho: SQL keywords decorativas -->
+  <text x="638" y="70" font-family="'Courier New', Courier, monospace" font-size="13" fill="#336791" opacity="0.8">SELECT</text>
+  <text x="700" y="70" font-family="'Courier New', Courier, monospace" font-size="13" fill="#c678dd" opacity="0.8">* FROM</text>
+  <text x="638" y="92" font-family="'Courier New', Courier, monospace" font-size="13" fill="#c678dd" opacity="0.8">  knowledge</text>
+  <text x="638" y="114" font-family="'Courier New', Courier, monospace" font-size="13" fill="#56b6c2" opacity="0.8">JOIN</text>
+  <text x="679" y="114" font-family="'Courier New', Courier, monospace" font-size="13" fill="#c678dd" opacity="0.8"> practice</text>
+  <text x="638" y="136" font-family="'Courier New', Courier, monospace" font-size="13" fill="#c678dd" opacity="0.8">  ON success;</text>
+  <text x="638" y="160" font-family="'Courier New', Courier, monospace" font-size="13" fill="#98c379" opacity="0.8">-- 24 semanas</text>
+
+  <!-- Línea inferior acento -->
+  <rect x="0" y="214" width="900" height="6" fill="#336791" rx="0"/>
+</svg>
