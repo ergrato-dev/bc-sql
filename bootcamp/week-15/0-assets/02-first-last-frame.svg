@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="780" height="430">
+  <rect width="780" height="430" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="390" y="32" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="bold" fill="#e2e8f0" text-anchor="middle">FIRST_VALUE y LAST_VALUE — frame clause</text>
+
+  <!-- Left side: FIRST_VALUE -->
+  <text x="195" y="60" font-family="Inter, Roboto, sans-serif" font-size="14" fill="#98c379" font-weight="bold" text-anchor="middle">FIRST_VALUE(salary)</text>
+  <text x="195" y="76" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">OVER (PARTITION BY dept ORDER BY salary DESC)</text>
+
+  <!-- Right side: LAST_VALUE -->
+  <text x="585" y="60" font-family="Inter, Roboto, sans-serif" font-size="14" fill="#e06c75" font-weight="bold" text-anchor="middle">LAST_VALUE(salary)</text>
+  <text x="585" y="76" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">OVER (PARTITION BY dept ORDER BY salary DESC</text>
+
+  <!-- Frame divider vertical -->
+  <line x1="390" y1="52" x2="390" y2="310" stroke="#336791" stroke-width="1" stroke-dasharray="6,3"/>
+
+  <!-- Dept = Engineering rows (left table) -->
+  <!-- Headers -->
+  <text x="80"  y="102" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">first_name</text>
+  <text x="190" y="102" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">salary</text>
+  <text x="300" y="102" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379" text-anchor="middle">first_val</text>
+  <line x1="30" y1="108" x2="375" y2="108" stroke="#336791" stroke-width="1"/>
+
+  <!-- Rows left -->
+  <rect x="30" y="114" width="345" height="32" rx="3" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="80"  y="134" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle">Ana</text>
+  <text x="190" y="134" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e" text-anchor="middle">82 000</text>
+  <text x="300" y="134" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">82 000</text>
+
+  <rect x="30" y="150" width="345" height="32" rx="3" fill="#1a1a2e"/>
+  <text x="80"  y="170" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle">Carlos</text>
+  <text x="190" y="170" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e" text-anchor="middle">76 000</text>
+  <text x="300" y="170" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">82 000</text>
+
+  <rect x="30" y="186" width="345" height="32" rx="3" fill="#16213e"/>
+  <text x="80"  y="206" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle">Omar</text>
+  <text x="190" y="206" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e" text-anchor="middle">76 000</text>
+  <text x="300" y="206" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">82 000</text>
+
+  <rect x="30" y="222" width="345" height="32" rx="3" fill="#1a1a2e"/>
+  <text x="80"  y="242" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle">Sofia</text>
+  <text x="190" y="242" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e" text-anchor="middle">48 000</text>
+  <text x="300" y="242" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">82 000</text>
+
+  <!-- FIRST_VALUE annotation — points to first row -->
+  <text x="195" y="272" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379" text-anchor="middle">↑ siempre la primera fila de la partición</text>
+  <text x="195" y="286" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096" text-anchor="middle">frame por defecto es suficiente</text>
+
+  <!-- Right table — LAST_VALUE with default frame (broken) vs extended frame (fixed) -->
+  <!-- Sub labels -->
+  <text x="500" y="96" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e06c75" text-anchor="middle">❌ frame default</text>
+  <text x="695" y="96" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#98c379" text-anchor="middle">✅ UNBOUNDED FOLLOWING</text>
+  <text x="500" y="107" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096" text-anchor="middle">last_val (mal)</text>
+  <text x="695" y="107" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096" text-anchor="middle">last_val (bien)</text>
+  <line x1="408" y1="108" x2="760" y2="108" stroke="#336791" stroke-width="1"/>
+
+  <!-- Rows right -->
+  <rect x="408" y="114" width="352" height="32" rx="3" fill="#16213e"/>
+  <text x="500" y="134" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e06c75" text-anchor="middle">82 000 ←×</text>
+  <text x="695" y="134" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">48 000</text>
+
+  <rect x="408" y="150" width="352" height="32" rx="3" fill="#1a1a2e"/>
+  <text x="500" y="170" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e06c75" text-anchor="middle">76 000 ←×</text>
+  <text x="695" y="170" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">48 000</text>
+
+  <rect x="408" y="186" width="352" height="32" rx="3" fill="#16213e"/>
+  <text x="500" y="206" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e06c75" text-anchor="middle">76 000 ←×</text>
+  <text x="695" y="206" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">48 000</text>
+
+  <rect x="408" y="222" width="352" height="32" rx="3" fill="#1a1a2e"/>
+  <text x="500" y="242" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e06c75" text-anchor="middle">48 000 ←×</text>
+  <text x="695" y="242" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379" font-weight="bold" text-anchor="middle">48 000</text>
+
+  <text x="500" y="272" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e06c75" text-anchor="middle">devuelve la fila ACTUAL</text>
+  <text x="695" y="272" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379" text-anchor="middle">devuelve la última</text>
+
+  <!-- Frame clause code box -->
+  <rect x="30" y="312" width="720" height="88" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="50" y="334" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">-- Frame por defecto (implícito):</text>
+  <text x="50" y="353" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e06c75">ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW</text>
+  <text x="410" y="353" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">← LAST_VALUE solo ve hasta la fila actual</text>
+  <text x="50" y="372" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">-- Frame extendido (necesario para LAST_VALUE):</text>
+  <text x="50" y="392" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <rect width="780" height="420" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="390" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="bold" fill="#e2e8f0" text-anchor="middle">LAG() y LEAD() — desplazamiento entre filas</text>
+
+  <!-- Column headers -->
+  <text x="80"  y="72" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096" text-anchor="middle">fila</text>
+  <text x="200" y="72" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096" text-anchor="middle">sale_date</text>
+  <text x="320" y="72" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096" text-anchor="middle">amount</text>
+  <text x="470" y="72" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2" text-anchor="middle">LAG(amount,1,0)</text>
+  <text x="630" y="72" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd" text-anchor="middle">LEAD(amount,1,0)</text>
+
+  <!-- Separator line -->
+  <line x1="30" y1="78" x2="750" y2="78" stroke="#336791" stroke-width="1"/>
+
+  <!-- Row data -->
+  <!-- Row 1 -->
+  <rect x="30" y="86" width="720" height="36" rx="4" fill="#16213e"/>
+  <text x="80"  y="109" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#718096" text-anchor="middle">1</text>
+  <text x="200" y="109" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">2024-01-01</text>
+  <text x="320" y="109" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#f6c90e" text-anchor="middle">1 200</text>
+  <text x="470" y="109" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#56b6c2" text-anchor="middle">0  ← default</text>
+  <text x="630" y="109" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#c678dd" text-anchor="middle">980</text>
+
+  <!-- Row 2 -->
+  <rect x="30" y="126" width="720" height="36" rx="4" fill="#1a1a2e"/>
+  <text x="80"  y="149" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#718096" text-anchor="middle">2</text>
+  <text x="200" y="149" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">2024-01-02</text>
+  <text x="320" y="149" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#f6c90e" text-anchor="middle">980</text>
+  <text x="470" y="149" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#56b6c2" text-anchor="middle">1 200</text>
+  <text x="630" y="149" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#c678dd" text-anchor="middle">1 540</text>
+
+  <!-- Row 3 (highlighted — current row) -->
+  <rect x="30" y="166" width="720" height="36" rx="4" fill="#1e2d45"/>
+  <rect x="30" y="166" width="4"   height="36" rx="2" fill="#98c379"/>
+  <text x="80"  y="189" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="bold" fill="#98c379" text-anchor="middle">3 ←</text>
+  <text x="200" y="189" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">2024-01-03</text>
+  <text x="320" y="189" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#f6c90e" font-weight="bold" text-anchor="middle">1 540</text>
+  <text x="470" y="189" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#56b6c2" font-weight="bold" text-anchor="middle">980</text>
+  <text x="630" y="189" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#c678dd" font-weight="bold" text-anchor="middle">720</text>
+
+  <!-- Row 4 -->
+  <rect x="30" y="206" width="720" height="36" rx="4" fill="#1a1a2e"/>
+  <text x="80"  y="229" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#718096" text-anchor="middle">4</text>
+  <text x="200" y="229" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#e2e8f0" text-anchor="middle">2024-01-04</text>
+  <text x="320" y="229" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#f6c90e" text-anchor="middle">720</text>
+  <text x="470" y="229" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#56b6c2" text-anchor="middle">1 540</text>
+  <text x="630" y="229" font-family="Inter, Roboto, sans-serif" font-size="13" fill="#c678dd" text-anchor="middle">0  ← default</text>
+
+  <!-- Arrows for row 3 -->
+  <!-- LAG arrow: row 2 amount → row 3 lag -->
+  <line x1="320" y1="152" x2="320" y2="162" stroke="#56b6c2" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <path d="M 458 162 L 320 162" stroke="#56b6c2" stroke-width="1.5" marker-end="url(#arrow-lag)"/>
+  <defs>
+    <marker id="arrow-lag" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#56b6c2"/>
+    </marker>
+    <marker id="arrow-lead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#c678dd"/>
+    </marker>
+  </defs>
+  <!-- LEAD arrow: row 4 amount → row 3 lead -->
+  <line x1="320" y1="210" x2="320" y2="202" stroke="#c678dd" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <path d="M 610 202 L 320 202" stroke="#c678dd" stroke-width="1.5" marker-end="url(#arrow-lead)"/>
+
+  <!-- Annotations -->
+  <rect x="30" y="278" width="340" height="56" rx="6" fill="#16213e" stroke="#56b6c2" stroke-width="1"/>
+  <text x="50" y="298" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2" font-weight="bold">LAG(amount, 1, 0)</text>
+  <text x="50" y="316" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Fila anterior en la ventana. Default 0 si no existe.</text>
+  <text x="50" y="330" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Patrón: amount - LAG(amount) → delta</text>
+
+  <rect x="400" y="278" width="350" height="56" rx="6" fill="#16213e" stroke="#c678dd" stroke-width="1"/>
+  <text x="420" y="298" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd" font-weight="bold">LEAD(amount, 1, 0)</text>
+  <text x="420" y="316" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Fila siguiente en la ventana. Default 0 si no existe.</text>
+  <text x="420" y="330" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Patrón: LEAD(amount) - amount → forward delta</text>
+
+  <!-- Formula box -->
+  <rect x="30" y="354" width="720" height="46" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="50" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">LAG/LEAD(</text>
+  <text x="145" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e">columna</text>
+  <text x="210" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">,</text>
+  <text x="220" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">offset</text>
+  <text x="265" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">,</text>
+  <text x="275" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">default</text>
+  <text x="330" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">) OVER (</text>
+  <text x="410" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">[PARTITION BY col]</text>
+  <text x="555" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">ORDER BY col</text>
+  <text x="660" y="374" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">)</text>
+  <text x="50" y="390" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">offset por defecto = 1   |   default por defecto = NULL</text>
+</svg>
