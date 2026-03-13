@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <rect width="820" height="480" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="410" y="38" font-family="Inter, Roboto, sans-serif" font-size="18" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">NULL: Comportamiento Especial en SQL</text>
+
+  <!-- Panel 1: Comparaciones -->
+  <rect x="30" y="60" width="240" height="380" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="150" y="88" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Comparaciones</text>
+
+  <text x="50" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Cualquier comparación con</text>
+  <text x="50" y="134" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">NULL devuelve UNKNOWN</text>
+
+  <rect x="46" y="150" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="150" y="168" font-family="'Courier New', monospace" font-size="11"
+        fill="#e06c75" text-anchor="middle">NULL = NULL  → UNKNOWN</text>
+  <rect x="46" y="184" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="150" y="202" font-family="'Courier New', monospace" font-size="11"
+        fill="#e06c75" text-anchor="middle">NULL != 'abc' → UNKNOWN</text>
+  <rect x="46" y="218" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="150" y="236" font-family="'Courier New', monospace" font-size="11"
+        fill="#e06c75" text-anchor="middle">NULL &gt; 0    → UNKNOWN</text>
+
+  <line x1="46" y1="260" x2="254" y2="260" stroke="#336791" stroke-width="1" stroke-dasharray="4"/>
+  <text x="50" y="282" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">✓ Usa IS NULL o</text>
+  <text x="50" y="298" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">  IS NOT NULL</text>
+
+  <rect x="46" y="314" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="150" y="332" font-family="'Courier New', monospace" font-size="11"
+        fill="#98c379" text-anchor="middle">email IS NULL  → TRUE/FALSE</text>
+  <rect x="46" y="348" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="150" y="366" font-family="'Courier New', monospace" font-size="11"
+        fill="#98c379" text-anchor="middle">email IS NOT NULL → TRUE/FALSE</text>
+
+  <!-- Panel 2: Aritmética -->
+  <rect x="290" y="60" width="240" height="380" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="410" y="88" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Aritmética</text>
+
+  <text x="310" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">NULL contamina toda</text>
+  <text x="310" y="134" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">operación aritmética</text>
+
+  <rect x="306" y="150" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="410" y="168" font-family="'Courier New', monospace" font-size="11"
+        fill="#e06c75" text-anchor="middle">salary + NULL  → NULL</text>
+  <rect x="306" y="184" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="410" y="202" font-family="'Courier New', monospace" font-size="11"
+        fill="#e06c75" text-anchor="middle">bonus * 1.1   → NULL</text>
+  <rect x="306" y="218" width="208" height="26" rx="4" fill="#1a1a2e"/>
+  <text x="410" y="236" font-family="'Courier New', monospace" font-size="11"
+        fill="#e06c75" text-anchor="middle">total / NULL   → NULL</text>
+
+  <line x1="306" y1="260" x2="514" y2="260" stroke="#336791" stroke-width="1" stroke-dasharray="4"/>
+  <text x="310" y="282" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">✓ Usa COALESCE para</text>
+  <text x="310" y="298" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">  sustituir NULLs</text>
+
+  <rect x="306" y="314" width="208" height="40" rx="4" fill="#1a1a2e"/>
+  <text x="410" y="332" font-family="'Courier New', monospace" font-size="10"
+        fill="#98c379" text-anchor="middle">COALESCE(bonus, 0) + salary</text>
+  <text x="410" y="348" font-family="'Courier New', monospace" font-size="10"
+        fill="#98c379" text-anchor="middle">→ siempre un número</text>
+
+  <!-- Panel 3: Agregación -->
+  <rect x="550" y="60" width="240" height="380" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="670" y="88" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">Agregación</text>
+
+  <text x="570" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Funciones de agregación</text>
+  <text x="570" y="134" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">ignoran NULLs (excepto COUNT(*))</text>
+
+  <!-- Tabla visual pequeña -->
+  <rect x="566" y="148" width="208" height="120" rx="4" fill="#1a1a2e" stroke="#336791" stroke-width="1"/>
+  <text x="670" y="165" font-family="'Courier New', monospace" font-size="10" fill="#f6c90e" text-anchor="middle">bonus</text>
+  <line x1="566" y1="170" x2="774" y2="170" stroke="#336791" stroke-width="1"/>
+  <text x="670" y="186" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">500</text>
+  <text x="670" y="202" font-family="'Courier New', monospace" font-size="10" fill="#e06c75" text-anchor="middle">NULL</text>
+  <text x="670" y="218" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">300</text>
+  <text x="670" y="234" font-family="'Courier New', monospace" font-size="10" fill="#e06c75" text-anchor="middle">NULL</text>
+  <text x="670" y="250" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">700</text>
+
+  <line x1="566" y1="280" x2="774" y2="280" stroke="#336791" stroke-width="1" stroke-dasharray="4"/>
+
+  <rect x="566" y="292" width="208" height="24" rx="4" fill="#1a1a2e"/>
+  <text x="670" y="308" font-family="'Courier New', monospace" font-size="10"
+        fill="#c678dd" text-anchor="middle">COUNT(*) = 5  (incluye NULL)</text>
+  <rect x="566" y="322" width="208" height="24" rx="4" fill="#1a1a2e"/>
+  <text x="670" y="338" font-family="'Courier New', monospace" font-size="10"
+        fill="#98c379" text-anchor="middle">COUNT(bonus) = 3  (excluye NULL)</text>
+  <rect x="566" y="352" width="208" height="24" rx="4" fill="#1a1a2e"/>
+  <text x="670" y="368" font-family="'Courier New', monospace" font-size="10"
+        fill="#98c379" text-anchor="middle">AVG(bonus) = 500  (500+300+700)/3</text>
+  <rect x="566" y="382" width="208" height="24" rx="4" fill="#1a1a2e"/>
+  <text x="670" y="398" font-family="'Courier New', monospace" font-size="10"
+        fill="#98c379" text-anchor="middle">SUM(bonus) = 1500  (ignora NULL)</text>
+
+  <!-- Pie -->
+  <text x="410" y="458" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 07: NULL y Constraints</text>
+</svg>
