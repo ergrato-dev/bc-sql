@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Inter, Roboto, sans-serif">
+  <!-- Fondo -->
+  <rect width="760" height="420" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#e2e8f0">Operadores de acceso JSONB</text>
+
+  <!-- Documento fuente -->
+  <rect x="30" y="60" width="220" height="200" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="140" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#336791">Documento JSONB</text>
+  <text x="46" y="104" font-size="11" fill="#f6c90e">"color"</text>
+  <text x="130" y="104" font-size="11" fill="#98c379">: "silver"</text>
+  <text x="46" y="122" font-size="11" fill="#f6c90e">"ram_gb"</text>
+  <text x="130" y="122" font-size="11" fill="#c678dd">: 16</text>
+  <text x="46" y="140" font-size="11" fill="#f6c90e">"sensor"</text>
+  <text x="130" y="140" font-size="11" fill="#e2e8f0">: {</text>
+  <text x="62" y="158" font-size="11" fill="#f6c90e">  "mp"</text>
+  <text x="130" y="158" font-size="11" fill="#c678dd">: 24</text>
+  <text x="62" y="176" font-size="11" fill="#f6c90e">  "type"</text>
+  <text x="130" y="176" font-size="11" fill="#98c379">:"CMOS"</text>
+  <text x="46" y="194" font-size="11" fill="#e2e8f0">}</text>
+  <text x="46" y="212" font-size="11" fill="#f6c90e">"ports"</text>
+  <text x="130" y="212" font-size="11" fill="#56b6c2">: [...]</text>
+  <text x="46" y="230" font-size="11" fill="#e2e8f0">}</text>
+
+  <!-- Flecha -> -->
+  <line x1="250" y1="110" x2="310" y2="110" stroke="#56b6c2" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Etiqueta -> -->
+  <rect x="255" y="94" width="50" height="20" rx="4" fill="#0d1b2a" stroke="#56b6c2" stroke-width="1"/>
+  <text x="280" y="108" text-anchor="middle" font-size="11" fill="#56b6c2">-&gt;</text>
+
+  <!-- Resultado -> -->
+  <rect x="310" y="92" width="130" height="36" rx="5" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="375" y="107" text-anchor="middle" font-size="10" fill="#718096">Retorna JSONB</text>
+  <text x="375" y="122" text-anchor="middle" font-size="11" fill="#98c379">"silver"</text>
+
+  <!-- Flecha ->> -->
+  <line x1="250" y1="155" x2="310" y2="155" stroke="#c678dd" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <rect x="251" y="139" width="54" height="20" rx="4" fill="#0d1b2a" stroke="#c678dd" stroke-width="1"/>
+  <text x="278" y="153" text-anchor="middle" font-size="11" fill="#c678dd">->></text>
+
+  <!-- Resultado ->> -->
+  <rect x="310" y="137" width="130" height="36" rx="5" fill="#16213e" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="375" y="152" text-anchor="middle" font-size="10" fill="#718096">Retorna TEXT</text>
+  <text x="375" y="167" text-anchor="middle" font-size="11" fill="#98c379">silver</text>
+
+  <!-- Flecha #>> -->
+  <line x1="250" y1="200" x2="310" y2="200" stroke="#f6c90e" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <rect x="248" y="184" width="58" height="20" rx="4" fill="#0d1b2a" stroke="#f6c90e" stroke-width="1"/>
+  <text x="277" y="198" text-anchor="middle" font-size="11" fill="#f6c90e">#>></text>
+
+  <!-- Resultado #>> -->
+  <rect x="310" y="182" width="160" height="36" rx="5" fill="#16213e" stroke="#f6c90e" stroke-width="1.5"/>
+  <text x="390" y="197" text-anchor="middle" font-size="10" fill="#718096">Path: {sensor, mp}</text>
+  <text x="390" y="212" text-anchor="middle" font-size="11" fill="#c678dd">24</text>
+
+  <!-- Separador vertical -->
+  <line x1="490" y1="60" x2="490" y2="280" stroke="#336791" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Operador ? -->
+  <rect x="505" y="65" width="220" height="70" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="615" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#e06c75">Operadores de existencia</text>
+  <text x="515" y="102" font-size="11" fill="#e06c75">?   'clave'</text>
+  <text x="615" y="102" font-size="10" fill="#718096">existe esa clave</text>
+  <text x="515" y="118" font-size="11" fill="#e06c75">?|  ARRAY[...]</text>
+  <text x="615" y="118" font-size="10" fill="#718096">alguna existe</text>
+
+  <!-- @> -->
+  <rect x="505" y="150" width="220" height="70" rx="6" fill="#16213e" stroke="#98c379" stroke-width="1.5"/>
+  <text x="615" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#98c379">Operador de contención</text>
+  <text x="515" y="188" font-size="11" fill="#98c379">@&gt;  '{"color":"silver"}'</text>
+  <text x="615" y="206" text-anchor="middle" font-size="10" fill="#718096">usa índice GIN ✓</text>
+
+  <!-- Nota índice -->
+  <rect x="30" y="285" width="700" height="52" rx="6" fill="#0d1b2a" stroke="#336791" stroke-width="1"/>
+  <text x="380" y="305" text-anchor="middle" font-size="11" fill="#718096">Solo <tspan fill="#98c379">@&gt;</tspan>, <tspan fill="#e06c75">?</tspan>, <tspan fill="#e06c75">?|</tspan>, <tspan fill="#e06c75">?&amp;</tspan> pueden usar índice GIN.</text>
+  <text x="380" y="325" text-anchor="middle" font-size="11" fill="#718096">attributes <tspan fill="#c678dd">->></tspan> 'color' <tspan fill="#e06c75">=</tspan> 'silver'  →  NO usa índice (seq scan)</text>
+
+  <!-- Leyenda -->
+  <rect x="30" y="352" width="700" height="50" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="55" y="372" font-size="10" fill="#56b6c2">→  retorna JSONB</text>
+  <text x="185" y="372" font-size="10" fill="#c678dd">>  retorna TEXT</text>
+  <text x="315" y="372" font-size="10" fill="#f6c90e">#>>  path TEXT</text>
+  <text x="420" y="372" font-size="10" fill="#98c379">@>  contención (GIN)</text>
+  <text x="560" y="372" font-size="10" fill="#e06c75">?  existencia (GIN)</text>
+  <text x="55" y="392" font-size="10" fill="#718096">Versión: PostgreSQL 16</text>
+
+  <!-- Marcadores de flecha -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#56b6c2"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#c678dd"/>
+    </marker>
+    <marker id="arr3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f6c90e"/>
+    </marker>
+  </defs>
+</svg>
