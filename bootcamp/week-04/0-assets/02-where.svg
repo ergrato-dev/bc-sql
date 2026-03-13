@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="720" height="340" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="340" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">Cláusula WHERE — Semana 04</text>
+
+  <!-- Izquierda: AND -->
+  <rect x="40" y="52" width="300" height="130" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="190" y="72" text-anchor="middle" fill="#56b6c2" font-size="11" font-weight="700">AND — ambas condiciones</text>
+  <text x="58" y="94"  fill="#c678dd" font-size="12" font-family="monospace">SELECT</text>
+  <text x="58" y="112" fill="#f6c90e" font-size="12" font-family="monospace">    first_name, salary</text>
+  <text x="58" y="130" fill="#c678dd" font-size="12" font-family="monospace">FROM</text>
+  <text x="100" y="130" fill="#e06c75" font-size="12" font-family="monospace"> employees</text>
+  <text x="58" y="148" fill="#c678dd" font-size="12" font-family="monospace">WHERE</text>
+  <text x="106" y="148" fill="#e2e8f0" font-size="12" font-family="monospace"> department_id = 1</text>
+  <text x="58" y="166" fill="#56b6c2" font-size="12" font-family="monospace" font-weight="700">  AND</text>
+  <text x="100" y="166" fill="#e2e8f0" font-size="12" font-family="monospace">   salary &gt; 70000;</text>
+
+  <!-- Derecha: OR -->
+  <rect x="380" y="52" width="300" height="130" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="530" y="72" text-anchor="middle" fill="#c678dd" font-size="11" font-weight="700">OR — al menos una condición</text>
+  <text x="398" y="94"  fill="#c678dd" font-size="12" font-family="monospace">SELECT</text>
+  <text x="398" y="112" fill="#f6c90e" font-size="12" font-family="monospace">    first_name, salary</text>
+  <text x="398" y="130" fill="#c678dd" font-size="12" font-family="monospace">FROM</text>
+  <text x="440" y="130" fill="#e06c75" font-size="12" font-family="monospace"> employees</text>
+  <text x="398" y="148" fill="#c678dd" font-size="12" font-family="monospace">WHERE</text>
+  <text x="446" y="148" fill="#e2e8f0" font-size="12" font-family="monospace"> department_id = 1</text>
+  <text x="398" y="166" fill="#c678dd" font-size="12" font-family="monospace" font-weight="700">  OR</text>
+  <text x="432" y="166" fill="#e2e8f0" font-size="12" font-family="monospace">    department_id = 3;</text>
+
+  <!-- Precedencia -->
+  <rect x="40" y="206" width="640" height="110" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="360" y="228" text-anchor="middle" fill="#a0aec0" font-size="12" font-weight="600">Precedencia: AND antes que OR — usa siempre paréntesis</text>
+  <text x="58"  y="252" fill="#e06c75" font-size="12" font-family="monospace">dept = 1 OR dept = 2 AND salary &gt; 60000</text>
+  <text x="440" y="252" fill="#718096" font-size="11">→ se lee como  dept=1 OR (dept=2 AND salary&gt;60000)</text>
+  <text x="58"  y="276" fill="#68d391" font-size="12" font-family="monospace">(dept = 1 OR dept = 2) AND salary &gt; 60000</text>
+  <text x="440" y="276" fill="#718096" font-size="11">→ intención explícita y clara</text>
+  <text x="360" y="304" text-anchor="middle" fill="#718096" font-size="11">Operadores de comparación: = ≠ &lt; &gt; &lt;= &gt;=</text>
+</svg>

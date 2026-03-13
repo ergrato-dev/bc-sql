@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="360" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">Anatomía de SELECT — Semana 04</text>
+
+  <!-- Bloque código -->
+  <rect x="60" y="52" width="600" height="162" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="86" y="84"  fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">SELECT</text>
+  <text x="86" y="108" fill="#f6c90e" font-size="13" font-family="monospace">    first_name</text>
+  <text x="230" y="108" fill="#718096" font-size="13" font-family="monospace">                   AS</text>
+  <text x="298" y="108" fill="#98c379" font-size="13" font-family="monospace"> nombre,</text>
+  <text x="86" y="128" fill="#f6c90e" font-size="13" font-family="monospace">    last_name</text>
+  <text x="230" y="128" fill="#718096" font-size="13" font-family="monospace">                    AS</text>
+  <text x="298" y="128" fill="#98c379" font-size="13" font-family="monospace"> apellido,</text>
+  <text x="86" y="148" fill="#f6c90e" font-size="13" font-family="monospace">    salary * 12</text>
+  <text x="230" y="148" fill="#718096" font-size="13" font-family="monospace">               AS</text>
+  <text x="298" y="148" fill="#98c379" font-size="13" font-family="monospace"> salario_anual</text>
+  <text x="86" y="172" fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">FROM</text>
+  <text x="130" y="172" fill="#e06c75" font-size="14" font-family="monospace">   employees</text>
+  <text x="230" y="172" fill="#718096" font-size="14" font-family="monospace"> e</text>
+  <text x="86" y="196" fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">WHERE</text>
+  <text x="140" y="196" fill="#f6c90e" font-size="14" font-family="monospace">  e.department_id</text>
+  <text x="320" y="196" fill="#e2e8f0" font-size="14" font-family="monospace"> = 1;</text>
+
+  <!-- Leyenda -->
+  <rect x="60" y="238" width="600" height="95" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="360" y="258" text-anchor="middle" fill="#a0aec0" font-size="11" font-weight="600">Leyenda de colores</text>
+  <rect x="80"  y="270" width="12" height="12" fill="#c678dd"/><text x="100" y="281" fill="#a0aec0" font-size="11">Keyword SQL</text>
+  <rect x="210" y="270" width="12" height="12" fill="#f6c90e"/><text x="230" y="281" fill="#a0aec0" font-size="11">Columna</text>
+  <rect x="330" y="270" width="12" height="12" fill="#98c379"/><text x="350" y="281" fill="#a0aec0" font-size="11">Alias (AS)</text>
+  <rect x="450" y="270" width="12" height="12" fill="#e06c75"/><text x="470" y="281" fill="#a0aec0" font-size="11">Tabla + alias</text>
+  <text x="80"  y="318" fill="#718096" font-size="11">✗  SELECT *         →  recupera todo, dificulta mantenimiento</text>
+  <text x="80"  y="334" fill="#68d391" font-size="11">✓  SELECT col1, col2 →  explícito, eficiente, autodocumentado</text>
+</svg>
