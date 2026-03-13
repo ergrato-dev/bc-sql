@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460">
+  <rect width="860" height="460" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="430" y="34" font-family="Inter, Roboto, sans-serif" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Capas de SQL — Ruta de Aprendizaje</text>
+
+  <!-- Layer 1: DDL -->
+  <rect x="60" y="60" width="740" height="64" rx="8" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="60" y="60" width="140" height="64" rx="8" fill="#336791"/>
+  <text x="130" y="88" font-family="Inter, Roboto, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0" text-anchor="middle">DDL</text>
+  <text x="130" y="108" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Semanas 1–4</text>
+  <text x="230" y="85" font-family="Inter, Roboto, monospace" font-size="12" fill="#c678dd">CREATE TABLE</text>
+  <text x="380" y="85" font-family="Inter, Roboto, monospace" font-size="12" fill="#c678dd">ALTER TABLE</text>
+  <text x="520" y="85" font-family="Inter, Roboto, monospace" font-size="12" fill="#c678dd">DROP TABLE</text>
+  <text x="230" y="107" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">PRIMARY KEY · FOREIGN KEY · UNIQUE · CHECK · NOT NULL</text>
+
+  <!-- Layer 2: DML -->
+  <rect x="60" y="144" width="740" height="64" rx="8" fill="#16213e" stroke="#56b6c2" stroke-width="2"/>
+  <rect x="60" y="144" width="140" height="64" rx="8" fill="#56b6c2"/>
+  <text x="130" y="172" font-family="Inter, Roboto, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e" text-anchor="middle">DML</text>
+  <text x="130" y="192" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#1a1a2e" text-anchor="middle">Semanas 1–8</text>
+  <text x="230" y="170" font-family="Inter, Roboto, monospace" font-size="12" fill="#56b6c2">INSERT INTO</text>
+  <text x="380" y="170" font-family="Inter, Roboto, monospace" font-size="12" fill="#56b6c2">UPDATE ... SET</text>
+  <text x="530" y="170" font-family="Inter, Roboto, monospace" font-size="12" fill="#56b6c2">DELETE FROM</text>
+  <text x="230" y="192" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Transacciones · RETURNING · ON CONFLICT</text>
+
+  <!-- Layer 3: DQL -->
+  <rect x="60" y="228" width="740" height="64" rx="8" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <rect x="60" y="228" width="140" height="64" rx="8" fill="#98c379"/>
+  <text x="130" y="256" font-family="Inter, Roboto, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e" text-anchor="middle">DQL</text>
+  <text x="130" y="276" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#1a1a2e" text-anchor="middle">Semanas 5–12</text>
+  <text x="230" y="254" font-family="Inter, Roboto, monospace" font-size="12" fill="#98c379">SELECT / JOIN</text>
+  <text x="390" y="254" font-family="Inter, Roboto, monospace" font-size="12" fill="#98c379">GROUP BY / HAVING</text>
+  <text x="580" y="254" font-family="Inter, Roboto, monospace" font-size="12" fill="#98c379">Subqueries</text>
+  <text x="230" y="276" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">CTEs · WINDOW · LATERAL · Funciones de cadena, fecha, número</text>
+
+  <!-- Layer 4: Advanced -->
+  <rect x="60" y="312" width="740" height="64" rx="8" fill="#16213e" stroke="#e06c75" stroke-width="2"/>
+  <rect x="60" y="312" width="140" height="64" rx="8" fill="#e06c75"/>
+  <text x="130" y="340" font-family="Inter, Roboto, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Avanzado</text>
+  <text x="130" y="360" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Semanas 13–23</text>
+  <text x="230" y="338" font-family="Inter, Roboto, monospace" font-size="12" fill="#e06c75">Triggers</text>
+  <text x="320" y="338" font-family="Inter, Roboto, monospace" font-size="12" fill="#f6c90e">JSONB</text>
+  <text x="420" y="338" font-family="Inter, Roboto, monospace" font-size="12" fill="#c678dd">tsvector</text>
+  <text x="540" y="338" font-family="Inter, Roboto, monospace" font-size="12" fill="#98c379">Índices</text>
+  <text x="640" y="338" font-family="Inter, Roboto, monospace" font-size="12" fill="#56b6c2">EXPLAIN</text>
+  <text x="230" y="360" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Procedimientos · Vistas materializadas · Particionamiento</text>
+
+  <!-- Layer 5: Final Project -->
+  <rect x="60" y="396" width="740" height="46" rx="8" fill="#0d1b2a" stroke="#f6c90e" stroke-width="2"/>
+  <text x="430" y="424" font-family="Inter, Roboto, sans-serif" font-size="14" font-weight="bold" fill="#f6c90e" text-anchor="middle">Semana 24 — Proyecto Integrador Final</text>
+
+  <!-- Arrows between layers -->
+  <polygon points="430,128  424,140  436,140" fill="#718096"/>
+  <polygon points="430,212  424,224  436,224" fill="#718096"/>
+  <polygon points="430,296  424,308  436,308" fill="#718096"/>
+  <polygon points="430,380  424,392  436,392" fill="#718096"/>
+</svg>

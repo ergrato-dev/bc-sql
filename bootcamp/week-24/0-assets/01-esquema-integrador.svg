@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
+  <rect width="900" height="540" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="450" y="34" font-family="Inter, Roboto, sans-serif" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Esquema Integrador — Proyecto Final</text>
+
+  <!-- categories -->
+  <rect x="30" y="70" width="160" height="90" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="30" y="70" width="160" height="26" rx="6" fill="#336791"/>
+  <text x="110" y="88" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">categories</text>
+  <text x="42" y="112" font-family="Inter, Roboto, monospace" font-size="11" fill="#f6c90e">🔑 id SERIAL PK</text>
+  <text x="42" y="128" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   name TEXT NN</text>
+  <text x="42" y="144" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   is_active BOOLEAN</text>
+
+  <!-- products -->
+  <rect x="250" y="50" width="200" height="170" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="250" y="50" width="200" height="26" rx="6" fill="#336791"/>
+  <text x="350" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">products</text>
+  <text x="262" y="92" font-family="Inter, Roboto, monospace" font-size="11" fill="#f6c90e">🔑 id SERIAL PK</text>
+  <text x="262" y="108" font-family="Inter, Roboto, monospace" font-size="11" fill="#56b6c2">🔗 category_id FK</text>
+  <text x="262" y="124" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   name TEXT NN</text>
+  <text x="262" y="140" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   price NUMERIC(10,2)</text>
+  <text x="262" y="156" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   stock INTEGER</text>
+  <text x="262" y="172" font-family="Inter, Roboto, monospace" font-size="11" fill="#98c379">   attributes JSONB</text>
+  <text x="262" y="188" font-family="Inter, Roboto, monospace" font-size="11" fill="#c678dd">   search_vector TSVECTOR</text>
+  <text x="262" y="204" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   created_at DATE</text>
+
+  <!-- customers -->
+  <rect x="620" y="50" width="175" height="125" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="620" y="50" width="175" height="26" rx="6" fill="#336791"/>
+  <text x="707" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">customers</text>
+  <text x="632" y="92" font-family="Inter, Roboto, monospace" font-size="11" fill="#f6c90e">🔑 id SERIAL PK</text>
+  <text x="632" y="108" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   name TEXT NN</text>
+  <text x="632" y="124" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   email TEXT UNIQUE</text>
+  <text x="632" y="140" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   region TEXT</text>
+  <text x="632" y="156" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   created_at DATE</text>
+
+  <!-- orders -->
+  <rect x="510" y="260" width="175" height="125" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="510" y="260" width="175" height="26" rx="6" fill="#336791"/>
+  <text x="597" y="278" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">orders</text>
+  <text x="522" y="302" font-family="Inter, Roboto, monospace" font-size="11" fill="#f6c90e">🔑 id SERIAL PK</text>
+  <text x="522" y="318" font-family="Inter, Roboto, monospace" font-size="11" fill="#56b6c2">🔗 customer_id FK</text>
+  <text x="522" y="334" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   status TEXT</text>
+  <text x="522" y="350" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   total_amount NUMERIC</text>
+  <text x="522" y="366" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   created_at DATE</text>
+
+  <!-- order_items -->
+  <rect x="250" y="280" width="195" height="130" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="250" y="280" width="195" height="26" rx="6" fill="#336791"/>
+  <text x="347" y="298" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">order_items</text>
+  <text x="262" y="322" font-family="Inter, Roboto, monospace" font-size="11" fill="#f6c90e">🔑 id SERIAL PK</text>
+  <text x="262" y="338" font-family="Inter, Roboto, monospace" font-size="11" fill="#56b6c2">🔗 order_id FK</text>
+  <text x="262" y="354" font-family="Inter, Roboto, monospace" font-size="11" fill="#56b6c2">🔗 product_id FK</text>
+  <text x="262" y="370" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   quantity INTEGER</text>
+  <text x="262" y="386" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   unit_price NUMERIC</text>
+
+  <!-- audit_log -->
+  <rect x="620" y="280" width="200" height="125" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="2"/>
+  <rect x="620" y="280" width="200" height="26" rx="6" fill="#e06c75"/>
+  <text x="720" y="298" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">audit_log</text>
+  <text x="632" y="322" font-family="Inter, Roboto, monospace" font-size="11" fill="#f6c90e">🔑 id BIGSERIAL PK</text>
+  <text x="632" y="338" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   table_name TEXT</text>
+  <text x="632" y="354" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   action TEXT</text>
+  <text x="632" y="370" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   record_id INTEGER</text>
+  <text x="632" y="386" font-family="Inter, Roboto, monospace" font-size="11" fill="#e2e8f0">   changed_at TIMESTAMP</text>
+
+  <!-- FK: categories → products -->
+  <line x1="190" y1="115" x2="250" y2="135" stroke="#56b6c2" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- FK: products → order_items -->
+  <line x1="350" y1="220" x2="350" y2="280" stroke="#56b6c2" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- FK: orders → order_items -->
+  <line x1="510" y1="340" x2="445" y2="340" stroke="#56b6c2" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- FK: customers → orders -->
+  <line x1="707" y1="175" x2="597" y2="260" stroke="#56b6c2" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Legend -->
+  <rect x="30" y="460" width="840" height="58" rx="6" fill="#0d1b2a"/>
+  <text x="50" y="480" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e">🔑 PK</text>
+  <text x="110" y="480" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#56b6c2">🔗 FK</text>
+  <text x="170" y="480" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">■ JSONB</text>
+  <text x="260" y="480" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#c678dd">■ TSVECTOR</text>
+  <text x="380" y="480" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e06c75">■ audit_log (no FK, se llena por trigger)</text>
+  <text x="50" y="504" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">Esquema de referencia para el proyecto. Adaptarlo al dominio asignado.</text>
+</svg>
