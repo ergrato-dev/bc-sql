@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <rect width="820" height="480" fill="#1a1a2e"/>
+  <text x="410" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Esquema ER — Relaciones para JOIN</text>
+
+  <!-- Tabla locations -->
+  <rect x="30" y="60" width="195" height="160" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="30" y="60" width="195" height="32" rx="6" fill="#336791"/>
+  <text x="128" y="81" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">locations</text>
+  <line x1="30" y1="92" x2="225" y2="92" stroke="#336791" stroke-width="1"/>
+
+  <rect x="30" y="92" width="195" height="26" fill="#1a1a2e"/>
+  <text x="50" y="109" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">id</text>
+  <text x="110" y="109" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">PK INTEGER</text>
+
+  <rect x="30" y="118" width="195" height="26" fill="#16213e"/>
+  <text x="50" y="135" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">name</text>
+  <text x="110" y="135" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL UNIQUE</text>
+
+  <rect x="30" y="144" width="195" height="26" fill="#1a1a2e"/>
+  <text x="50" y="161" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">country</text>
+  <text x="110" y="161" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL</text>
+
+  <rect x="30" y="170" width="195" height="26" fill="#16213e"/>
+  <text x="50" y="187" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">region</text>
+  <text x="110" y="187" font-family="'Courier New', monospace" font-size="10" fill="#718096">TEXT (NULL ok)</text>
+
+  <!-- FK line locations → departments -->
+  <line x1="225" y1="140" x2="310" y2="200" stroke="#c678dd" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="306,194 318,200 310,208" fill="#c678dd"/>
+  <text x="250" y="160" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">1</text>
+  <text x="295" y="195" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">N</text>
+
+  <!-- Tabla departments -->
+  <rect x="310" y="60" width="210" height="200" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="310" y="60" width="210" height="32" rx="6" fill="#336791"/>
+  <text x="415" y="81" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">departments</text>
+  <line x1="310" y1="92" x2="520" y2="92" stroke="#336791" stroke-width="1"/>
+
+  <rect x="310" y="92" width="210" height="26" fill="#1a1a2e"/>
+  <text x="330" y="109" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">id</text>
+  <text x="390" y="109" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">PK INTEGER</text>
+
+  <rect x="310" y="118" width="210" height="26" fill="#16213e"/>
+  <text x="330" y="135" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">name</text>
+  <text x="390" y="135" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL UNIQUE</text>
+
+  <rect x="310" y="144" width="210" height="26" fill="#1a1a2e"/>
+  <text x="330" y="161" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">budget</text>
+  <text x="390" y="161" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">CHECK &gt;0</text>
+
+  <rect x="310" y="170" width="210" height="26" fill="#16213e"/>
+  <text x="330" y="187" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">location_id</text>
+  <text x="410" y="187" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">FK → locations</text>
+
+  <rect x="310" y="196" width="210" height="26" fill="#1a1a2e"/>
+  <text x="330" y="213" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">is_active</text>
+  <text x="400" y="213" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">DEFAULT 1</text>
+
+  <!-- FK line departments → employees -->
+  <line x1="520" y1="160" x2="610" y2="200" stroke="#c678dd" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="606,194 618,200 610,208" fill="#c678dd"/>
+  <text x="548" y="160" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">1</text>
+  <text x="598" y="195" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#c678dd">N</text>
+
+  <!-- Tabla employees -->
+  <rect x="610" y="60" width="200" height="250" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="610" y="60" width="200" height="32" rx="6" fill="#336791"/>
+  <text x="710" y="81" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">employees</text>
+  <line x1="610" y1="92" x2="810" y2="92" stroke="#336791" stroke-width="1"/>
+
+  <rect x="610" y="92" width="200" height="26" fill="#1a1a2e"/>
+  <text x="630" y="109" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">id</text>
+  <text x="680" y="109" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">PK INTEGER</text>
+
+  <rect x="610" y="118" width="200" height="26" fill="#16213e"/>
+  <text x="630" y="135" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">first_name</text>
+  <text x="714" y="135" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL</text>
+
+  <rect x="610" y="144" width="200" height="26" fill="#1a1a2e"/>
+  <text x="630" y="161" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">last_name</text>
+  <text x="710" y="161" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">NOT NULL</text>
+
+  <rect x="610" y="170" width="200" height="26" fill="#16213e"/>
+  <text x="630" y="187" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">email</text>
+  <text x="680" y="187" font-family="'Courier New', monospace" font-size="10" fill="#98c379">UNIQUE</text>
+
+  <rect x="610" y="196" width="200" height="26" fill="#1a1a2e"/>
+  <text x="630" y="213" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">salary</text>
+  <text x="682" y="213" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">NOT NULL CHECK &gt;0</text>
+
+  <rect x="610" y="222" width="200" height="26" fill="#16213e"/>
+  <text x="630" y="239" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">level</text>
+  <text x="674" y="239" font-family="'Courier New', monospace" font-size="10" fill="#e06c75">CHECK IN(jr,mid,sr)</text>
+
+  <rect x="610" y="248" width="200" height="26" fill="#1a1a2e"/>
+  <text x="630" y="265" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">department_id</text>
+  <text x="724" y="265" font-family="'Courier New', monospace" font-size="10" fill="#c678dd">FK → dept</text>
+
+  <rect x="610" y="274" width="200" height="26" fill="#16213e"/>
+  <text x="630" y="291" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">is_active</text>
+  <text x="700" y="291" font-family="'Courier New', monospace" font-size="10" fill="#56b6c2">DEFAULT 1</text>
+
+  <!-- ejemplo query multi-JOIN -->
+  <rect x="30" y="340" width="760" height="122" rx="8" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="410" y="362" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">JOIN de las tres tablas</text>
+
+  <text x="50" y="382" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="106" y="382" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">e.first_name, d.name AS department, l.name AS location</text>
+  <text x="50" y="400" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <text x="90" y="400" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees e</text>
+  <text x="50" y="418" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">INNER JOIN</text>
+  <text x="120" y="418" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">departments d</text>
+  <text x="214" y="418" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">ON</text>
+  <text x="232" y="418" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">e.department_id = d.id</text>
+  <text x="50" y="436" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">INNER JOIN</text>
+  <text x="120" y="436" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">locations     l</text>
+  <text x="214" y="436" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">ON</text>
+  <text x="232" y="436" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">d.location_id = l.id;</text>
+
+  <text x="410" y="470" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 09: JOINs</text>
+</svg>

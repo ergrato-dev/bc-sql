@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+  <rect width="820" height="500" fill="#1a1a2e"/>
+  <text x="410" y="34" font-family="Inter, Roboto, sans-serif" font-size="17" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Tipos de JOIN — Diagramas de Venn</text>
+
+  <!-- ===== INNER JOIN ===== -->
+  <text x="138" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">INNER JOIN</text>
+
+  <circle cx="120" cy="120" r="55" fill="#16213e" stroke="#e06c75" stroke-width="2" opacity="0.9"/>
+  <circle cx="158" cy="120" r="55" fill="#16213e" stroke="#98c379" stroke-width="2" opacity="0.9"/>
+  <!-- intersection highlight -->
+  <clipPath id="clip1"><circle cx="158" cy="120" r="55"/></clipPath>
+  <circle cx="120" cy="120" r="55" fill="#336791" clip-path="url(#clip1)" opacity="0.8"/>
+
+  <text x="100" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">A</text>
+  <text x="180" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">B</text>
+  <text x="138" y="188" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096" text-anchor="middle">Solo coincidencias</text>
+
+  <!-- ===== LEFT JOIN ===== -->
+  <text x="340" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">LEFT JOIN</text>
+
+  <circle cx="318" cy="120" r="55" fill="#336791" stroke="#e06c75" stroke-width="2" opacity="0.9"/>
+  <circle cx="358" cy="120" r="55" fill="#16213e" stroke="#98c379" stroke-width="2" opacity="0.9"/>
+  <!-- intersection highlight over left -->
+  <clipPath id="clip2"><circle cx="318" cy="120" r="55"/></clipPath>
+  <circle cx="358" cy="120" r="55" fill="#336791" clip-path="url(#clip2)" opacity="0.8"/>
+
+  <text x="298" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">A</text>
+  <text x="380" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">B</text>
+  <text x="340" y="188" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096" text-anchor="middle">Todo A + coincidencias</text>
+
+  <!-- ===== RIGHT JOIN ===== -->
+  <text x="543" y="68" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">RIGHT JOIN</text>
+
+  <circle cx="518" cy="120" r="55" fill="#16213e" stroke="#e06c75" stroke-width="2" opacity="0.9"/>
+  <circle cx="558" cy="120" r="55" fill="#336791" stroke="#98c379" stroke-width="2" opacity="0.9"/>
+  <!-- intersection highlight over right -->
+  <clipPath id="clip3"><circle cx="558" cy="120" r="55"/></clipPath>
+  <circle cx="518" cy="120" r="55" fill="#336791" clip-path="url(#clip3)" opacity="0.8"/>
+
+  <text x="498" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">A</text>
+  <text x="580" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">B</text>
+  <text x="543" y="188" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096" text-anchor="middle">Todo B + coincidencias</text>
+
+  <!-- ===== FULL OUTER JOIN ===== -->
+  <text x="718" y="68" font-family="Inter, Roboto, sans-serif" font-size="12" font-weight="700"
+        fill="#56b6c2" text-anchor="middle">FULL OUTER JOIN</text>
+
+  <circle cx="695" cy="120" r="55" fill="#336791" stroke="#e06c75" stroke-width="2" opacity="0.9"/>
+  <circle cx="735" cy="120" r="55" fill="#336791" stroke="#98c379" stroke-width="2" opacity="0.9"/>
+
+  <text x="675" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">A</text>
+  <text x="757" y="125" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">B</text>
+  <text x="718" y="188" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096" text-anchor="middle">Todo A + todo B</text>
+
+  <!-- Separador -->
+  <line x1="30" y1="210" x2="790" y2="210" stroke="#336791" stroke-width="1" stroke-dasharray="6,3"/>
+
+  <!-- Ejemplos SQL en tabla de dos columnas -->
+  <text x="410" y="235" font-family="Inter, Roboto, sans-serif" font-size="13" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle">Sintaxis de referencia</text>
+
+  <!-- INNER -->
+  <rect x="30" y="248" width="375" height="114" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="50" y="270" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="100" y="270" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">e.first_name, d.name</text>
+  <text x="50" y="288" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <text x="94" y="288" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees e</text>
+  <text x="50" y="306" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">INNER JOIN</text>
+  <text x="122" y="306" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">departments d</text>
+  <text x="122" y="324" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">ON</text>
+  <text x="144" y="324" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">e.department_id = d.id;</text>
+  <text x="50" y="352" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Solo empleados con dept válido</text>
+
+  <!-- LEFT -->
+  <rect x="415" y="248" width="375" height="114" rx="6" fill="#16213e" stroke="#336791" stroke-width="1"/>
+  <text x="435" y="270" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">SELECT</text>
+  <text x="486" y="270" font-family="'Courier New', monospace" font-size="11" fill="#f6c90e">d.name, e.first_name</text>
+  <text x="435" y="288" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">FROM</text>
+  <text x="479" y="288" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">departments d</text>
+  <text x="435" y="306" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">LEFT JOIN</text>
+  <text x="505" y="306" font-family="'Courier New', monospace" font-size="11" fill="#e06c75">employees e</text>
+  <text x="505" y="324" font-family="'Courier New', monospace" font-size="11" fill="#c678dd">ON</text>
+  <text x="527" y="324" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">e.department_id = d.id;</text>
+  <text x="435" y="352" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Todos los depts, con o sin empleados</text>
+
+  <!-- Nota LEFT JOIN huerfanos -->
+  <rect x="30" y="376" width="760" height="46" rx="6" fill="#16213e" stroke="#f6c90e" stroke-width="1"/>
+  <text x="50" y="396" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e" font-weight="700">Patrón "huérfanos":</text>
+  <text x="170" y="396" font-family="'Courier New', monospace" font-size="11" fill="#e2e8f0">WHERE e.id IS NULL</text>
+  <text x="310" y="396" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">→ departamentos SIN empleados</text>
+  <text x="50" y="413" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">Agrega</text>
+  <text x="88" y="413" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">WHERE e.id IS NULL</text>
+  <text x="224" y="413" font-family="Inter, Roboto, sans-serif" font-size="10" fill="#718096">al LEFT JOIN anterior para ver filas sin coincidencia</text>
+
+  <text x="410" y="488" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#718096" text-anchor="middle">Bootcamp SQL — Semana 09: JOINs</text>
+</svg>
