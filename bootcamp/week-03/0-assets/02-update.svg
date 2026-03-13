@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="360" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">Anatomía de UPDATE — Semana 03</text>
+
+  <rect x="60" y="52" width="600" height="130" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="86" y="84"  fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">UPDATE</text>
+  <text x="158" y="84" fill="#e06c75" font-size="14" font-family="monospace"> employees</text>
+  <text x="86" y="108" fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">SET</text>
+  <text x="120" y="108" fill="#f6c90e" font-size="14" font-family="monospace">    salary</text>
+  <text x="220" y="108" fill="#e2e8f0" font-size="14" font-family="monospace"> = </text>
+  <text x="242" y="108" fill="#56b6c2" font-size="14" font-family="monospace">70000.00</text>
+  <text x="86" y="132" fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">WHERE</text>
+  <text x="145" y="132" fill="#f6c90e" font-size="14" font-family="monospace">  id</text>
+  <text x="177" y="132" fill="#e2e8f0" font-size="14" font-family="monospace"> = </text>
+  <text x="199" y="132" fill="#56b6c2" font-size="14" font-family="monospace">2</text>
+  <text x="218" y="132" fill="#e2e8f0" font-size="14" font-family="monospace">;</text>
+
+  <!-- Warning + buenas prácticas -->
+  <rect x="60" y="200" width="280" height="130" rx="6" fill="#2d1515" stroke="#e06c75" stroke-width="1.5"/>
+  <text x="200" y="222" text-anchor="middle" fill="#e06c75" font-size="12" font-weight="700">⚠️ SIN WHERE — peligroso</text>
+  <text x="80" y="244" fill="#a0aec0" font-size="12" font-family="monospace">UPDATE employees</text>
+  <text x="80" y="262" fill="#a0aec0" font-size="12" font-family="monospace">SET salary = 0;</text>
+  <text x="200" y="288" text-anchor="middle" fill="#e06c75" font-size="11">Actualiza TODAS las filas</text>
+  <text x="200" y="306" text-anchor="middle" fill="#718096" font-size="11">No hay UNDO automático en SQLite</text>
+
+  <rect x="380" y="200" width="280" height="130" rx="6" fill="#152d15" stroke="#68d391" stroke-width="1.5"/>
+  <text x="520" y="222" text-anchor="middle" fill="#68d391" font-size="12" font-weight="700">✓ CON WHERE — seguro</text>
+  <text x="400" y="244" fill="#a0aec0" font-size="12" font-family="monospace">UPDATE employees</text>
+  <text x="400" y="262" fill="#a0aec0" font-size="12" font-family="monospace">SET salary = 70000</text>
+  <text x="400" y="280" fill="#a0aec0" font-size="12" font-family="monospace">WHERE id = 2;</text>
+  <text x="520" y="306" text-anchor="middle" fill="#718096" font-size="11">Afecta solo la fila deseada</text>
+</svg>

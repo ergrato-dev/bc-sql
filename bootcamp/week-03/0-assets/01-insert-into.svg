@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="380" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">Anatomía de INSERT INTO — Semana 03</text>
+
+  <!-- Bloque código -->
+  <rect x="60" y="52" width="600" height="160" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="86" y="84"  fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">INSERT INTO</text>
+  <text x="206" y="84" fill="#e06c75" font-size="14" font-family="monospace"> employees</text>
+  <text x="86" y="108" fill="#e2e8f0" font-size="13" font-family="monospace">    (id, first_name, last_name, email, salary)</text>
+  <text x="86" y="132" fill="#c678dd" font-size="14" font-weight="700" font-family="monospace">VALUES</text>
+  <text x="86" y="156" fill="#e2e8f0" font-size="13" font-family="monospace">    (1, </text>
+  <text x="130" y="156" fill="#98c379" font-size="13" font-family="monospace">'Alice'</text>
+  <text x="188" y="156" fill="#e2e8f0" font-size="13" font-family="monospace">, </text>
+  <text x="200" y="156" fill="#98c379" font-size="13" font-family="monospace">'Johnson'</text>
+  <text x="272" y="156" fill="#e2e8f0" font-size="13" font-family="monospace">, </text>
+  <text x="284" y="156" fill="#98c379" font-size="13" font-family="monospace">'alice@ex.com'</text>
+  <text x="404" y="156" fill="#e2e8f0" font-size="13" font-family="monospace">, 72000.00),</text>
+  <text x="86" y="180" fill="#e2e8f0" font-size="13" font-family="monospace">    (2, </text>
+  <text x="130" y="180" fill="#98c379" font-size="13" font-family="monospace">'Bob'</text>
+  <text x="178" y="180" fill="#e2e8f0" font-size="13" font-family="monospace">  , </text>
+  <text x="200" y="180" fill="#98c379" font-size="13" font-family="monospace">'Smith'</text>
+  <text x="258" y="180" fill="#e2e8f0" font-size="13" font-family="monospace">  , </text>
+  <text x="284" y="180" fill="#98c379" font-size="13" font-family="monospace">'bob@ex.com'</text>
+  <text x="392" y="180" fill="#e2e8f0" font-size="13" font-family="monospace">  , 65000.00);</text>
+
+  <!-- Etiquetas -->
+  <rect x="60" y="234" width="600" height="120" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="360" y="256" text-anchor="middle" fill="#a0aec0" font-size="12" font-weight="600">Reglas de oro del INSERT</text>
+
+  <text x="80" y="278" fill="#68d391" font-size="12">✓</text>
+  <text x="96" y="278" fill="#a0aec0" font-size="12">Listar siempre las columnas explícitamente</text>
+
+  <text x="80" y="298" fill="#68d391" font-size="12">✓</text>
+  <text x="96" y="298" fill="#a0aec0" font-size="12">Insertar tablas padre antes que tablas hijo (orden FK)</text>
+
+  <text x="80" y="318" fill="#e06c75" font-size="12">✗</text>
+  <text x="96" y="318" fill="#a0aec0" font-size="12">Nunca usar  INSERT INTO table VALUES (...)  sin listar columnas</text>
+
+  <text x="80" y="338" fill="#68d391" font-size="12">✓</text>
+  <text x="96" y="338" fill="#a0aec0" font-size="12">Strings con comillas simples: 'Alice'  —  nunca dobles: "Alice"</text>
+</svg>

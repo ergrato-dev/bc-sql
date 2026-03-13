@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" font-family="Inter, Roboto, Open Sans, sans-serif">
+  <rect width="720" height="360" fill="#1a1a2e"/>
+  <text x="360" y="34" text-anchor="middle" fill="#a0aec0" font-size="13" font-weight="600">DELETE Seguro — Semana 03</text>
+
+  <!-- Paso 1: SELECT primero -->
+  <rect x="60" y="52" width="280" height="110" rx="6" fill="#16213e" stroke="#336791" stroke-width="1.5"/>
+  <text x="200" y="72" text-anchor="middle" fill="#68d391" font-size="11" font-weight="700">Paso 1: Verificar con SELECT</text>
+  <text x="80" y="94"  fill="#c678dd" font-size="12" font-family="monospace">SELECT</text>
+  <text x="136" y="94" fill="#e2e8f0" font-size="12" font-family="monospace"> id, email</text>
+  <text x="80" y="112" fill="#c678dd" font-size="12" font-family="monospace">FROM</text>
+  <text x="120" y="112" fill="#e06c75" font-size="12" font-family="monospace">   employees</text>
+  <text x="80" y="130" fill="#c678dd" font-size="12" font-family="monospace">WHERE</text>
+  <text x="130" y="130" fill="#e2e8f0" font-size="12" font-family="monospace">  is_active = 0</text>
+  <text x="80" y="148" fill="#718096" font-size="11">→ Ver qué filas se borrarán</text>
+
+  <!-- Flecha -->
+  <text x="360" y="115" text-anchor="middle" fill="#a0aec0" font-size="20">→</text>
+
+  <!-- Paso 2: DELETE -->
+  <rect x="380" y="52" width="280" height="110" rx="6" fill="#16213e" stroke="#e06c75" stroke-width="1.5"/>
+  <text x="520" y="72" text-anchor="middle" fill="#e06c75" font-size="11" font-weight="700">Paso 2: Ejecutar DELETE</text>
+  <text x="400" y="94"  fill="#c678dd" font-size="12" font-family="monospace">DELETE FROM</text>
+  <text x="508" y="94" fill="#e06c75" font-size="12" font-family="monospace"> employees</text>
+  <text x="400" y="112" fill="#c678dd" font-size="12" font-family="monospace">WHERE</text>
+  <text x="450" y="112" fill="#e2e8f0" font-size="12" font-family="monospace">  is_active = 0</text>
+  <text x="400" y="148" fill="#718096" font-size="11">→ Mismo WHERE que el SELECT</text>
+
+  <!-- Comparación -->
+  <rect x="60" y="192" width="600" height="140" rx="6" fill="#16213e" stroke="#2d3748" stroke-width="1"/>
+  <text x="360" y="214" text-anchor="middle" fill="#a0aec0" font-size="12" font-weight="600">DELETE vs DROP TABLE vs TRUNCATE</text>
+
+  <text x="80" y="238" fill="#56b6c2" font-size="12" font-weight="700">DELETE FROM t WHERE ...</text>
+  <text x="320" y="238" fill="#718096" font-size="11">Elimina filas específicas · tabla permanece</text>
+
+  <text x="80" y="260" fill="#e06c75" font-size="12" font-weight="700">DELETE FROM t;</text>
+  <text x="320" y="260" fill="#718096" font-size="11">Vacía la tabla (equivale a TRUNCATE en SQLite)</text>
+
+  <text x="80" y="282" fill="#e06c75" font-size="12" font-weight="700">DROP TABLE t;</text>
+  <text x="320" y="282" fill="#718096" font-size="11">Elimina tabla + estructura + datos permanentemente</text>
+
+  <text x="80" y="304" fill="#a0aec0" font-size="12" font-weight="700">TRUNCATE TABLE t;</text>
+  <text x="320" y="304" fill="#718096" font-size="11">Solo PostgreSQL/MySQL · no disponible en SQLite</text>
+</svg>
