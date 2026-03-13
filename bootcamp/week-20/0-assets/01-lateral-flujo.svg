@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" width="780" height="400">
+  <rect width="780" height="400" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="390" y="32" font-family="Inter, Roboto, sans-serif" font-size="16"
+        font-weight="bold" fill="#e2e8f0" text-anchor="middle">
+    LATERAL — Correlación de filas en FROM
+  </text>
+
+  <!-- Tabla izquierda: employees -->
+  <rect x="30" y="55" width="200" height="180" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="30" y="55" width="200" height="36" rx="6" fill="#336791"/>
+  <text x="130" y="79" font-family="Inter, Roboto, sans-serif" font-size="13"
+        font-weight="bold" fill="#e2e8f0" text-anchor="middle">employees</text>
+  <line x1="30" y1="91" x2="230" y2="91" stroke="#336791" stroke-width="1"/>
+  <text x="50" y="113" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e">id</text>
+  <text x="90" y="113" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">name</text>
+  <line x1="30" y1="120" x2="230" y2="120" stroke="#16213e" stroke-width="1"/>
+  <text x="50" y="140" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">1</text>
+  <text x="90" y="140" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">Ana García</text>
+  <text x="50" y="162" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">2</text>
+  <text x="90" y="162" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">Luis Pérez</text>
+  <text x="50" y="184" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#98c379">3</text>
+  <text x="90" y="184" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">Sara Nieto</text>
+  <text x="50" y="210" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">...</text>
+
+  <!-- Flechas de correlación -->
+  <path d="M230 140 Q310 140 310 160" stroke="#c678dd" stroke-width="2" fill="none"
+        stroke-dasharray="5,3" marker-end="url(#arrowL)"/>
+  <path d="M230 162 Q310 162 310 200" stroke="#c678dd" stroke-width="2" fill="none"
+        stroke-dasharray="5,3" marker-end="url(#arrowL)"/>
+  <path d="M230 184 Q310 184 310 240" stroke="#c678dd" stroke-width="2" fill="none"
+        stroke-dasharray="5,3" marker-end="url(#arrowL)"/>
+
+  <!-- Etiqueta correlación -->
+  <text x="270" y="128" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#c678dd" text-anchor="middle">e.id →</text>
+  <text x="270" y="142" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#c678dd" text-anchor="middle">subquery</text>
+
+  <!-- Subquery LATERAL box -->
+  <rect x="300" y="70" width="280" height="220" rx="6" fill="#0d1b2a" stroke="#c678dd" stroke-width="2"/>
+  <rect x="300" y="70" width="280" height="32" rx="6" fill="#c678dd"/>
+  <text x="440" y="92" font-family="Inter, Roboto, sans-serif" font-size="13"
+        font-weight="bold" fill="#1a1a2e" text-anchor="middle">LATERAL (subquery)</text>
+  <text x="315" y="122" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">SELECT</text>
+  <text x="350" y="122" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">product_name, amount</text>
+  <text x="315" y="140" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">FROM</text>
+  <text x="350" y="140" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">sales</text>
+  <text x="315" y="158" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">WHERE</text>
+  <text x="357" y="158" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">employee_id = e.id</text>
+  <text x="315" y="176" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">ORDER BY</text>
+  <text x="382" y="176" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">amount DESC</text>
+  <text x="315" y="194" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">LIMIT</text>
+  <text x="350" y="194" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">1</text>
+
+  <line x1="300" y1="212" x2="580" y2="212" stroke="#336791" stroke-width="1"/>
+  <text x="315" y="232" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">
+    ↳ Se evalúa una vez por fila
+  </text>
+  <text x="315" y="250" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">
+    ↳ Puede usar columnas de e.*
+  </text>
+  <text x="315" y="268" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">
+    ↳ LIMIT 1 = último registro
+  </text>
+
+  <!-- Flecha resultado -->
+  <path d="M580 175 L620 175" stroke="#98c379" stroke-width="2" fill="none"
+        marker-end="url(#arrowG)"/>
+
+  <!-- Resultado -->
+  <rect x="620" y="55" width="140" height="230" rx="6" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <rect x="620" y="55" width="140" height="32" rx="6" fill="#98c379"/>
+  <text x="690" y="77" font-family="Inter, Roboto, sans-serif" font-size="12"
+        font-weight="bold" fill="#1a1a2e" text-anchor="middle">Resultado</text>
+  <line x1="620" y1="87" x2="760" y2="87" stroke="#98c379" stroke-width="1"/>
+  <text x="635" y="105" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">name</text>
+  <text x="695" y="105" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">amount</text>
+  <line x1="620" y1="112" x2="760" y2="112" stroke="#336791" stroke-width="1"/>
+  <text x="635" y="130" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Ana</text>
+  <text x="695" y="130" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">850.00</text>
+  <text x="635" y="152" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Luis</text>
+  <text x="695" y="152" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">720.00</text>
+  <text x="635" y="174" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Sara</text>
+  <text x="695" y="174" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">990.00</text>
+  <text x="635" y="200" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">...</text>
+
+  <!-- Nota inferior -->
+  <rect x="30" y="310" width="720" height="60" rx="6" fill="#0d1b2a" stroke="#56b6c2" stroke-width="1"/>
+  <text x="390" y="332" font-family="Inter, Roboto, sans-serif" font-size="12"
+        fill="#56b6c2" text-anchor="middle" font-weight="bold">Sintaxis</text>
+  <text x="390" y="354" font-family="courier new, monospace" font-size="11"
+        fill="#e2e8f0" text-anchor="middle">
+    FROM employees e  JOIN LATERAL (SELECT ... WHERE employee_id = e.id  LIMIT 1) AS sub ON TRUE
+  </text>
+  <text x="390" y="372" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#718096" text-anchor="middle">
+    LEFT JOIN LATERAL para conservar filas sin coincidencia
+  </text>
+
+  <defs>
+    <marker id="arrowL" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#c678dd"/>
+    </marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#98c379"/>
+    </marker>
+  </defs>
+</svg>

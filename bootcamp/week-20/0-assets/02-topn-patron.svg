@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <rect width="780" height="420" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="390" y="32" font-family="Inter, Roboto, sans-serif" font-size="16"
+        font-weight="bold" fill="#e2e8f0" text-anchor="middle">
+    Patrón Top-N por Grupo con LATERAL
+  </text>
+
+  <!-- Leyenda objetivo -->
+  <text x="390" y="56" font-family="Inter, Roboto, sans-serif" font-size="12"
+        fill="#718096" text-anchor="middle">
+    Obtener los 2 productos más vendidos por cada categoría
+  </text>
+
+  <!-- Tabla categories -->
+  <rect x="20" y="75" width="160" height="160" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="20" y="75" width="160" height="32" rx="6" fill="#336791"/>
+  <text x="100" y="97" font-family="Inter, Roboto, sans-serif" font-size="13"
+        font-weight="bold" fill="#e2e8f0" text-anchor="middle">categories</text>
+  <text x="35" y="122" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e">id</text>
+  <text x="75" y="122" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#f6c90e">category</text>
+  <line x1="20" y1="128" x2="180" y2="128" stroke="#336791" stroke-width="1"/>
+  <text x="35" y="147" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">1</text>
+  <text x="75" y="147" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">electronics</text>
+  <text x="35" y="167" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">2</text>
+  <text x="75" y="167" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">furniture</text>
+  <text x="35" y="187" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">3</text>
+  <text x="75" y="187" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#e2e8f0">clothing</text>
+  <text x="35" y="215" font-family="Inter, Roboto, sans-serif" font-size="12" fill="#718096">...</text>
+
+  <!-- Flechas correlación -->
+  <path d="M180 147 C230 147 230 165 260 165" stroke="#c678dd" stroke-width="1.5"
+        fill="none" stroke-dasharray="4,3" marker-end="url(#aP)"/>
+  <path d="M180 167 C230 167 230 210 260 210" stroke="#c678dd" stroke-width="1.5"
+        fill="none" stroke-dasharray="4,3" marker-end="url(#aP)"/>
+  <path d="M180 187 C230 187 230 255 260 255" stroke="#c678dd" stroke-width="1.5"
+        fill="none" stroke-dasharray="4,3" marker-end="url(#aP)"/>
+
+  <!-- 3 subquery boxes -->
+  <!-- Box 1: electronics -->
+  <rect x="260" y="75" width="220" height="100" rx="4" fill="#0d1b2a" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="275" y="97" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">LATERAL (category='electronics')</text>
+  <text x="275" y="115" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">1. Laptop Pro  → 420 uds</text>
+  <text x="275" y="132" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">2. Monitor 4K  → 310 uds</text>
+  <text x="275" y="149" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">  (LIMIT 2)</text>
+  <text x="275" y="168" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">ORDER BY sold DESC LIMIT 2</text>
+
+  <!-- Box 2: furniture -->
+  <rect x="260" y="185" width="220" height="100" rx="4" fill="#0d1b2a" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="275" y="207" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">LATERAL (category='furniture')</text>
+  <text x="275" y="225" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">1. Mesa Exec   → 195 uds</text>
+  <text x="275" y="242" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">2. Silla Ergo  → 180 uds</text>
+  <text x="275" y="259" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">  (LIMIT 2)</text>
+  <text x="275" y="278" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">ORDER BY sold DESC LIMIT 2</text>
+
+  <!-- Box 3: clothing -->
+  <rect x="260" y="295" width="220" height="100" rx="4" fill="#0d1b2a" stroke="#c678dd" stroke-width="1.5"/>
+  <text x="275" y="317" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#c678dd">LATERAL (category='clothing')</text>
+  <text x="275" y="335" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">1. Camisa L    → 540 uds</text>
+  <text x="275" y="352" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">2. Jeans Slim  → 430 uds</text>
+  <text x="275" y="369" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">  (LIMIT 2)</text>
+  <text x="275" y="388" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#56b6c2">ORDER BY sold DESC LIMIT 2</text>
+
+  <!-- Flechas a resultado -->
+  <path d="M480 125 L530 125" stroke="#98c379" stroke-width="1.5" fill="none" marker-end="url(#aG)"/>
+  <path d="M480 235 L530 235" stroke="#98c379" stroke-width="1.5" fill="none" marker-end="url(#aG)"/>
+  <path d="M480 345 L530 345" stroke="#98c379" stroke-width="1.5" fill="none" marker-end="url(#aG)"/>
+
+  <!-- Resultado -->
+  <rect x="530" y="75" width="230" height="320" rx="6" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <rect x="530" y="75" width="230" height="32" rx="6" fill="#98c379"/>
+  <text x="645" y="97" font-family="Inter, Roboto, sans-serif" font-size="13"
+        font-weight="bold" fill="#1a1a2e" text-anchor="middle">Top-2 por Categoría</text>
+  <text x="545" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">category</text>
+  <text x="640" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">product</text>
+  <text x="720" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">sold</text>
+  <line x1="530" y1="124" x2="760" y2="124" stroke="#336791" stroke-width="1"/>
+  <text x="545" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">electronics</text>
+  <text x="635" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Laptop Pro</text>
+  <text x="720" y="142" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">420</text>
+  <text x="545" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">electronics</text>
+  <text x="635" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Monitor 4K</text>
+  <text x="720" y="160" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">310</text>
+  <line x1="530" y1="170" x2="760" y2="170" stroke="#0d1b2a" stroke-width="1"/>
+  <text x="545" y="188" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">furniture</text>
+  <text x="635" y="188" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Mesa Exec</text>
+  <text x="720" y="188" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">195</text>
+  <text x="545" y="206" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">furniture</text>
+  <text x="635" y="206" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Silla Ergo</text>
+  <text x="720" y="206" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">180</text>
+  <line x1="530" y1="216" x2="760" y2="216" stroke="#0d1b2a" stroke-width="1"/>
+  <text x="545" y="234" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">clothing</text>
+  <text x="635" y="234" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Camisa L</text>
+  <text x="720" y="234" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">540</text>
+  <text x="545" y="252" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">clothing</text>
+  <text x="635" y="252" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Jeans Slim</text>
+  <text x="720" y="252" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">430</text>
+  <text x="545" y="300" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">...</text>
+
+  <defs>
+    <marker id="aP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#c678dd"/>
+    </marker>
+    <marker id="aG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#98c379"/>
+    </marker>
+  </defs>
+</svg>
