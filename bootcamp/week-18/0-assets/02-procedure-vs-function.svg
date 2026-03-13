@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, sans-serif">
+  <!-- Fondo -->
+  <rect width="760" height="420" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="380" y="36" fill="#e2e8f0" font-size="18" font-weight="700" text-anchor="middle">FUNCTION vs PROCEDURE en PL/pgSQL</text>
+
+  <!-- ===== FUNCTION (izquierda) ===== -->
+  <rect x="40" y="60" width="320" height="330" rx="10" fill="#16213e" stroke="#56b6c2" stroke-width="2"/>
+  <rect x="40" y="60" width="320" height="36" rx="10" fill="#56b6c2" fill-opacity="0.3"/>
+  <text x="200" y="84" fill="#56b6c2" font-size="15" font-weight="700" text-anchor="middle">FUNCTION</text>
+
+  <!-- cómo se llama -->
+  <text x="200" y="118" fill="#718096" font-size="11" text-anchor="middle">Llamada:</text>
+  <rect x="70" y="124" width="260" height="28" rx="5" fill="#1a1a2e"/>
+  <text x="200" y="143" fill="#98c379" font-size="11" text-anchor="middle" font-family="monospace">SELECT fn_nombre(args);</text>
+
+  <!-- retorna -->
+  <text x="200" y="177" fill="#718096" font-size="11" text-anchor="middle">Retorna:</text>
+  <text x="200" y="197" fill="#e2e8f0" font-size="11" text-anchor="middle">Escalar / TABLE / SETOF / VOID</text>
+
+  <!-- transaccion -->
+  <rect x="70" y="212" width="260" height="28" rx="5" fill="#e06c75" fill-opacity="0.15" stroke="#e06c75" stroke-width="1"/>
+  <text x="200" y="231" fill="#e06c75" font-size="11" text-anchor="middle">❌ No puede hacer COMMIT</text>
+
+  <!-- ejemplo bloque -->
+  <rect x="70" y="252" width="260" height="100" rx="5" fill="#0d1b2a"/>
+  <text x="85" y="270" fill="#c678dd" font-size="10" font-family="monospace">CREATE OR REPLACE FUNCTION</text>
+  <text x="85" y="285" fill="#e2e8f0" font-size="10" font-family="monospace">fn_get_label(v NUMERIC)</text>
+  <text x="85" y="300" fill="#c678dd" font-size="10" font-family="monospace">RETURNS TEXT LANGUAGE plpgsql AS $$</text>
+  <text x="85" y="315" fill="#56b6c2" font-size="10" font-family="monospace">BEGIN</text>
+  <text x="85" y="330" fill="#e2e8f0" font-size="10" font-family="monospace">  RETURN CASE WHEN v&gt;500 THEN 'high'</text>
+  <text x="85" y="345" fill="#e2e8f0" font-size="10" font-family="monospace">    ELSE 'low' END;</text>
+
+  <!-- ===== PROCEDURE (derecha) ===== -->
+  <rect x="400" y="60" width="320" height="330" rx="10" fill="#16213e" stroke="#c678dd" stroke-width="2"/>
+  <rect x="400" y="60" width="320" height="36" rx="10" fill="#c678dd" fill-opacity="0.3"/>
+  <text x="560" y="84" fill="#c678dd" font-size="15" font-weight="700" text-anchor="middle">PROCEDURE</text>
+
+  <!-- cómo se llama -->
+  <text x="560" y="118" fill="#718096" font-size="11" text-anchor="middle">Llamada:</text>
+  <rect x="430" y="124" width="260" height="28" rx="5" fill="#1a1a2e"/>
+  <text x="560" y="143" fill="#98c379" font-size="11" text-anchor="middle" font-family="monospace">CALL sp_nombre(args);</text>
+
+  <!-- retorna -->
+  <text x="560" y="177" fill="#718096" font-size="11" text-anchor="middle">Retorna:</text>
+  <text x="560" y="197" fill="#e2e8f0" font-size="11" text-anchor="middle">Nada (usa parámetros OUT)</text>
+
+  <!-- transaccion -->
+  <rect x="430" y="212" width="260" height="28" rx="5" fill="#98c379" fill-opacity="0.15" stroke="#98c379" stroke-width="1"/>
+  <text x="560" y="231" fill="#98c379" font-size="11" text-anchor="middle">✓ Puede hacer COMMIT / ROLLBACK</text>
+
+  <!-- ejemplo bloque -->
+  <rect x="430" y="252" width="260" height="100" rx="5" fill="#0d1b2a"/>
+  <text x="445" y="270" fill="#c678dd" font-size="10" font-family="monospace">CREATE OR REPLACE PROCEDURE</text>
+  <text x="445" y="285" fill="#e2e8f0" font-size="10" font-family="monospace">sp_transfer(p_from INT, p_to INT,</text>
+  <text x="445" y="300" fill="#e2e8f0" font-size="10" font-family="monospace">            p_amt NUMERIC)</text>
+  <text x="445" y="315" fill="#c678dd" font-size="10" font-family="monospace">LANGUAGE plpgsql AS $$</text>
+  <text x="445" y="330" fill="#56b6c2" font-size="10" font-family="monospace">BEGIN ... COMMIT; END; $$;</text>
+
+  <!-- Nota inferior -->
+  <text x="380" y="408" fill="#718096" font-size="10" text-anchor="middle">Ambos se inspeccionan con: SELECT * FROM pg_proc WHERE proname = 'nombre';</text>
+</svg>
