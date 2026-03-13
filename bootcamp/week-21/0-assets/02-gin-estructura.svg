@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" width="780" height="380">
+  <rect width="780" height="380" fill="#1a1a2e"/>
+
+  <!-- Título -->
+  <text x="390" y="30" font-family="Inter, Roboto, sans-serif" font-size="16"
+        font-weight="bold" fill="#e2e8f0" text-anchor="middle">
+    Índice GIN — Generalized Inverted Index
+  </text>
+  <text x="390" y="52" font-family="Inter, Roboto, sans-serif" font-size="12"
+        fill="#718096" text-anchor="middle">
+    Cada lexema apunta a las filas que lo contienen
+  </text>
+
+  <!-- Tabla articles (filas) -->
+  <rect x="20" y="70" width="200" height="260" rx="6" fill="#16213e" stroke="#336791" stroke-width="2"/>
+  <rect x="20" y="70" width="200" height="32" rx="6" fill="#336791"/>
+  <text x="120" y="92" font-family="Inter, Roboto, sans-serif" font-size="13"
+        font-weight="bold" fill="#e2e8f0" text-anchor="middle">articles</text>
+  <text x="35" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">id</text>
+  <text x="65" y="118" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#f6c90e">title (resumen)</text>
+  <line x1="20" y1="124" x2="220" y2="124" stroke="#336791" stroke-width="1"/>
+  <text x="35" y="143" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">1</text>
+  <text x="65" y="143" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Base de datos SQL</text>
+  <text x="35" y="163" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">2</text>
+  <text x="65" y="163" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Datos y estadística</text>
+  <text x="35" y="183" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">3</text>
+  <text x="65" y="183" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Bases relacionales</text>
+  <text x="35" y="203" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">4</text>
+  <text x="65" y="203" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Introducción SQL</text>
+  <text x="35" y="223" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">5</text>
+  <text x="65" y="223" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Datos y algoritmos</text>
+  <text x="35" y="243" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">6</text>
+  <text x="65" y="243" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">Diseño de bases</text>
+  <text x="35" y="263" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#98c379">7</text>
+  <text x="65" y="263" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#e2e8f0">SQL avanzado</text>
+  <text x="35" y="283" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">...</text>
+
+  <!-- Flecha tabla → GIN -->
+  <path d="M220 190 L280 190" stroke="#56b6c2" stroke-width="2" fill="none" marker-end="url(#gArr)"/>
+  <text x="250" y="182" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#56b6c2" text-anchor="middle">GIN</text>
+  <text x="250" y="200" font-family="Inter, Roboto, sans-serif" font-size="10"
+        fill="#56b6c2" text-anchor="middle">index</text>
+
+  <!-- GIN Index box -->
+  <rect x="280" y="65" width="300" height="270" rx="6" fill="#0d1b2a" stroke="#f6c90e" stroke-width="2"/>
+  <rect x="280" y="65" width="300" height="32" rx="6" fill="#f6c90e"/>
+  <text x="430" y="87" font-family="Inter, Roboto, sans-serif" font-size="13"
+        font-weight="bold" fill="#1a1a2e" text-anchor="middle">Índice GIN (lexema → row IDs)</text>
+
+  <!-- Lexemas y posting lists -->
+  <text x="295" y="115" font-family="courier new, monospace" font-size="11" fill="#c678dd">'bas'</text>
+  <text x="340" y="115" font-family="courier new, monospace" font-size="11" fill="#e2e8f0">→</text>
+  <text x="360" y="115" font-family="courier new, monospace" font-size="11" fill="#98c379">{1, 3, 6}</text>
+
+  <text x="295" y="137" font-family="courier new, monospace" font-size="11" fill="#c678dd">'dato'</text>
+  <text x="340" y="137" font-family="courier new, monospace" font-size="11" fill="#e2e8f0">→</text>
+  <text x="360" y="137" font-family="courier new, monospace" font-size="11" fill="#98c379">{1, 2, 5}</text>
+
+  <text x="295" y="159" font-family="courier new, monospace" font-size="11" fill="#c678dd">'relacionl'</text>
+  <text x="370" y="159" font-family="courier new, monospace" font-size="11" fill="#e2e8f0">→</text>
+  <text x="390" y="159" font-family="courier new, monospace" font-size="11" fill="#98c379">{1, 3}</text>
+
+  <text x="295" y="181" font-family="courier new, monospace" font-size="11" fill="#c678dd">'sql'</text>
+  <text x="340" y="181" font-family="courier new, monospace" font-size="11" fill="#e2e8f0">→</text>
+  <text x="360" y="181" font-family="courier new, monospace" font-size="11" fill="#98c379">{1, 4, 7}</text>
+
+  <text x="295" y="203" font-family="courier new, monospace" font-size="11" fill="#c678dd">'estadist'</text>
+  <text x="370" y="203" font-family="courier new, monospace" font-size="11" fill="#e2e8f0">→</text>
+  <text x="390" y="203" font-family="courier new, monospace" font-size="11" fill="#98c379">{2, 5}</text>
+
+  <text x="295" y="225" font-family="courier new, monospace" font-size="11" fill="#c678dd">'avanz'</text>
+  <text x="340" y="225" font-family="courier new, monospace" font-size="11" fill="#e2e8f0">→</text>
+  <text x="360" y="225" font-family="courier new, monospace" font-size="11" fill="#98c379">{7}</text>
+
+  <text x="295" y="247" font-family="courier new, monospace" font-size="11" fill="#718096">'algorit'</text>
+  <text x="370" y="247" font-family="courier new, monospace" font-size="11" fill="#718096">→  {5}</text>
+
+  <text x="295" y="267" font-family="courier new, monospace" font-size="11" fill="#718096">'diseñ'</text>
+  <text x="340" y="267" font-family="courier new, monospace" font-size="11" fill="#718096">→  {6}</text>
+
+  <text x="295" y="287" font-family="Inter, Roboto, sans-serif" font-size="11" fill="#718096">...</text>
+
+  <!-- Búsqueda: 'bas' & 'dato' -->
+  <rect x="280" y="345" width="300" height="28" rx="4" fill="#16213e" stroke="#56b6c2" stroke-width="1.5"/>
+  <text x="430" y="364" font-family="courier new, monospace" font-size="11"
+        fill="#56b6c2" text-anchor="middle">
+    'bas' &amp; 'dato' → {1,3,6} ∩ {1,2,5} = {1}
+  </text>
+
+  <!-- Flecha GIN → búsqueda -->
+  <path d="M430 335 L430 373" stroke="#56b6c2" stroke-width="1.5" fill="none" marker-end="url(#gArr)"/>
+
+  <!-- Resultado -->
+  <rect x="600" y="160" width="160" height="60" rx="6" fill="#16213e" stroke="#98c379" stroke-width="2"/>
+  <text x="680" y="183" font-family="Inter, Roboto, sans-serif" font-size="12"
+        font-weight="bold" fill="#98c379" text-anchor="middle">Resultado</text>
+  <text x="680" y="203" font-family="Inter, Roboto, sans-serif" font-size="11"
+        fill="#e2e8f0" text-anchor="middle">Fila 1 — O(log n)</text>
+  <path d="M580 190 L600 190" stroke="#98c379" stroke-width="1.5" fill="none" marker-end="url(#gArrG)"/>
+
+  <defs>
+    <marker id="gArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#56b6c2"/>
+    </marker>
+    <marker id="gArrG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#98c379"/>
+    </marker>
+  </defs>
+</svg>
