@@ -68,7 +68,7 @@ Students learn the same tools used by real data teams.
 Each week includes:
 
 ```
-bootcamp/week-XX/
+bootcamp/week-XX-tema_principal/
 ├── README.md                 # Description and objectives
 ├── rubrica-evaluacion.md     # Evaluation criteria
 ├── 0-assets/                 # SVG diagrams (ER, flow, indexes)
@@ -129,7 +129,7 @@ No additional configuration required. Open any `.sql` file in
 DB Browser for SQLite or run with the CLI:
 
 ```bash
-sqlite3 my_db.db < bootcamp/week-01/2-practicas/ejercicio-01/starter/setup.sql
+sqlite3 my_db.db < bootcamp/week-01-introduccion_bases_de_datos_relacionales/2-practicas/ejercicio-01/starter/setup.sql
 ```
 
 ### 3. Weeks 13–24 — PostgreSQL 16 with Docker
@@ -147,7 +147,7 @@ docker compose -f _scripts/docker-compose.yml exec postgres \
 
 # Load a SQL file
 docker compose -f _scripts/docker-compose.yml exec -T postgres \
-  psql -U bootcamp -d bootcamp_db < bootcamp/week-13/2-practicas/ejercicio-01/starter/setup.sql
+  psql -U bootcamp -d bootcamp_db < bootcamp/week-13-ctes_recursivas/2-practicas/ejercicio-01/starter/setup.sql
 
 # Stop the container (preserves data)
 docker compose -f _scripts/docker-compose.yml down
@@ -157,7 +157,7 @@ docker compose -f _scripts/docker-compose.yml down
 
 ```bash
 # Go to the first week
-cd bootcamp/week-01
+cd bootcamp/week-01-introduccion_bases_de_datos_relacionales
 
 # Read instructions
 cat README.md
@@ -203,7 +203,7 @@ Contributions are welcome! This is an open-source educational project.
 2. Review the [Code of Conduct](CODE_OF_CONDUCT.md)
 3. Fork the repository
 4. Create your branch (`git checkout -b feature/new-practice`)
-5. Commit with [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat(week-05): add window functions exercise'`)
+5. Commit with [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat(week-05-operadores_y_filtros): add window functions exercise'`)
 6. Push to your branch (`git push origin feature/new-practice`)
 7. Open a Pull Request
 
@@ -258,7 +258,7 @@ details.
 </p>
 
 <p align="center">
-  <a href="bootcamp/week-01">Start Week 1</a> •
+  <a href="bootcamp/week-01-introduccion_bases_de_datos_relacionales">Start Week 1</a> •
   <a href="_docs">View Documentation</a> •
   <a href="https://github.com/ergrato-dev/bc-sql/issues">Report Issue</a> •
   <a href="CONTRIBUTING.md">Contribute</a>

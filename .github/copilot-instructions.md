@@ -80,7 +80,7 @@ Al finalizar el bootcamp, los estudiantes serán capaces de:
 Cada semana sigue esta estructura estándar:
 
 ```
-bootcamp/week-XX/
+bootcamp/week-XX-tema_principal/
 ├── README.md                 # Descripción y objetivos de la semana
 ├── rubrica-evaluacion.md     # Criterios de evaluación detallados
 ├── 0-assets/                 # Diagramas SVG (ER, flujo, índices, etc.)
@@ -354,11 +354,11 @@ select employeeId, firstName from Employees where hireDate > '2020-01-01';
 
 #### ✅ Patrón estándar del bootcamp
 
-| Etapa | Semanas | Motor | Tipo correcto |
-| ----- | ------- | ----- | ------------- |
-| Etapa 0 | 1–12 | SQLite | `INTEGER PRIMARY KEY` |
-| Etapa 1–2 | 13–23 | PostgreSQL | `SERIAL PRIMARY KEY` |
-| Proyecto final | 24 | PostgreSQL | `SERIAL PRIMARY KEY` (tablas normales) / `BIGSERIAL PRIMARY KEY` (tablas de auditoría/log de alto volumen) |
+| Etapa          | Semanas | Motor      | Tipo correcto                                                                                              |
+| -------------- | ------- | ---------- | ---------------------------------------------------------------------------------------------------------- |
+| Etapa 0        | 1–12    | SQLite     | `INTEGER PRIMARY KEY`                                                                                      |
+| Etapa 1–2      | 13–23   | PostgreSQL | `SERIAL PRIMARY KEY`                                                                                       |
+| Proyecto final | 24      | PostgreSQL | `SERIAL PRIMARY KEY` (tablas normales) / `BIGSERIAL PRIMARY KEY` (tablas de auditoría/log de alto volumen) |
 
 ```sql
 -- ✅ SQLite (semanas 1–12)
@@ -379,18 +379,21 @@ id  INTEGER PRIMARY KEY AUTOINCREMENT
 #### UUID como PRIMARY KEY — cuándo sí, cuándo no
 
 **✅ Usar UUID cuando:**
+
 - Los IDs se exponen en URLs/APIs públicas (opacos, no revelan conteo)
 - Sistema distribuido o multi-tenant donde los IDs se generan sin coordinación
 - Merge de datos entre instancias independientes (sin colisión entre `id=1` de dos DBs)
 - Sincronización offline (el cliente genera el ID antes de conectarse)
 
 **❌ NO usar UUID como PK por defecto porque:**
+
 - UUID v4 es aleatorio → inserciones en nodos aleatorios del B-tree → índice fragmentado (+30–50% tamaño)
 - Comparar 128 bits vs 32/64 bits tiene costo en JOINs masivos
 - Sin orden natural: `ORDER BY id` no da orden de inserción
 - En SQLite no existe tipo nativo UUID (se almacena como `TEXT(36)`)
 
 **En PostgreSQL 16 (el motor del bootcamp), si fuera necesario:**
+
 ```sql
 -- Requiere extensión pgcrypto o la función nativa gen_random_uuid()
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
@@ -701,7 +704,7 @@ Cada semana incluye **tres tipos de evidencias**:
 
 - **Repositorio**: https://github.com/ergrato-dev/bc-sql
 - **Documentación general**: [\_docs/README.md](_docs/README.md)
-- **Primera semana**: [bootcamp/week-01/README.md](bootcamp/week-01/README.md)
+- **Primera semana**: [bootcamp/week-01-introduccion_bases_de_datos_relacionales/README.md](bootcamp/week-01-introduccion_bases_de_datos_relacionales/README.md)
 
 ---
 

@@ -147,7 +147,7 @@ git checkout -b docs/improve-week-08-readme
 
 ```bash
 git add .
-git commit -m "feat(week-05): add GROUP BY edge case exercise"
+git commit -m "feat(week-05-operadores_y_filtros): add GROUP BY edge case exercise"
 git push origin feat/week-05-new-exercise
 ```
 
@@ -230,16 +230,16 @@ Usamos [Conventional Commits](https://www.conventionalcommits.org/):
 #### Ejemplos
 
 ```bash
-feat(week-09): add LEFT JOIN exercise with NULLs
-fix(week-14): correct window function PARTITION BY syntax
-docs(week-01): clarify PRIMARY KEY explanation
-style(week-07): reformat GROUP BY queries
+feat(week-09-joins_inner_join_y_left_join): add LEFT JOIN exercise with NULLs
+fix(week-14-window_functions_ranking): correct window function PARTITION BY syntax
+docs(week-01-introduccion_bases_de_datos_relacionales): clarify PRIMARY KEY explanation
+style(week-07-null_y_constraints): reformat GROUP BY queries
 chore: update docker-compose to postgres:16.2-alpine
 ```
 
 #### Alcance
 
-- `week-01` … `week-24` para semanas específicas
+- `week-01-introduccion_bases_de_datos_relacionales` … `week-24-proyecto_integrador_final` para semanas específicas
 - `docs` para documentación general
 - `scripts` para herramientas y automatización
 - `assets` para diagramas SVG
