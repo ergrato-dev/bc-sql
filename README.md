@@ -254,6 +254,32 @@ para más detalles.
 
 ---
 
+## ⚠️ Exención de Responsabilidad
+
+Este repositorio es un recurso educativo de acceso libre, distribuido **tal
+como está** (*as-is*), sin garantía de ningún tipo, expresa o implícita.
+
+- El contenido tiene **fines exclusivamente educativos**. No constituye
+  asesoramiento profesional en bases de datos, seguridad informática ni
+  desarrollo de software para entornos productivos.
+- Los autores y colaboradores **no se responsabilizan** por daños directos,
+  indirectos o consecuentes derivados del uso, aplicación o mal uso del
+  material aquí publicado.
+- Los **fragmentos de código SQL** y configuraciones de ejemplo están
+  diseñados para entornos de aprendizaje local. **No deben usarse en
+  producción** sin una revisión de seguridad adecuada.
+- Las **credenciales de desarrollo** incluidas (usuario `bootcamp`,
+  contraseña `bootcamp123`) son solo para uso local. Nunca las uses en
+  sistemas accesibles públicamente.
+- Las referencias a herramientas, libros o servicios de terceros se
+  incluyen con fines informativos. Los autores no avalan ni garantizan
+  la disponibilidad, exactitud o idoneidad de dichos recursos.
+- El material puede contener **errores tipográficos o inexactitudes**.
+  Se agradece reportarlos abriendo un
+  [Issue](https://github.com/ergrato-dev/bc-sql/issues).
+
+---
+
 <p align="center">
   <strong>🎓 Bootcamp SQL — De Cero a Héroe</strong><br>
   <em>De cero a SQL Developer Junior en ~6 meses</em>
