@@ -487,16 +487,44 @@ ORDER BY avg_salary DESC;
 Para las **semanas 13–24** (Etapa 2: SQL Avanzado) se usa **PostgreSQL vía
 Docker** para garantizar:
 
-- Versión idéntica en todos los entornos (`postgres:16-alpine`)
+- Versión idéntica en todos los entornos (imagen pineada por digest SHA256)
 - Sin conflictos con PostgreSQL instalado en el sistema
 - Reset fácil del entorno para repetir ejercicios desde cero
 - Reproducibilidad en Linux, macOS y Windows
 
-### Imagen recomendada
+### 🔒 Regla de Oro — Pinning de imágenes Docker (NON-NEGOTIABLE)
+
+**NUNCA** referenciar una imagen Docker con tag flotante. Siempre usar el
+**digest SHA256 exacto** para garantizar reproducibilidad y prevenir ataques
+de supply-chain.
+
+```yaml
+# ❌ PROHIBIDO — tag flotante (puede cambiar silenciosamente)
+image: postgres:16-alpine
+image: postgres:latest
+image: postgres:16
+
+# ✅ REQUERIDO — digest inmutable
+image: postgres:16-alpine@sha256:<digest-exacto>
+```
+
+La misma regla aplica a **cualquier imagen Docker** usada en el proyecto.
+No existe excepción.
+
+Para actualizar una imagen:
+1. `docker pull <imagen>:<tag>`
+2. `docker inspect <imagen>:<tag> --format '{{index .RepoDigests 0}}'`
+3. Reemplazar el digest en `docker-compose.yml`
+4. Re-auditar CVEs con Trivy y actualizar `_docs/security-cve-audit.md`
+
+### Imagen actual
 
 ```
-postgres:16-alpine
+postgres:16-alpine@sha256:20edbde7749f822887a1a022ad526fde0a47d6b2be9a8364433605cf65099416
 ```
+
+PostgreSQL **16.13** / Alpine Linux **3.23.3** · Auditado 2026-04-04
+Ver auditoría completa en [`_docs/security-cve-audit.md`](_docs/security-cve-audit.md)
 
 ### docker-compose.yml
 

@@ -3,11 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ergrato-dev/bc-sql/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"></a>
+  <a href="https://github.com/ergrato-dev/bc-sql/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="License CC BY-NC-SA 4.0"></a>
   <a href="#"><img src="https://img.shields.io/badge/weeks-24-yellow.svg" alt="24 Weeks"></a>
   <a href="#"><img src="https://img.shields.io/badge/hours-192-orange.svg" alt="192 Hours"></a>
   <a href="#"><img src="https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white" alt="PostgreSQL 16"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
 </p>
 
 <p align="center">
@@ -195,17 +194,17 @@ Each week includes three types of evidence:
 
 ## 🤝 Contributing
 
-Contributions are welcome! This is an open-source educational project.
+Contributions are welcome! This is an open-source educational project under
+the [CC BY-NC-SA 4.0](LICENSE) license — you can share and adapt it with
+attribution, for non-commercial use, and under the same license.
 
 ### How to Contribute
 
-1. Read the [Contributing Guide](CONTRIBUTING.md)
-2. Review the [Code of Conduct](CODE_OF_CONDUCT.md)
-3. Fork the repository
-4. Create your branch (`git checkout -b feature/new-practice`)
-5. Commit with [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat(week-05-operadores_y_filtros): add window functions exercise'`)
-6. Push to your branch (`git push origin feature/new-practice`)
-7. Open a Pull Request
+1. Fork the repository
+2. Create your branch (`git checkout -b feature/new-practice`)
+3. Commit with [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat(week-05-operadores_y_filtros): add window functions exercise'`)
+4. Push to your branch (`git push origin feature/new-practice`)
+5. Open a Pull Request
 
 ### 📋 Contribution Areas
 
@@ -227,8 +226,10 @@ Contributions are welcome! This is an open-source educational project.
 
 ## 📄 License
 
-This project is under the MIT License — see the [LICENSE](LICENSE) file for
-details.
+This project is under the
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license —
+share and adapt with attribution, for non-commercial use, and under the same
+license. See the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -245,9 +246,6 @@ details.
 ## 📚 Additional Documentation
 
 - [🤖 Copilot Instructions](.github/copilot-instructions.md)
-- [🤝 Contributing Guide](CONTRIBUTING.md)
-- [📜 Code of Conduct](CODE_OF_CONDUCT.md)
-- [🔒 Security Policy](SECURITY.md)
 - [📖 General Documentation](_docs/)
 
 ---
@@ -285,8 +283,7 @@ This repository is a freely available educational resource, distributed
 <p align="center">
   <a href="bootcamp/week-01-introduccion_bases_de_datos_relacionales">Start Week 1</a> •
   <a href="_docs">View Documentation</a> •
-  <a href="https://github.com/ergrato-dev/bc-sql/issues">Report Issue</a> •
-  <a href="CONTRIBUTING.md">Contribute</a>
+  <a href="https://github.com/ergrato-dev/bc-sql/issues">Report Issue</a>
 </p>
 
 <p align="center">

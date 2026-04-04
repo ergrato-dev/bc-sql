@@ -6,10 +6,32 @@
 #
 # Reset completo (elimina todos los datos):
 #   docker compose down -v
+#
+# ──────────────────────────────────────────────────────────────────
+# REGLA DE ORO — PINNING DE IMÁGENES DOCKER
+# ──────────────────────────────────────────────────────────────────
+# La imagen SIEMPRE debe referenciarse con su digest SHA256 exacto.
+# PROHIBIDO usar:
+#   ❌  image: postgres:16-alpine          (tag flotante, puede cambiar)
+#   ❌  image: postgres:latest             (tag flotante, sin versión)
+#   ❌  image: postgres:16                 (tag flotante)
+# CORRECTO:
+#   ✅  image: postgres:16-alpine@sha256:<digest>  (inmutable, reproducible)
+#
+# Para actualizar la imagen:
+#   1. docker pull postgres:16-alpine
+#   2. docker inspect postgres:16-alpine --format '{{index .RepoDigests 0}}'
+#   3. Reemplazar el digest en este archivo + ejecutar trivy para re-auditar CVEs
+#   4. Actualizar _docs/security-cve-audit.md con la nueva auditoría
+# ──────────────────────────────────────────────────────────────────
+#
+# Auditoría de CVEs activa: ver _docs/security-cve-audit.md
+# Última auditoría: 2026-04-04 | Imagen: postgres 16.13 (Alpine 3.23.3)
 
 services:
   postgres:
-    image: postgres:16-alpine
+    # digest pinned — postgres 16.13 / Alpine 3.23.3 / auditado 2026-04-04
+    image: postgres:16-alpine@sha256:20edbde7749f822887a1a022ad526fde0a47d6b2be9a8364433605cf65099416
     container_name: bc-sql-postgres
     restart: unless-stopped
     environment:
