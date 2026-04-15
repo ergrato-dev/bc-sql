@@ -39,6 +39,7 @@ Crea los archivos en este orden exacto:
 ## Reglas críticas
 
 ### SQL
+
 - Keywords en UPPERCASE, identificadores en snake_case en inglés, comentarios en español
 - Semanas 1–12 → `INTEGER PRIMARY KEY` (SQLite)
 - Semanas 13–24 → `SERIAL PRIMARY KEY` (PostgreSQL 16)
@@ -46,36 +47,41 @@ Crea los archivos en este orden exacto:
 - Proyectos: usar `-- TODO:` para implementación libre del alumno
 
 ### Teoría
+
 - Máximo 120 líneas por archivo
 - 4–6 secciones numeradas
 - Checklist de exactamente 4 preguntas al final
 
 ### Assets SVG
+
 - Tema dark: fondo `#1a1a2e`, tablas `#16213e`, bordes `#336791`
 - Notación crow's foot para diagramas ER
 - Sin degradés, fuentes sans-serif
 
 ### Proyectos
+
 - Dominio de ejemplo NO debe ser: biblioteca, farmacia, gimnasio, escuela,
   tienda de mascotas, restaurante, banco, agencia de taxis, hospital, cine,
   hotel, agencia de viajes, concesionario, tienda de ropa, taller mecánico
 - Usar dominios alternativos: museo, planetario, acuario, zoológico, etc.
 
 ### Semanas 13–24 (PostgreSQL)
+
 - Incluir bloque "Cómo ejecutar" con comandos Docker en cada README de ejercicio
 
 ## Distribución del tiempo (tabla en README)
 
-| Actividad | Tiempo |
-|---|---|
-| Teoría | 2 h |
-| Ejercicios | 3 h |
-| Proyecto | 2 h |
-| Revisión | 1 h |
+| Actividad  | Tiempo |
+| ---------- | ------ |
+| Teoría     | 2 h    |
+| Ejercicios | 3 h    |
+| Proyecto   | 2 h    |
+| Revisión   | 1 h    |
 
 ## Navegación en README
 
 Incluir siempre al final:
+
 ```
 ← [Semana N-1 — Tema](../week-NN-slug/README.md) |
 → [Semana N+1 — Tema](../week-NN-slug/README.md)

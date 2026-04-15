@@ -6,14 +6,14 @@ applyTo: "**/1-teoria/*.md"
 
 ## Límites de extensión (NON-NEGOTIABLE)
 
-| Elemento | Límite |
-|---|---|
-| Líneas por archivo | **Máximo 120** |
-| Objetivos | 3–4 ítems |
-| Secciones numeradas | 4–6 (`## 1.`, `## 2.`…) |
-| Ejemplos de código por sección | Máximo 2 |
-| Checklist final | **4 ítems** como preguntas concretas |
-| Referencias | 2–3 links |
+| Elemento                       | Límite                               |
+| ------------------------------ | ------------------------------------ |
+| Líneas por archivo             | **Máximo 120**                       |
+| Objetivos                      | 3–4 ítems                            |
+| Secciones numeradas            | 4–6 (`## 1.`, `## 2.`…)              |
+| Ejemplos de código por sección | Máximo 2                             |
+| Checklist final                | **4 ítems** como preguntas concretas |
+| Referencias                    | 2–3 links                            |
 
 ## Estructura obligatoria de cada archivo de teoría
 
@@ -21,26 +21,32 @@ applyTo: "**/1-teoria/*.md"
 # Título del Concepto
 
 ## Objetivos
+
 - Objetivo 1 (verbo de acción)
 - Objetivo 2
 - Objetivo 3
 
 ## Diagrama
+
 ![Descripción](../0-assets/XX-nombre.svg)
 
 ## 1. Primera sección
+
 ...
 
 ## 2. Segunda sección
+
 ...
 
 ## Checklist
+
 - [ ] ¿Pregunta concreta 1?
 - [ ] ¿Pregunta concreta 2?
 - [ ] ¿Pregunta concreta 3?
 - [ ] ¿Pregunta concreta 4?
 
 ## Referencias
+
 - [Título](url)
 - [Título](url)
 ```

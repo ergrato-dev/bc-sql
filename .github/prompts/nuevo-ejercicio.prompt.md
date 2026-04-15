@@ -29,6 +29,7 @@ ejercicio-NN/
 ## Formato obligatorio del README.md del ejercicio
 
 Cada paso debe tener:
+
 1. Título con el concepto
 2. Explicación breve (2–4 líneas)
 3. Ejemplo SQL ejecutable en bloque de código
@@ -76,13 +77,15 @@ WHERE condicion;
 
 ## Semanas 13–24 — bloque Docker en README
 
-```markdown
+````markdown
 ## Cómo ejecutar
 
 1. Levanta el contenedor:
    ```bash
    docker compose -f scripts/docker-compose.yml up -d
    ```
+````
+
 2. Carga el esquema:
    ```bash
    docker compose -f scripts/docker-compose.yml exec -T postgres \
@@ -93,4 +96,7 @@ WHERE condicion;
    docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db
    ```
+
+```
+
 ```

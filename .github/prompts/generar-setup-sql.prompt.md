@@ -30,12 +30,12 @@ Amplía o adapta este esquema según el tema de la semana.
 
 ## Volumen recomendado por etapa
 
-| Semanas | Rows employees | Rows departments | Notas |
-|---|---|---|---|
-| 1–5 | 8–10 | 3–4 | Alumno puede trazar a mano |
-| 6–12 | 25–35 | 6–8 | Distribuciones desiguales visibles |
-| 13–16 | 50–100 (generate_series) | 8–10 | Empates para window functions |
-| 17–24 | 500–5000 (generate_series) | según tema | Volumen real para EXPLAIN |
+| Semanas | Rows employees             | Rows departments | Notas                              |
+| ------- | -------------------------- | ---------------- | ---------------------------------- |
+| 1–5     | 8–10                       | 3–4              | Alumno puede trazar a mano         |
+| 6–12    | 25–35                      | 6–8              | Distribuciones desiguales visibles |
+| 13–16   | 50–100 (generate_series)   | 8–10             | Empates para window functions      |
+| 17–24   | 500–5000 (generate_series) | según tema       | Volumen real para EXPLAIN          |
 
 ## Reglas de calidad de datos
 

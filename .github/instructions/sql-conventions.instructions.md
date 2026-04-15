@@ -32,16 +32,16 @@ Nunca usar UUID como PK por defecto.
 
 ## Nomenclatura
 
-| Elemento | Patrón | Ejemplo |
-|---|---|---|
-| Tablas | snake_case plural | `order_items` |
-| Columnas | snake_case descriptivo | `created_at`, `is_active` |
-| PK | `id` o `<singular>_id` | `employee_id` |
-| FK | `<tabla_ref_singular>_id` | `department_id` |
-| Índices | `idx_<tabla>_<col>` | `idx_employees_dept` |
-| Vistas | `v_<nombre>` | `v_active_employees` |
-| Procedimientos | `sp_<nombre>` | `sp_calculate_salary` |
-| Funciones | `fn_<nombre>` | `fn_get_full_name` |
+| Elemento       | Patrón                    | Ejemplo                   |
+| -------------- | ------------------------- | ------------------------- |
+| Tablas         | snake_case plural         | `order_items`             |
+| Columnas       | snake_case descriptivo    | `created_at`, `is_active` |
+| PK             | `id` o `<singular>_id`    | `employee_id`             |
+| FK             | `<tabla_ref_singular>_id` | `department_id`           |
+| Índices        | `idx_<tabla>_<col>`       | `idx_employees_dept`      |
+| Vistas         | `v_<nombre>`              | `v_active_employees`      |
+| Procedimientos | `sp_<nombre>`             | `sp_calculate_salary`     |
+| Funciones      | `fn_<nombre>`             | `fn_get_full_name`        |
 
 ## Estructura de archivos setup.sql
 

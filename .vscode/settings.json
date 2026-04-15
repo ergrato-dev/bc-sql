@@ -18,5 +18,20 @@
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#33679199",
     "titleBar.inactiveForeground": "#e7e7e799"
-  }
+  },
+  "sqltools.connections": [
+    {
+      "name": "bc-sql Bootcamp (Docker)",
+      "driver": "PostgreSQL",
+      "server": "localhost",
+      "port": 5432,
+      "database": "bootcamp_db",
+      "username": "bootcamp",
+      "password": "bootcamp123",
+      "previewLimit": 50,
+      "group": "bc-sql"
+    }
+  ],
+  "sqltools.autoOpenSessionFiles": false,
+  "sqltools.results.limit": 100
 }

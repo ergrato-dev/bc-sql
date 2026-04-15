@@ -47,6 +47,7 @@ Breve descripción del caso de negocio genérico (2–3 líneas).
 
 Adapta el esquema y las consultas al dominio que te asignó el instructor.
 Ejemplos de adaptación:
+
 - Biblioteca → books, members, loans
 - Farmacia → medicines, sales, inventory
 - Gimnasio → members, routines, attendance
@@ -56,7 +57,7 @@ Ejemplos de adaptación:
 1. **Requisito 1**: descripción concreta y verificable
 2. **Requisito 2**: ...
 3. **Requisito 3**: ...
-(mínimo 4, máximo 6 requisitos)
+   (mínimo 4, máximo 6 requisitos)
 
 ## Entregables
 
@@ -66,13 +67,13 @@ Ejemplos de adaptación:
 
 ## Criterios de evaluación
 
-| Criterio | Puntaje |
-|---|---|
-| Esquema correcto con FK | 20 pts |
-| Consultas funcionan sin errores | 40 pts |
-| Uso correcto del concepto de la semana | 30 pts |
-| Comentarios en español | 10 pts |
-| **Total** | **100 pts** |
+| Criterio                               | Puntaje     |
+| -------------------------------------- | ----------- |
+| Esquema correcto con FK                | 20 pts      |
+| Consultas funcionan sin errores        | 40 pts      |
+| Uso correcto del concepto de la semana | 30 pts      |
+| Comentarios en español                 | 10 pts      |
+| **Total**                              | **100 pts** |
 ```
 
 ## Formato del starter/proyecto.sql
