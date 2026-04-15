@@ -1,5 +1,6 @@
-# .dockerignore — bc-sql
-# Excluye archivos innecesarios del contexto de build de Docker
+# .dockerignore — bc-sql Bootcamp
+# Excluye del build context archivos innecesarios para la imagen PostgreSQL.
+# El build context es scripts/ (context: . en docker-compose.yml).
 
 # Control de versiones
 .git/
@@ -10,26 +11,33 @@
 .vscode/
 .github/
 
-# Documentación del proyecto (no necesaria en el contenedor)
+# Documentación y assets del proyecto
 README.md
 README_EN.md
 LICENSE
 CONTRIBUTING.md
 CODE_OF_CONDUCT.md
 SECURITY.md
-_docs/
-_assets/
+docs/
+assets/
 
-# Contenido del bootcamp (el contenedor solo necesita recibir
-# los archivos .sql que se montan o pasan por stdin)
+# Contenido del bootcamp (los .sql se pasan por stdin o se montan en runtime)
 bootcamp/
 
-# Archivos de sistema
+# Archivos de entorno y secretos
+.env
+.env.*
+*.env
+
+# Scripts de pausa/restauración (no van dentro del contenedor)
+scripts/pause.sh
+scripts/resume.sh
+scripts/restore.sh
+
+# Archivos de sistema y temporales
 .DS_Store
 Thumbs.db
 *.log
-
-# Scripts de pausa/restauración (no van en el contenedor)
-_scripts/pause.sh
-_scripts/resume.sh
-_scripts/restore.sh
+*.tmp
+*.swp
+*.swo
