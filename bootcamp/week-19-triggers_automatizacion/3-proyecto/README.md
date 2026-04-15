@@ -10,16 +10,16 @@ transformaciones y auditoría en la base de datos de tu dominio asignado
 
 1. Asegúrate de tener Docker corriendo:
    ```bash
-   docker compose -f _scripts/docker-compose.yml up -d
+   docker compose -f scripts/docker-compose.yml up -d
    ```
 2. Carga el esquema base:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec -T postgres \
+   docker compose -f scripts/docker-compose.yml exec -T postgres \
      psql -U bootcamp -d bootcamp_db < bootcamp/week-19-triggers_automatizacion/3-proyecto/starter/proyecto.sql
    ```
 3. Conecta e implementa:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec postgres \
+   docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db
    ```
 

@@ -10,7 +10,7 @@ Aprende a ejecutar lógica automáticamente cuando ocurren eventos DML
 **PostgreSQL 16** vía Docker.
 
 ```bash
-docker compose -f _scripts/docker-compose.yml up -d
+docker compose -f scripts/docker-compose.yml up -d
 ```
 
 ## Objetivos de la semana

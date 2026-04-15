@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="_assets/bootcamp-header.svg" alt="Bootcamp SQL — De Cero a Héroe" width="860">
+  <img src="assets/bootcamp-header.svg" alt="Bootcamp SQL — De Cero a Héroe" width="860">
 </p>
 
 <p align="center">
@@ -136,21 +136,21 @@ sqlite3 mi_base.db < bootcamp/week-01-introduccion_bases_de_datos_relacionales/2
 
 ```bash
 # Levantar el contenedor de PostgreSQL
-docker compose -f _scripts/docker-compose.yml up -d
+docker compose -f scripts/docker-compose.yml up -d
 
 # Verificar que está corriendo
-docker compose -f _scripts/docker-compose.yml ps
+docker compose -f scripts/docker-compose.yml ps
 
 # Conectar con psql interactivo
-docker compose -f _scripts/docker-compose.yml exec postgres \
+docker compose -f scripts/docker-compose.yml exec postgres \
   psql -U bootcamp -d bootcamp_db
 
 # Cargar un archivo SQL
-docker compose -f _scripts/docker-compose.yml exec -T postgres \
+docker compose -f scripts/docker-compose.yml exec -T postgres \
   psql -U bootcamp -d bootcamp_db < bootcamp/week-13-ctes_recursivas/2-practicas/ejercicio-01/starter/setup.sql
 
 # Detener el contenedor (conserva datos)
-docker compose -f _scripts/docker-compose.yml down
+docker compose -f scripts/docker-compose.yml down
 ```
 
 ### 4. Navegar al Contenido
@@ -247,7 +247,7 @@ licencia. Ver el archivo [LICENSE](LICENSE) para más detalles.
 ## 📚 Documentación Adicional
 
 - [🤖 Instrucciones de Copilot](.github/copilot-instructions.md)
-- [📖 Documentación General](_docs/)
+- [📖 Documentación General](docs/)
 
 ---
 
@@ -284,7 +284,7 @@ como está** (*as-is*), sin garantía de ningún tipo, expresa o implícita.
 
 <p align="center">
   <a href="bootcamp/week-01-introduccion_bases_de_datos_relacionales">Comenzar Semana 1</a> •
-  <a href="_docs">Ver Documentación</a> •
+  <a href="docs">Ver Documentación</a> •
   <a href="https://github.com/ergrato-dev/bc-sql/issues">Reportar Issue</a>
 </p>
 

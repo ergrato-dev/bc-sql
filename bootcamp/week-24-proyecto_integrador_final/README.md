@@ -53,7 +53,7 @@ week-24-proyecto_integrador_final/
 ## Cómo ejecutar
 
 ```bash
-docker compose -f _scripts/docker-compose.yml up -d
-docker compose -f _scripts/docker-compose.yml exec postgres \
+docker compose -f scripts/docker-compose.yml up -d
+docker compose -f scripts/docker-compose.yml exec postgres \
   psql -U bootcamp -d bootcamp_db
 ```

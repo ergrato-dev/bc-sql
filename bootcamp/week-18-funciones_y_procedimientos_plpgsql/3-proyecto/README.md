@@ -9,16 +9,16 @@ y procedimientos PL/pgSQL, añadiendo validaciones y auditoría de operaciones.
 
 1. Inicia el contenedor:
    ```bash
-   docker compose -f _scripts/docker-compose.yml up -d
+   docker compose -f scripts/docker-compose.yml up -d
    ```
 2. Carga el esquema:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec -T postgres \
+   docker compose -f scripts/docker-compose.yml exec -T postgres \
      psql -U bootcamp -d bootcamp_db < bootcamp/week-18-funciones_y_procedimientos_plpgsql/3-proyecto/starter/proyecto.sql
    ```
 3. Conéctate:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec postgres \
+   docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db
    ```
 

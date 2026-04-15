@@ -9,16 +9,16 @@ para tu dominio asignado, incorporando todos los conceptos del bootcamp.
 
 1. Asegúrate de tener Docker corriendo:
    ```bash
-   docker compose -f _scripts/docker-compose.yml up -d
+   docker compose -f scripts/docker-compose.yml up -d
    ```
 2. Carga el esquema e implementa tus TODOs:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec -T postgres \
+   docker compose -f scripts/docker-compose.yml exec -T postgres \
      psql -U bootcamp -d bootcamp_db < starter/proyecto.sql
    ```
 3. Conecta para interactuar:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec postgres \
+   docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db
    ```
 

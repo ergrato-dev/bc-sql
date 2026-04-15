@@ -10,16 +10,16 @@ que lleguen a disco.
 
 1. Asegúrate de tener Docker corriendo:
    ```bash
-   docker compose -f _scripts/docker-compose.yml up -d
+   docker compose -f scripts/docker-compose.yml up -d
    ```
 2. Carga el esquema:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec -T postgres \
+   docker compose -f scripts/docker-compose.yml exec -T postgres \
      psql -U bootcamp -d bootcamp_db < bootcamp/week-19-triggers_automatizacion/2-practicas/ejercicio-02/starter/setup.sql
    ```
 3. Conecta e interactúa:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec postgres \
+   docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db
    ```
 4. Abre `starter/ejercicio.sql` y sigue los pasos.

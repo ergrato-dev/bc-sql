@@ -14,9 +14,9 @@ con `WITH RECURSIVE` para generar reportes de profundidad y paths.
 ## Cómo ejecutar
 
 ```bash
-docker compose -f _scripts/docker-compose.yml up -d
+docker compose -f scripts/docker-compose.yml up -d
 
-docker compose -f _scripts/docker-compose.yml exec -T postgres \
+docker compose -f scripts/docker-compose.yml exec -T postgres \
   psql -U bootcamp -d bootcamp_db < starter/proyecto.sql
 ```
 

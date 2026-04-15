@@ -50,7 +50,7 @@ week-22-json_y_jsonb/
 ## Cómo ejecutar
 
 ```bash
-docker compose -f _scripts/docker-compose.yml up -d
-docker compose -f _scripts/docker-compose.yml exec postgres \
+docker compose -f scripts/docker-compose.yml up -d
+docker compose -f scripts/docker-compose.yml exec postgres \
   psql -U bootcamp -d bootcamp_db
 ```

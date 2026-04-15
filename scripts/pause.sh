@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # pause.sh — Guarda el estado del workspace antes de salir
-# Uso: ./_scripts/pause.sh
+# Uso: ./scripts/pause.sh
 # ─────────────────────────────────────────────────────────
 set -euo pipefail
 
@@ -33,7 +33,7 @@ else
 fi
 
 # ── 3. Docker: detener contenedor si está corriendo ───────
-COMPOSE="_scripts/docker-compose.yml"
+COMPOSE="scripts/docker-compose.yml"
 if [ -f "$COMPOSE" ]; then
     if docker compose -f "$COMPOSE" ps --quiet 2>/dev/null | grep -q .; then
         docker compose -f "$COMPOSE" down

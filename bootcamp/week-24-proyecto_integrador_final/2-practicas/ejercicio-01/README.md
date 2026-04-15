@@ -10,16 +10,16 @@ window functions y Full-Text Search en un único flujo de trabajo.
 1. Asegúrate de tener Docker corriendo
 2. Levanta el contenedor:
    ```bash
-   docker compose -f _scripts/docker-compose.yml up -d
+   docker compose -f scripts/docker-compose.yml up -d
    ```
 3. Carga el esquema:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec -T postgres \
+   docker compose -f scripts/docker-compose.yml exec -T postgres \
      psql -U bootcamp -d bootcamp_db < starter/setup.sql
    ```
 4. Abre el ejercicio:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec postgres \
+   docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db -f /dev/stdin < starter/ejercicio.sql
    ```
 

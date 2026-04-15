@@ -8,9 +8,9 @@ por grupo** — patrón fundamental en análisis de datos.
 ## Cómo ejecutar
 
 ```bash
-docker compose -f _scripts/docker-compose.yml exec -T postgres \
+docker compose -f scripts/docker-compose.yml exec -T postgres \
   psql -U bootcamp -d bootcamp_db < starter/setup.sql
-docker compose -f _scripts/docker-compose.yml exec postgres \
+docker compose -f scripts/docker-compose.yml exec postgres \
   psql -U bootcamp -d bootcamp_db -f /dev/stdin < starter/ejercicio.sql
 ```
 

@@ -109,9 +109,9 @@ bootcamp/week-XX-tema_principal/
 
 ### 📁 Carpetas Raíz
 
-- **`_assets/`**: Recursos visuales globales (logos, headers, banners)
-- **`_docs/`**: Documentación general del bootcamp
-- **`_scripts/`**: Scripts de automatización y utilidades
+- **`assets/`**: Recursos visuales globales (logos, headers, banners)
+- **`docs/`**: Documentación general del bootcamp
+- **`scripts/`**: Scripts de automatización y utilidades
 - **`bootcamp/`**: Contenido semanal del bootcamp
 
 ### 🗂️ Orden de Creación de Cada Semana
@@ -515,7 +515,7 @@ Para actualizar una imagen:
 1. `docker pull <imagen>:<tag>`
 2. `docker inspect <imagen>:<tag> --format '{{index .RepoDigests 0}}'`
 3. Reemplazar el digest en `docker-compose.yml`
-4. Re-auditar CVEs con Trivy y actualizar `_docs/security-cve-audit.md`
+4. Re-auditar CVEs con Trivy y actualizar `docs/security-cve-audit.md`
 
 ### Imagen actual
 
@@ -524,30 +524,30 @@ postgres:16-alpine@sha256:20edbde7749f822887a1a022ad526fde0a47d6b2be9a8364433605
 ```
 
 PostgreSQL **16.13** / Alpine Linux **3.23.3** · Auditado 2026-04-04
-Ver auditoría completa en [`_docs/security-cve-audit.md`](_docs/security-cve-audit.md)
+Ver auditoría completa en [`docs/security-cve-audit.md`](docs/security-cve-audit.md)
 
 ### docker-compose.yml
 
-El archivo `_scripts/docker-compose.yml` incluye la configuración lista
+El archivo `scripts/docker-compose.yml` incluye la configuración lista
 para usar. Comandos principales:
 
 ```bash
 # Levantar PostgreSQL en background
-docker compose -f _scripts/docker-compose.yml up -d
+docker compose -f scripts/docker-compose.yml up -d
 
 # Conectar con psql interactivo
-docker compose -f _scripts/docker-compose.yml exec postgres \
+docker compose -f scripts/docker-compose.yml exec postgres \
   psql -U bootcamp -d bootcamp_db
 
 # Ejecutar un archivo .sql contra el contenedor
-docker compose -f _scripts/docker-compose.yml exec -T postgres \
+docker compose -f scripts/docker-compose.yml exec -T postgres \
   psql -U bootcamp -d bootcamp_db < ruta/al/setup.sql
 
 # Detener el contenedor (conserva datos)
-docker compose -f _scripts/docker-compose.yml down
+docker compose -f scripts/docker-compose.yml down
 
 # Reset completo — elimina volumen de datos
-docker compose -f _scripts/docker-compose.yml down -v
+docker compose -f scripts/docker-compose.yml down -v
 ```
 
 ### Credenciales de desarrollo
@@ -578,18 +578,18 @@ Al generar contenido para semanas 13–24:
 1. Asegúrate de tener Docker corriendo
 2. Levanta el contenedor:
    ```bash
-   docker compose -f _scripts/docker-compose.yml up -d
+   docker compose -f scripts/docker-compose.yml up -d
    ```
 ````
 
 3. Carga el esquema de prueba:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec -T postgres \
+   docker compose -f scripts/docker-compose.yml exec -T postgres \
      psql -U bootcamp -d bootcamp_db < starter/setup.sql
    ```
 4. Conecta e interactúa:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec postgres \
+   docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db
    ```
 
@@ -731,7 +731,7 @@ Cada semana incluye **tres tipos de evidencias**:
 ## 🔗 Enlaces Importantes
 
 - **Repositorio**: https://github.com/ergrato-dev/bc-sql
-- **Documentación general**: [\_docs/README.md](_docs/README.md)
+- **Documentación general**: [\docs/README.md](docs/README.md)
 - **Primera semana**: [bootcamp/week-01-introduccion_bases_de_datos_relacionales/README.md](bootcamp/week-01-introduccion_bases_de_datos_relacionales/README.md)
 
 ---

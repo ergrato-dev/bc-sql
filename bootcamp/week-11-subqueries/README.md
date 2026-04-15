@@ -26,6 +26,9 @@ y subqueries en `FROM` como tablas derivadas.
 
 ### Teoría
 
+> **¿Empiezas desde la semana 11?**
+> Lee primero: [Nivelación — Prerequisitos](1-teoria/00-nivelacion.md)
+
 1. [Subquery Escalar](1-teoria/01-subquery-escalar.md)
 2. [IN, NOT IN, EXISTS, NOT EXISTS](1-teoria/02-subquery-in-exists.md)
 3. [Subquery en FROM — Tabla Derivada](1-teoria/03-subquery-from.md)

@@ -10,12 +10,12 @@ y un reporte JSONB que consolida datos de múltiples tablas.
 1. Asegúrate de haber ejecutado el setup del ejercicio 01
 2. Carga este setup adicional:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec -T postgres \
+   docker compose -f scripts/docker-compose.yml exec -T postgres \
      psql -U bootcamp -d bootcamp_db < starter/setup.sql
    ```
 3. Abre el ejercicio:
    ```bash
-   docker compose -f _scripts/docker-compose.yml exec postgres \
+   docker compose -f scripts/docker-compose.yml exec postgres \
      psql -U bootcamp -d bootcamp_db -f /dev/stdin < starter/ejercicio.sql
    ```
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # restore.sh — Instalación completa desde cero (máquina nueva o reset)
-# Uso: ./_scripts/restore.sh [--reset-db]
+# Uso: ./scripts/restore.sh [--reset-db]
 #
 #   Sin flags   → git pull + docker up (conserva datos)
 #   --reset-db  → git pull + docker down -v + docker up (borra datos PG)
@@ -25,7 +25,7 @@ git pull --ff-only
 echo "✓  Repositorio sincronizado"
 
 # ── 2. Docker: levantar (con o sin reset de volumen) ──────
-COMPOSE="_scripts/docker-compose.yml"
+COMPOSE="scripts/docker-compose.yml"
 if [ -f "$COMPOSE" ]; then
     if [ "$RESET_DB" = true ]; then
         docker compose -f "$COMPOSE" down -v 2>/dev/null || true
@@ -34,7 +34,7 @@ if [ -f "$COMPOSE" ]; then
 
     docker compose -f "$COMPOSE" up -d
     echo "✓  Contenedor PostgreSQL iniciado"
-    echo "   → psql: docker compose -f _scripts/docker-compose.yml exec postgres psql -U bootcamp -d bootcamp_db"
+    echo "   → psql: docker compose -f scripts/docker-compose.yml exec postgres psql -U bootcamp -d bootcamp_db"
 fi
 
 echo ""

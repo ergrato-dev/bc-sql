@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # resume.sh — Restaura el estado del workspace al regresar
-# Uso: ./_scripts/resume.sh
+# Uso: ./scripts/resume.sh
 # ─────────────────────────────────────────────────────────
 set -euo pipefail
 
@@ -24,11 +24,11 @@ else
 fi
 
 # ── 3. Docker: levantar contenedor PostgreSQL ─────────────
-COMPOSE="_scripts/docker-compose.yml"
+COMPOSE="scripts/docker-compose.yml"
 if [ -f "$COMPOSE" ]; then
     docker compose -f "$COMPOSE" up -d
     echo "✓  Contenedor PostgreSQL iniciado"
-    echo "   → psql: docker compose -f _scripts/docker-compose.yml exec postgres psql -U bootcamp -d bootcamp_db"
+    echo "   → psql: docker compose -f scripts/docker-compose.yml exec postgres psql -U bootcamp -d bootcamp_db"
 fi
 
 echo ""
