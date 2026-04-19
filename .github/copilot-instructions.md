@@ -16,6 +16,9 @@ nivel de SQL Developer Junior o Data Analyst Junior.
 - **Enfoque**: Progresión desde fundamentos absolutos hasta SQL avanzado y
   optimización de consultas
 - **Motor principal**: SQLite (fundamentos) → PostgreSQL vía Docker (producción)
+- **Otros motores**: MySQL/MariaDB es común en el ecosistema real; los conceptos del
+  bootcamp son ~95% transferibles. El contenido central usa exclusivamente
+  PostgreSQL/SQLite; las diferencias de sintaxis se documentan con notas puntuales.
 
 ---
 
@@ -512,6 +515,7 @@ La misma regla aplica a **cualquier imagen Docker** usada en el proyecto.
 No existe excepción.
 
 Para actualizar una imagen:
+
 1. `docker pull <imagen>:<tag>`
 2. `docker inspect <imagen>:<tag> --format '{{index .RepoDigests 0}}'`
 3. Reemplazar el digest en `docker-compose.yml`
@@ -708,6 +712,17 @@ Cada semana incluye **tres tipos de evidencias**:
    - Indicar explícitamente cuando una sintaxis es solo PostgreSQL vs estándar SQL
    - Proveer alternativas SQLite cuando el ejercicio use features de PG en etapa 0
 
+4. **MySQL/MariaDB — política de referencias**
+   - ❌ **NUNCA** incluir sintaxis MySQL en archivos `.sql` de ejercicios o proyectos
+   - ❌ **NUNCA** agregar secciones dedicadas a MySQL en la teoría
+   - ✅ En teoría, agregar **una sola línea** `> **MySQL/MariaDB**: ...` cuando la
+     sintaxis difiera notablemente (p.ej. `AUTO_INCREMENT`, backticks, `SHOW TABLES`)
+   - ✅ Las diferencias relevantes son: `AUTO_INCREMENT` vs `SERIAL`, comillas de
+     identificadores (backtick vs doble comilla), `SHOW TABLES` vs `\dt`,
+     ausencia de `FULL OUTER JOIN` nativo en MySQL < 8, tipos `TINYINT`/`MEDIUMINT`
+   - ✅ Si el aprendiz pregunta sobre MySQL, redirigir a la documentación oficial y
+     señalar la diferencia puntual, sin cambiar el ejemplo del bootcamp
+
 ### Diagramas ER (assets SVG)
 
 - Usar notación de pata de gallo (crow's foot) para relaciones
@@ -767,6 +782,6 @@ Cuando crees contenido para una nueva semana:
 
 ---
 
-_Última actualización: Marzo 2026_
-_Versión: 1.0_
+_Última actualización: Abril 2026_
+_Versión: 1.1_
 ```
