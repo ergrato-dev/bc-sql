@@ -6,6 +6,20 @@ Implementa una capa de triggers que automatice validaciones,
 transformaciones y auditoría en la base de datos de tu dominio asignado
 (biblioteca, farmacia, gimnasio, restaurante, etc.).
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> Un trigger que solo se dispara 2 veces no se puede validar. Necesitas operar con volumen para confirmar que funciona en todos los casos.
+> **Mínimo obligatorio: 200 filas en tu tabla principal.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Asegúrate de tener Docker corriendo:

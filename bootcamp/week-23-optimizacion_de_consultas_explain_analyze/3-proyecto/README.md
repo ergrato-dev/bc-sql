@@ -5,6 +5,21 @@
 Analizar el rendimiento de consultas del dominio asignado, identificar
 consultas lentas con `EXPLAIN ANALYZE` y aplicar índices para mejorarlas.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> `EXPLAIN ANALYZE` sobre 50 filas **siempre** usa Seq Scan. No hay nada que optimizar. Esta semana requiere volumen real para que los índices cambien el plan de ejecución.
+> **Mínimo obligatorio: 200 filas. Recomendado: 1.000+.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - Esta semana más que ninguna: usa `generate_series` para llegar a 1.000 filas si puedes
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Levanta el contenedor:

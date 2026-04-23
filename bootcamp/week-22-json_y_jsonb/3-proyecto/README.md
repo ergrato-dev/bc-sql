@@ -6,6 +6,21 @@ Implementar una columna `JSONB` para almacenar atributos variables en el
 dominio asignado, crear un índice GIN y construir consultas de reporte
 con `jsonb_agg`.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> `jsonb_agg` sobre 5 filas con el mismo JSON no prueba nada. Necesitas datos con atributos JSON variados para que las consultas sean significativas.
+> **Mínimo obligatorio: 200 filas con columnas JSONB de estructura variada.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - **Copilot / ChatGPT** → pídele: *"Dame 200 INSERT PostgreSQL con columna JSONB variada para el dominio X"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Levanta el contenedor:

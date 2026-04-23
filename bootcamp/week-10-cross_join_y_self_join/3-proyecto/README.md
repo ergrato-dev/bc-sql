@@ -5,6 +5,21 @@
 Aplicar SELF JOIN para modelar una relación jerárquica o de referencia propia
 dentro del dominio asignado.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos
+>
+> El SELF JOIN requiere filas con relación padre-hijo real. Con 5 filas planas no hay jerarquía que recorrer.
+> **Mínimo obligatorio: 80 filas en tu tabla principal, con al menos 3 niveles de jerarquía.**
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 80 INSERT INTO para una tabla con auto-referencia `parent_id`, con 3 niveles jerárquicos"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones generales
 
 1. Identifica una entidad en tu dominio que tenga una relación jerárquica

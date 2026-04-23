@@ -8,6 +8,20 @@ las semanas 01–07.
 
 ---
 
+> ## ⚠️ ANTES DE EMPEZAR — Datos de prueba (requisito de entrega)
+>
+> Este es el proyecto integrador. Se evalúan tus consultas sobre datos reales, no sobre ejemplos de 5 filas.
+> **Mínimo obligatorio: 30 filas en tu tabla principal, 10 en cada tabla secundaria.**
+> Proyectos entregados con menos filas que el mínimo se devuelven sin calificar.
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 30 INSERT INTO realistas para una tabla SQLite llamada `X` con columnas A, B, C"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones
 
 1. Abre `starter/proyecto.sql`

@@ -6,6 +6,21 @@ Aplica índices estratégicos a las tablas de tu dominio y crea un reporte
 que combine funciones de cadena, fecha y numéricas para transformar y
 presentar los datos.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> Los índices y `EXPLAIN ANALYZE` solo muestran diferencia de rendimiento con volumen real. Con 20 filas un seq scan y un index scan son idénticos.
+> **Mínimo obligatorio: 200 filas en tu tabla principal.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - **Copilot / ChatGPT** → pídele: *"Dame un INSERT masivo con generate_series para una tabla PostgreSQL de tu dominio"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Asegúrate de tener Docker corriendo

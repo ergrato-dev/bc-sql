@@ -5,6 +5,21 @@
 Modelar una estructura jerárquica del dominio asignado y recorrerla
 con `WITH RECURSIVE` para generar reportes de profundidad y paths.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> Una CTE recursiva sobre 4 nodos no demuestra que entiendes la recursividad. Necesitas una jerarquía real con al menos 3 niveles y varios nodos por nivel.
+> **Mínimo obligatorio: 200 filas en tu tabla principal, con estructura jerárquica de al menos 3 niveles.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - **Copilot / ChatGPT** → pídele: *"Dame un INSERT masivo con generate_series para una tabla PostgreSQL con columna parent_id jerárquica"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones generales
 
 1. Adapta el esquema del `starter/proyecto.sql` a tu dominio.

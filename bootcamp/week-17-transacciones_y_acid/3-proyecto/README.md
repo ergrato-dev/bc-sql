@@ -6,6 +6,20 @@ Implementa el control de integridad de datos de tu dominio asignado
 usando transacciones explícitas con `BEGIN`, `COMMIT`, `ROLLBACK`
 y al menos un `SAVEPOINT`.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> Una transacción que opera sobre 3 filas no demuestra nada. Necesitas datos suficientes para que el `ROLLBACK` y el `SAVEPOINT` tengan impacto visible.
+> **Mínimo obligatorio: 200 filas en tu tabla principal.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Inicia el contenedor:

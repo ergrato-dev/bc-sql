@@ -5,6 +5,21 @@
 Aplica `LAG()`, `LEAD()`, `FIRST_VALUE()` y `LAST_VALUE()` a datos temporales
 de tu dominio asignado. Encapsula el análisis en una **vista** reutilizable.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> `LAG()` y `LEAD()` sobre 10 filas ordenadas por fecha no muestra tendencias. Necesitas datos con variación temporal real a lo largo de varios meses.
+> **Mínimo obligatorio: 200 filas en tu tabla principal, con fechas distribuidas en al menos 12 meses.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - **Copilot / ChatGPT** → pídele: *"Dame un INSERT con generate_series PostgreSQL con fechas distribuidas en los últimos 2 años"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Asegúrate de tener Docker corriendo

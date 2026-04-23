@@ -5,6 +5,21 @@
 Aplicar subqueries escalares, `IN`/`NOT IN`, `EXISTS`/`NOT EXISTS` y tablas
 derivadas en el dominio asignado para generar reportes analíticos.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos
+>
+> `NOT EXISTS` sobre una tabla vacía siempre devuelve todos los registros. Eso no prueba que tu subquery esté bien.
+> **Mínimo obligatorio: 80 filas en tu tabla principal, 20 en cada tabla secundaria, con casos de inclusión y exclusión reales.**
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 80 INSERT INTO realistas para una tabla SQLite con distribución variada de estados y categorías"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones generales
 
 1. Adapta el esquema del `starter/proyecto.sql` a tu dominio.

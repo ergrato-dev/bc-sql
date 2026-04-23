@@ -7,6 +7,19 @@ usando funciones de agregación, `GROUP BY` y `HAVING`.
 
 ---
 
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos
+>
+> `GROUP BY` con 5 filas produce grupos de 1 o 2 registros. `HAVING` nunca filtra nada. Eso no es practicar agregaciones, es engañarse.
+> **Mínimo obligatorio para esta semana: 30 filas en tu tabla principal con distribución desigual entre grupos.**
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 30 INSERT INTO realistas para una tabla SQLite con distribución desigual por categoría"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones
 
 1. Abre `starter/proyecto.sql`

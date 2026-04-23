@@ -5,6 +5,21 @@
 Implementar búsqueda de texto completo en el dominio asignado usando
 `tsvector`, `tsquery`, índice GIN, `ts_rank` y `ts_headline`.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> Full-text search sobre 10 filas con el mismo texto no muestra diferencia de relevancia. Necesitas textos variados y suficientes para que `ts_rank` produzca resultados distintos.
+> **Mínimo obligatorio: 200 filas con columnas de texto variado y realista.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** + textos generados → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - **Copilot / ChatGPT** → pídele: *"Dame 200 INSERT con textos variados en español para una tabla PostgreSQL de descripciones de tu dominio"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Levanta el contenedor:

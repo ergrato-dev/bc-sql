@@ -30,9 +30,10 @@
 
 services:
   postgres:
-    # ── Imagen base (pinned) ──────────────────────────────────────────
-    # digest pinned — postgres 16.13 / Alpine 3.23.3 / auditado 2026-04-04
-    image: postgres:16-alpine@sha256:20edbde7749f822887a1a022ad526fde0a47d6b2be9a8364433605cf65099416
+    # ── Imagen resultante del build ───────────────────────────────────
+    # Nombre/tag local de la imagen construida. El pinning del digest base
+    # se mantiene en el FROM del Dockerfile (postgres:16-alpine@sha256:...).
+    image: bc-sql-postgres:16
     # ── Build personalizado ──────────────────────────────────────────
     # Usa el Dockerfile local para habilitar extensiones y config propia.
     # Ejecutar con: docker compose -f scripts/docker-compose.yml up -d --build

@@ -6,6 +6,21 @@ Esta semana aplicarás lo aprendido sobre DDL para diseñar el esquema de base
 de datos de tu dominio asignado. Crearás las tablas con tipos de datos y
 constraints adecuados.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Datos de prueba
+>
+> El DDL sin datos no se puede probar. Define el esquema **y** cárgalo con datos desde el inicio.
+> **Mínimo obligatorio para esta semana: 15 filas en tu tabla principal, 5 en cada tabla secundaria.**
+>
+> Cómo obtener datos realistas rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 15 INSERT INTO realistas para una tabla SQLite llamada `X` con columnas A, B, C"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones
 
 1. Identifica las **3 entidades principales** de tu dominio.

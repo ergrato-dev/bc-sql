@@ -6,6 +6,22 @@ Aplicar INNER JOIN y LEFT JOIN para generar reportes relacionales en el dominio
 asignado. Practicar el cruce de al menos dos tablas y la detección de registros
 huérfanos.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos
+>
+> Un JOIN sobre 5 filas produce resultados triviales. Para que el ejercicio tenga valor,
+> necesitas filas en **ambas tablas**, incluyendo registros que no cruzan (para el LEFT JOIN).
+> **Mínimo obligatorio: 80 filas en tu tabla principal, 20 en cada tabla secundaria.**
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 80 INSERT INTO realistas para una tabla SQLite llamada `X` con columnas A, B, C, incluyendo ~10 sin FK asignada"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones generales
 
 1. Adapta los nombres de tablas y columnas a tu dominio asignado.

@@ -5,6 +5,20 @@
 Encapsula la lógica de negocio de tu dominio asignado en funciones
 y procedimientos PL/pgSQL, añadiendo validaciones y auditoría de operaciones.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> Una función que solo se prueba con 2 llamadas no está probada. Necesitas datos suficientes para cubrir todos los casos de la lógica condicional.
+> **Mínimo obligatorio: 200 filas en tu tabla principal.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Inicia el contenedor:

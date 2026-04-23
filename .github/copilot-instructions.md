@@ -244,32 +244,32 @@ cualquier dominio.**
 
 #### 🏛️ Política de Dominios Únicos (Anticopia)
 
-**Cada aprendiz recibe un dominio único asignado por el instructor:**
+**Cada aprendiz recibe un dominio único asignado por el instructor.**
 
-- 📖 Biblioteca
-- 💊 Farmacia
-- 🏋️ Gimnasio
-- 🏫 Escuela
-- 🏬 Tienda de mascotas
-- 🏪 Restaurante
-- 🏦 Banco
-- 🚕 Agencia de taxis
-- 🏥 Hospital
-- 🎥 Cine
-- 🏨 Hotel
-- ✈️ Agencia de viajes
-- 🚗 Concesionario de autos
-- 👗 Tienda de ropa
-- 🛠️ Taller mecánico
-- Y otros dominios únicos según cantidad de aprendices
+El catálogo completo de **150 dominios** disponibles está en
+[`docs/dominios.md`](docs/dominios.md). La asignación se hace con:
+
+```bash
+python3 scripts/assign_domains.py \
+  --input aprendices.csv \
+  --output asignaciones.csv \
+  --trimestre 2026-Q2
+```
+
+**Reglas de asignación:**
+
+- Un dominio por aprendiz por trimestre — aplica a todos sus bootcamps simultáneos
+- Si un aprendiz repite en un trimestre posterior, se le asigna un dominio diferente
+- Los dominios marcados `★` en el catálogo están **reservados para ejemplos** del
+  bootcamp (teoría y ejercicios guiados) — **no asignar a aprendices**
 
 **Objetivo**: Prevenir copia entre estudiantes y fomentar implementaciones
 originales.
 
 **⚠️ IMPORTANTE para desarrollo de contenidos:**
 
-- Los ejemplos en los proyectos **NO deben usar dominios de la lista anterior**
-- Usar ejemplos genéricos o dominios diferentes (ej: Museo, Planetario, Acuario)
+- Los ejemplos en proyectos y starters **NO deben usar dominios marcados `★`**
+- Usar dominios no reservados del catálogo (ej: Planetario, Acuario, Escape room)
 - Esto evita "regalar" soluciones a aprendices con esos dominios asignados
 
 #### 📋 Formato del starter del proyecto:
@@ -281,12 +281,12 @@ originales.
 -- ============================================
 
 -- NOTA PARA EL APRENDIZ:
--- Adapta este esquema a tu dominio asignado.
--- Ejemplos:
---   Biblioteca  → books, members, loans
---   Farmacia    → medicines, sales, inventory
---   Gimnasio    → members, routines, attendance
---   Restaurante → dishes, tables, orders
+-- Adapta este esquema a tu dominio asignado (ver docs/dominios.md).
+-- Ejemplos de adaptación según dominio:
+--   Clínica veterinaria → animals, owners, appointments, treatments
+--   Escape room         → rooms, bookings, teams, clues
+--   Marina deportiva    → boats, berths, owners, services
+--   Empresa pesquera    → vessels, catches, species, ports
 
 -- TODO: Renombrar las tablas según tu dominio
 -- TODO: Agregar columnas específicas de tu dominio
@@ -566,6 +566,32 @@ docker compose -f scripts/docker-compose.yml down -v
 > ⚠️ **Solo para entorno local de aprendizaje.** Nunca usar estas
 > credenciales en producción.
 
+### Base de datos de ejemplo — Northwind
+
+El contenedor incluye la base **`northwind`** (puerto a PostgreSQL del clásico
+Northwind de Microsoft — empresa de importación/exportación).
+
+**Tablas disponibles:** `categories`, `customers`, `employees`, `orders`,
+`order_details`, `products`, `shippers`, `suppliers`, `territories`, `region`.
+
+**Credenciales:** mismas que `bootcamp_db` — usuario `bootcamp`, contraseña
+`bootcamp123`, host `localhost:5432`.
+
+**Cuándo usar Northwind en el contenido:**
+
+- ✅ **Semanas 9–24**: ejemplos en teoría y prácticas guiadas — Northwind provee
+  volumen y contexto real para JOINs, agregaciones, subqueries, window functions
+- ✅ Como fuente de consultas de exploración complementaria al final de ejercicios
+- ❌ **NO** reemplazar los `setup.sql` de ejercicios ni proyectos con Northwind —
+  los aprendices deben modelar su propio dominio asignado
+- ❌ **NO** usar Northwind en semanas 1–8 (Etapa 0 — SQLite, motor diferente)
+
+```bash
+# Conectar a Northwind
+docker compose -f scripts/docker-compose.yml exec postgres \
+  psql -U bootcamp -d northwind
+```
+
 ### Instrucciones para Copilot
 
 Al generar contenido para semanas 13–24:
@@ -695,6 +721,19 @@ Cada semana incluye **tres tipos de evidencias**:
    - Incluir siempre un `setup.sql` con datos de prueba representativos
    - Comenzar con `-- Semana XX: Tema` en el encabezado de cada archivo
    - Usar `-- ============================================` como separador
+   - **Volumen mínimo obligatorio** (NON-NEGOTIABLE):
+     - Semanas 01–03: tabla principal ≥ 15 filas, secundarias ≥ 5 filas
+     - Semanas 04–08: tabla principal ≥ 30 filas, secundarias ≥ 10 filas
+     - Semanas 09–12: tabla principal ≥ 80 filas, secundarias ≥ 20 filas
+     - Semanas 13–24: tabla principal ≥ 200 filas (usar `generate_series`)
+   - Los datos deben tener **distribuciones desiguales**: si todos los grupos
+     tienen el mismo COUNT, los datos no sirven para practicar agregaciones
+
+4. **README de proyectos semanales**
+   - Incluir **siempre** al inicio un bloque `> ⚠️ ANTES DE EMPEZAR` con enlace
+     a `docs/seed-datos.md` y el volumen mínimo de la semana
+   - Incluir el volumen mínimo también en la tabla de **Requisitos mínimos**
+   - El aprendiz no puede evaluar sus consultas con datos triviales
 
 ### Creación de Contenido
 

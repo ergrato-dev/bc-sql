@@ -5,6 +5,21 @@
 Aplicar CTEs (simples y encadenados) junto con `CASE WHEN` para construir
 un reporte analítico completo sobre el dominio asignado.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos
+>
+> `CASE WHEN` con 3 categorías y 2 filas por categoría no muestra nada útil. La clasificación tiene valor solo con distribución real.
+> **Mínimo obligatorio: 80 filas en tu tabla principal, con variación en las columnas que usarás en `CASE WHEN`.**
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 80 INSERT INTO realistas con distribución desigual de categorías para practicar CASE WHEN"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones generales
 
 1. Adapta el esquema del `starter/proyecto.sql` a tu dominio.

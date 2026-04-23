@@ -5,6 +5,20 @@
 Implementa consultas con `JOIN LATERAL` y funciones tabulares
 para responder preguntas analíticas sobre los datos de tu dominio asignado.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> `JOIN LATERAL` que devuelve 1 resultado por fila porque solo hay 5 filas no demuestra nada. Necesitas volumen para ver el impacto real.
+> **Mínimo obligatorio: 200 filas en tu tabla principal.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Levanta el contenedor:

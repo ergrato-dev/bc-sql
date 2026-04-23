@@ -5,6 +5,22 @@
 Diseña, implementa y documenta un esquema de base de datos completo
 para tu dominio asignado, incorporando todos los conceptos del bootcamp.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Datos de prueba (requisito de entrega)
+>
+> Este es el proyecto final. Se evalúan tus consultas, funciones, triggers e índices sobre datos reales.
+> **Mínimo obligatorio: 200 filas en tu tabla principal, 50 en cada tabla secundaria.**
+> Proyectos entregados con menos datos que el mínimo se devuelven sin calificar.
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) para datos complementarios
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Asegúrate de tener Docker corriendo:

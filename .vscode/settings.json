@@ -30,6 +30,17 @@
       "password": "bootcamp123",
       "previewLimit": 50,
       "group": "bc-sql"
+    },
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "bootcamp",
+      "database": "northwind",
+      "username": "bootcamp",
+      "password": "bootcamp123"
     }
   ],
   "sqltools.autoOpenSessionFiles": false,

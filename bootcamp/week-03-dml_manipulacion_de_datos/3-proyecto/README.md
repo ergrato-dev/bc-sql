@@ -7,6 +7,19 @@ adaptado a tu **dominio asignado**.
 
 ---
 
+> ## ⚠️ ANTES DE EMPEZAR — Datos de prueba
+>
+> Esta semana **el volumen de datos es el entregable principal**. Con 5 filas no se practica DML real.
+> **Mínimo obligatorio: 15 filas en tu tabla principal, 5 en cada tabla secundaria.**
+>
+> Cómo obtener datos realistas rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 15 INSERT INTO realistas para una tabla SQLite llamada `X` con columnas A, B, C"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones
 
 1. Abre `starter/proyecto.sql`
@@ -20,7 +33,7 @@ adaptado a tu **dominio asignado**.
 
 | Requisito | Descripción |
 |-----------|-------------|
-| INSERT bulk | Al menos **2 tablas** con mínimo **5 filas** cada una |
+| INSERT bulk | Al menos **2 tablas** con mínimo **15 filas** cada una |
 | FK correcta | Los inserts respetan el orden padre → hijo |
 | UPDATE seguro | Mínimo **2 sentencias UPDATE** con `WHERE` usando PK |
 | UPDATE condicional | Al menos **1 UPDATE** sobre múltiples filas por condición |
@@ -30,10 +43,10 @@ adaptado a tu **dominio asignado**.
 
 ## Dominios de ejemplo
 
-- Biblioteca → `books`, `members`, `loans`
-- Farmacia → `medicines`, `suppliers`, `sales`
-- Gimnasio → `members`, `plans`, `attendance`
-- Restaurante → `dishes`, `tables`, `orders`
+- Escape room → `rooms`, `teams`, `bookings`
+- Acuario → `species`, `tanks`, `feeding_logs`
+- Marina deportiva → `boats`, `berths`, `owners`
+- Empresa pesquera → `vessels`, `catches`, `species`
 
 ---
 

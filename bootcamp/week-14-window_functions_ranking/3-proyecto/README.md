@@ -5,6 +5,21 @@
 Aplica `ROW_NUMBER()`, `RANK()` y `DENSE_RANK()` a las entidades de tu
 dominio asignado para generar reportes de clasificación y análisis top-N.
 
+---
+
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos (PostgreSQL)
+>
+> Las window functions solo son interesantes con empates reales en los valores. Sin suficientes filas, `RANK()` y `DENSE_RANK()` producen el mismo resultado y no se nota la diferencia.
+> **Mínimo obligatorio: 200 filas en tu tabla principal, con valores repetidos en la columna que clasificarás.**
+>
+> Cómo completar tus datos rápidamente:
+> - **`generate_series`** en PostgreSQL → ver [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+> - **Copilot / ChatGPT** → pídele: *"Dame un INSERT con generate_series PostgreSQL con distribución de valores con empates para window functions"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Cómo ejecutar
 
 1. Asegúrate de tener Docker corriendo

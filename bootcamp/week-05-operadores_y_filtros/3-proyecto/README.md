@@ -7,6 +7,20 @@ usando `BETWEEN`, `IN`, `LIKE` y combinaciones.
 
 ---
 
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos
+>
+> `BETWEEN`, `IN` y `LIKE` solo funcionan correctamente con datos variados y suficientes.
+> Si todos tus registros tienen la misma ciudad o el mismo rango de fechas, los filtros no filtran nada.
+> **Mínimo obligatorio para esta semana: 30 filas en tu tabla principal, 10 en cada tabla secundaria.**
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 30 INSERT INTO realistas para una tabla SQLite llamada `X` con columnas A, B, C"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones
 
 1. Abre `starter/proyecto.sql`

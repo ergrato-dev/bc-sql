@@ -7,6 +7,19 @@ ya pobado con datos reales en la Semana 03.
 
 ---
 
+> ## ⚠️ ANTES DE EMPEZAR — Verifica tus datos
+>
+> Un `SELECT` sobre 3 filas no prueba nada. Si no tienes datos suficientes de la semana anterior, agrégalos ahora.
+> **Mínimo obligatorio para esta semana: 30 filas en tu tabla principal, 10 en cada tabla secundaria.**
+>
+> Cómo completar tus datos rápidamente:
+> - **Mockaroo** → [mockaroo.com](https://mockaroo.com) — genera hasta 1.000 INSERT en segundos
+> - **Copilot / ChatGPT** → pídele: *"Dame 30 INSERT INTO realistas para una tabla SQLite llamada `X` con columnas A, B, C"*
+>
+> 📖 Guía completa: [`docs/seed-datos.md`](../../../../docs/seed-datos.md)
+
+---
+
 ## Instrucciones
 
 1. Abre `starter/proyecto.sql`
