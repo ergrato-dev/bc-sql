@@ -85,7 +85,32 @@ ORDER BY active_employees DESC;
 
 ---
 
+## Paso 5: No repetir el presupuesto al sumar
+
+El JOIN repite un departamento por cada empleado. Su presupuesto pertenece
+al departamento, no al empleado: sumarlo después del JOIN lo multiplica.
+
+```sql
+-- Consulta intencionalmente incorrecta para el presupuesto total
+SELECT SUM(d.budget) AS repeated_budget
+FROM departments d
+LEFT JOIN employees e ON e.department_id = d.id;
+
+-- Una fila por departamento: no hace falta unir empleados
+SELECT SUM(budget) AS total_budget
+FROM departments;
+```
+
+Con estos datos obtienes **480000** frente a **300000**. HR sigue incluido
+una vez aunque no tenga empleados. `SUM(DISTINCT d.budget)` no es una
+solución general: dos departamentos pueden tener el mismo presupuesto.
+
+**Descomenta el Paso 5** y compara ambos resultados.
+
+---
+
 ## Verificación
 
 - ¿El Paso 1 muestra el departamento HR con `NULL` en employee?
 - ¿El Paso 3 muestra `0` para HR?
+- ¿El Paso 5 explica por qué sumar presupuestos tras el JOIN los repite?

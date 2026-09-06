@@ -50,3 +50,20 @@ LEFT JOIN employees  e ON e.department_id  = d.id
                       AND e.is_active      = 1
 GROUP BY d.name, l.name
 ORDER BY active_employees DESC;
+
+
+-- ============================================
+-- PASO 5: Presupuesto del departamento, no del empleado
+-- ============================================
+
+-- La primera consulta es incorrecta para sumar el presupuesto total.
+-- La segunda conserva una fila por departamento.
+-- Resultados esperados: 480000 y 300000, respectivamente.
+-- DISTINCT por importe no distingue departamentos con igual presupuesto.
+
+SELECT SUM(d.budget) AS repeated_budget
+FROM departments d
+LEFT JOIN employees e ON e.department_id = d.id;
+
+SELECT SUM(budget) AS total_budget
+FROM departments;
