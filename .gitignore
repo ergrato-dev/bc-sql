@@ -133,3 +133,7 @@ mi-dominio/
 # ============================================
 # Demos y soluciones internas — no exponer a aprendices.
 *6-instructor/
+
+# Asignación de dominios: vive en el repo privado bc-dominios
+aprendices*.csv
+asignaciones.*

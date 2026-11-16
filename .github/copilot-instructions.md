@@ -246,15 +246,8 @@ cualquier dominio.**
 
 **Cada aprendiz recibe un dominio único asignado por el instructor.**
 
-El catálogo completo de **150 dominios** disponibles está en
-[`docs/dominios.md`](docs/dominios.md). La asignación se hace con:
-
-```bash
-python3 scripts/assign_domains.py \
-  --input aprendices.csv \
-  --output asignaciones.csv \
-  --trimestre 2026-Q2
-```
+El catálogo de dominios y el script de asignación están en el repositorio privado
+`bc-dominios` del instructor.
 
 **Reglas de asignación:**
 
@@ -269,7 +262,7 @@ originales.
 **⚠️ IMPORTANTE para desarrollo de contenidos:**
 
 - Los ejemplos en proyectos y starters **NO deben usar dominios marcados `★`**
-- Usar dominios no reservados del catálogo (ej: Planetario, Acuario, Escape room)
+- Usar dominios no reservados (ej: Planetario, Acuario, Escape room)
 - Esto evita "regalar" soluciones a aprendices con esos dominios asignados
 
 #### 📋 Formato del starter del proyecto:
@@ -281,7 +274,7 @@ originales.
 -- ============================================
 
 -- NOTA PARA EL APRENDIZ:
--- Adapta este esquema a tu dominio asignado (ver docs/dominios.md).
+-- Adapta este esquema a tu dominio asignado.
 -- Ejemplos de adaptación según dominio:
 --   Clínica veterinaria → animals, owners, appointments, treatments
 --   Escape room         → rooms, bookings, teams, clues
